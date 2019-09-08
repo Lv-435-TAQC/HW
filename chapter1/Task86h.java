@@ -22,7 +22,7 @@ public class Task86h {
         return result;
     }
 
-    private static boolean isNumeric(String string) {
+    private static boolean isNumeric(final String string) {
         boolean result = true;
         try {
             Integer.parseInt(string);
@@ -46,7 +46,7 @@ public class Task86h {
     }
 
     public static void main(String[] args) {
-        String number = inputNumber();
+        final String number = inputNumber();
         System.out.println("The sum of digits with consecutive sings of the number " + number + " is "
                 + findSumOfNumberDigitsWithConsecutiveSigns(number));
     }
