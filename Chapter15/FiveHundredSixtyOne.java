@@ -3,7 +3,7 @@ package Chapter15;
 import java.util.ArrayList;
 
 public class FiveHundredSixtyOne {
-    public ArrayList<Integer> find(Integer n) {
+    public static ArrayList<Integer> find(Integer n) {
         ArrayList<Integer> a = new ArrayList<>();
         String test;
         for (int i = 1; i <= n; i++) {
