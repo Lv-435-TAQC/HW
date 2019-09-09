@@ -3,9 +3,9 @@ package Chapter7;
 import java.util.ArrayList;
 
 public class OneHundredSeventyEightH {
-    public int calculate(ArrayList<Integer> a) {
-        for (int i = 0; i < a.size(); i++) {
-            if (!(Math.sqrt(a.get(i)) % 2 == 0) || a.get(i) == 0) {
+    public static int calculate(ArrayList<Integer> a) {
+        for (int i = 1; i < a.size() - 1; i++) {
+            if (a.get(i) < (a.get(i - 1) + a.get(i + 1)) / 2) {
                 a.remove(i);
                 i--;
             }
