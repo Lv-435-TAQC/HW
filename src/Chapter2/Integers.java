@@ -1,4 +1,5 @@
 package Chapter2;
+import java.util.ArrayList;
 import java.util.LinkedList;
 public class Integers {
    public static LinkedList<Integer> task559(int n){
@@ -12,4 +13,16 @@ public class Integers {
        }
        return numbers;
    }
+    public static ArrayList<Integer> task561(Integer n) {
+        ArrayList<Integer> a = new ArrayList<>();
+        String test;
+        for (int i = 1; i <= n; i++) {
+            test = Integer.toString(i * i);
+            test = test.substring(test.length() - Integer.toString(i).length());
+            if (i == Integer.parseInt(test)) {
+                a.add(i);
+            }
+        }
+        return a;
+    }
 }
