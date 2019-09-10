@@ -18,4 +18,25 @@ public class SimpleLoops {
         }
         return result;
     }
+
+    public static int task86b(int n) {
+        int res = 0;
+        while (n > 0) {
+            int a = n % 10;
+            res += a;
+            n = (n - a) / 10;
+        }
+        return res;
+    }
+    
+    public static int task87(int n, int m){
+        int sum = 0;
+        for (; m > 0 && n != 0; m--){
+            sum += (n % 10);
+            n /= 10;
+        }
+        return sum;
+    }
+
+
 }
