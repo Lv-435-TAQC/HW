@@ -13,7 +13,6 @@ public class CyclesAndBranching {
         return count;
     }
 
-
     public static LinkedList<Integer> task226(int m, int n) {
         LinkedList<Integer> listMultipleNumbers = new LinkedList<>();
         int max = m * n;
