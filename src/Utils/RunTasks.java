@@ -4,7 +4,6 @@ import Chapter1.CyclesAndBranching;
 import Chapter1.SimpleLoops;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class RunTasks {
 
@@ -16,12 +15,12 @@ public class RunTasks {
                 start88b();
             case "86h":
                 runTask86h();
-
             case "86b":
                 System.out.println(start86b() + "  is sum of numbers! ");
-
             case "178h":
                 start178h();
+            case "184":
+                start184();
         }
     }
 
@@ -44,17 +43,20 @@ public class RunTasks {
         } else {
             System.out.println("Not natural number");
         }
-
-        private static void start178h () {
-            System.out.println("Pls write how many number you want to check");
-            int size = ConsoleReader.readInt();
-            ArrayList<Integer> a = new ArrayList<>();
-            for (int i = 0; i < size; i++) {
-                System.out.println("Write number");
-                a.add(ConsoleReader.readInt());
-            }
-            System.out.println(CyclesAndBranching.task178h(a) + " numbers are relevant! ");
-
-
-        }
     }
+
+    private static void start178h() {
+        System.out.println("Pls write how many number you want to check");
+        int size = ConsoleReader.readInt();
+        ArrayList<Integer> a = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            System.out.println("Write number");
+            a.add(ConsoleReader.readInt());
+        }
+        System.out.println(CyclesAndBranching.task178h(a) + " numbers are relevant! ");
+    }
+
+    public static void start184() {
+        task184();
+    }
+}
