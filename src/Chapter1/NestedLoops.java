@@ -1,5 +1,6 @@
 package Chapter1;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class NestedLoops {
@@ -16,5 +17,20 @@ public class NestedLoops {
                 }
             }
         return listEqualseSquareSum;
+    }
+    public static ArrayList<Integer> task331a(Integer n) {
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                for (int h = 1; h <= n; h++) {
+                    if ((i * i + j * j + h * h) == n) {
+                        a.add(i);
+                        a.add(j);
+                        a.add(h);
+                    }
+                }
+            }
+        }
+        return a;
     }
 }
