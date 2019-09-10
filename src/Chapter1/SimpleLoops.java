@@ -37,14 +37,7 @@ public class SimpleLoops {
         return sum;
     }
 
-  public static int task87(int n, int m) {
-        int sum = 0;
-        for (; m > 0 && n != 0; m--) {
-            sum += (n % 10);
-            n /= 10;
-        }
-        return sum;
-    }
+
 
     public static int task108(int n) {
         if (Math.pow(2, (Math.log(n) / Math.log(2))) == n) {
@@ -61,4 +54,5 @@ public class SimpleLoops {
             result=true;
         return result;
     }
+
 }
