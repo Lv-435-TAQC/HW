@@ -1,7 +1,5 @@
 package Chapter1;
-
 import java.util.ArrayList;
-
 import java.util.LinkedList;
 
 public class CyclesAndBranching {
@@ -14,6 +12,7 @@ public class CyclesAndBranching {
         }
         return count;
     }
+
 
     public static LinkedList<Integer> task226(int m, int n) {
         LinkedList<Integer> listMultipleNumbers = new LinkedList<>();
@@ -49,4 +48,5 @@ public class CyclesAndBranching {
         }
         return a.size();
     }
+
 }
