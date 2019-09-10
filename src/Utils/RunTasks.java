@@ -20,7 +20,10 @@ public class RunTasks {
                 runTask86h();
 
             case "86b":
-                System.out.println(runTask86b() + "  is sum of numbers! ");
+                start86b();
+
+            case "108":
+                start108();
 
             case "178h":
                 start178h();
@@ -55,15 +58,25 @@ public class RunTasks {
     }
 
 
-    public static int runTask86b() {
+    public static void runTask86b() {
         int n = ConsoleReader.ReadNumber();
         if (n > 0) {
-            return SimpleLoops.task86b(n);
+            System.out.println(" Sum numbers is "SimpleLoops.task86b(n));
         } else {
             System.out.println("Not natural number");
         }
-        return n;
     }
+
+    public static void runTask108() {
+        int n = ConsoleReader.ReadNumber();
+        if (n > 0) {
+            System.out.println("The smallest number of appearance 2^r>n " + SimpleLoops.task108(n));
+        } else {
+            System.out.println("Not natural number");
+        }
+    }
+
+}
 
     private static void start178h() {
         System.out.println("Pls write how many number you want to check");
@@ -88,7 +101,7 @@ public class RunTasks {
 
     private static void start561() {
         System.out.println("Pls write number");
-        System.out.println(Integers.task561(ConsoleReader.readInt())+ " are relevant numbers! ");
+        System.out.println(Integers.task561(ConsoleReader.readInt()) + " are relevant numbers! ");
     }
 
 }
