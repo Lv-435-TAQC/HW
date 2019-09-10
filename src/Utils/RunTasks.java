@@ -1,6 +1,7 @@
 package Utils;
 
 import Chapter1.CyclesAndBranching;
+import Chapter1.NestedLoops;
 import Chapter1.SimpleLoops;
 
 import java.util.ArrayList;
@@ -23,9 +24,11 @@ public class RunTasks {
                 start178h();
             case "243a":
                 start243a();
+            case "331a":
+                start331a();
 
         }
-        }
+    }
 
 
     private static void start88b() {
@@ -66,6 +69,11 @@ public class RunTasks {
         System.out.println("Pls write number");
         CyclesAndBranching.task243a(ConsoleReader.readInt());
     }
+
+    static void start331a() {
+        System.out.println("Pls write number");
+        System.out.println( NestedLoops.task331a(ConsoleReader.readInt()) + " are couple of relevant numbers! ");
+            }
 
 }
 
