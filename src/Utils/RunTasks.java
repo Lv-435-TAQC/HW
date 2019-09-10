@@ -3,6 +3,7 @@ package Utils;
 import Chapter1.CyclesAndBranching;
 import Chapter1.NestedLoops;
 import Chapter1.SimpleLoops;
+import Chapter2.Integers;
 
 import java.util.ArrayList;
 
@@ -14,6 +15,7 @@ public class RunTasks {
         switch (ConsoleReader.readString().toLowerCase()) {
             case "88b":
                 start88b();
+
             case "86h":
                 runTask86h();
 
@@ -22,11 +24,21 @@ public class RunTasks {
 
             case "178h":
                 start178h();
+
             case "243a":
                 start243a();
+
             case "331a":
                 start331a();
 
+            case "561":
+                start561();
+
+            case "exit":
+                break;
+
+            default:
+                System.out.println("You write invalid number");
         }
     }
 
@@ -50,7 +62,6 @@ public class RunTasks {
         } else {
             System.out.println("Not natural number");
         }
-
         return n;
     }
 
@@ -65,15 +76,20 @@ public class RunTasks {
         System.out.println(CyclesAndBranching.task178h(a) + " numbers are relevant! ");
     }
 
-    static void start243a() {
+    private static void start243a() {
         System.out.println("Pls write number");
         CyclesAndBranching.task243a(ConsoleReader.readInt());
     }
 
-    static void start331a() {
+    private static void start331a() {
         System.out.println("Pls write number");
-        System.out.println( NestedLoops.task331a(ConsoleReader.readInt()) + " are couple of relevant numbers! ");
-            }
+        System.out.println(NestedLoops.task331a(ConsoleReader.readInt()) + " are couple of relevant numbers! ");
+    }
+
+    private static void start561() {
+        System.out.println("Pls write number");
+        System.out.println(Integers.task561(ConsoleReader.readInt())+ " are relevant numbers! ");
+    }
 
 }
 
