@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class CyclesAndBranching {
-    public static int task178b(int[] array) {
+    public static int task178b(ArrayList<Integer> array) {
         int count = 0;
         for (int item : array) {
             if ((item % 3 == 0) && (item % 5 != 0)) {

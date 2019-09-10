@@ -37,20 +37,12 @@ public class SimpleLoops {
         return sum;
     }
 
-  public static int task87(int n, int m) {
-        int sum = 0;
-        for (; m > 0 && n != 0; m--) {
-            sum += (n % 10);
-            n /= 10;
-        }
-        return sum;
-    }
 
-    public int task108(int n) {
-        if (Math.pow(2, (Math.log(n) / Math.log(2))) == n) {
-            return (Math.log(n) / Math.log(2));
-        } else {
-            return (Math.log(n) / Math.log(2)) + 1;
-        }
-    }
+//    public int task108(int n) {
+//        if (Math.pow(2, (Math.log(n) / Math.log(2))) == n) {
+//            return (Math.log(n) / Math.log(2));
+//        } else {
+//            return (Math.log(n) / Math.log(2)) + 1;
+//        }
+//    }
 }
