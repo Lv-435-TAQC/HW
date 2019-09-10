@@ -2,7 +2,7 @@ package chapter1;
 
 import java.util.List;
 
-public class Task331b {
+public class NestedLoops {
     public static void findNums(int a){
         for (int i=1;i<Math.sqrt(a);i++){
             for(int j=1;j<i;j++){
