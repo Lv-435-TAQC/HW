@@ -1,6 +1,6 @@
-package Task3;
+package chapter1;
 
-public class Task243b {
+public class CyclesAndBranching {
     public void getNum(int a){
         for (int i=0; i<=a;i++){
             for (int j=0;j<a;j++){
