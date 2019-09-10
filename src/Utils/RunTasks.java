@@ -40,6 +40,9 @@ public class RunTasks {
             case "88a":
                 start88a();
 
+            case "178v":
+                start178v();
+
             case "exit":
                 break;
 
@@ -150,6 +153,10 @@ public class RunTasks {
     private static void start88a() {
         System.out.println("Pls write number");
         System.out.println(SimpleLoops.task88a(ConsoleReader.readInt()));
+        }
+    private static void start178v() {
+        System.out.println("Pls write 5 numbers");
+        System.out.println(SimpleLoops.task178v(ConsoleReader.readInt()));
         }
 }
 
