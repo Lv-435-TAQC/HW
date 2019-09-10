@@ -63,6 +63,9 @@ public class RunTasks {
             case "225":
                 start225();
 
+            case "227":
+                start227();
+
             case "exit":
                 break;
 
@@ -202,6 +205,10 @@ public class RunTasks {
             System.out.println("Not natural number");
         }
 
+    }
+    static void start227() {
+        System.out.println("Pls write 2 numbers");
+        CyclesAndBranching.task243a(ConsoleReader.readInt());
     }
 
 }
