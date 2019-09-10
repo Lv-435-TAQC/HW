@@ -41,13 +41,11 @@ public class RunTasks {
             case "561":
                 start561();
 
-<<<<<<< Updated upstream
             case "88a":
                 start88a();
-=======
+
             case "225":
                 start225();
->>>>>>> Stashed changes
 
             case "exit":
                 break;
@@ -160,17 +158,17 @@ public class RunTasks {
     private static void start88a() {
         System.out.println("Pls write number");
         System.out.println(SimpleLoops.task88a(ConsoleReader.readInt()));
-        }
-}
+    }
 
-    private static void start225()
-    {
+
+    private static void start225() {
         int n = ConsoleReader.ReadNumber();
         if (n > 0) {
-            System.out.println("The smallest number of appearance 2^r>n " + SimpleLoops.task225(n));
+            CyclesAndBranching.task225(n);
         } else {
             System.out.println("Not natural number");
         }
+
     }
 
 }

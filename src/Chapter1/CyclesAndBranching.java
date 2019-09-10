@@ -54,6 +54,7 @@ public class CyclesAndBranching {
                 a.add(i);
             }
         }
+        return a;
     }
 
     public static double task242(final int n) {
