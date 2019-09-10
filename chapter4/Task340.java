@@ -3,49 +3,59 @@ package edu.hw2.chapter4;
 
 public class Task340 {
 
-    private final static int[] startArray = fillUpTheArray();
-    private final static int m = (int) (Math.random() * 10);
-    private static int[] result;
-
     private static int[] fillUpTheArray() {
         int[] array = new int[20];
-        for (int i = 0; i <= array.length -1; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = i + ((int) (Math.random() * 10));
         }
         return array;
     }
 
-    private static void findThreeNumbersWithSpecificConditions() {
+    private static int[] findThreeNumbersWithSpecificConditions(int[] startArray, int m) {
         int i = 0;
         int j = 0;
         int k = 0;
-        while (i < 19) {
-            while (j < 19) {
-                while (k < 19) {
-                        if (startArray[i] + startArray[j] + startArray[k] == m) {
-                            result = new int[]{i, j, k};
-                        }
-                    k++;
-                }
+        while (i < 20) {
+            if (startArray[i] + startArray[j] + startArray[k] == m) {
+                return new int[]{i, j, k};
+            }
+            if (k < 19) {
+                k++;
+            } else {
+                k = 0;
                 j++;
             }
-            i++;
+            if (j == 20) {
+                j = 0;
+                i++;
+            }
+        }
+        return null;
+    }
+
+    private static void demonstrate() {
+        int[] resultArray = null;
+        int[] startingArray;
+        int m = 12;
+        while (resultArray == null) {
+            startingArray = fillUpTheArray();
+            System.out.print("The starting array is --> ");
+            for (int item : startingArray) {
+                System.out.print(item + " ");
+            }
+            resultArray = findThreeNumbersWithSpecificConditions(startingArray, m);
+        }
+        if (resultArray == null) {
+            System.out.print("\nThere are no three numbers which can satisfy the conditions " + m);
+        } else {
+            System.out.print("\nThe three numbers which can satisfy the equation a(i) + a(j) + a(k) = " + m + " are --> ");
+            for (int item : resultArray) {
+                System.out.print(item + " ");
+            }
         }
     }
 
     public static void main(String[] args) {
-        System.out.print("The starting array is --> ");
-        for (int item : startArray) {
-            System.out.print(item + " ");
-        }
-        findThreeNumbersWithSpecificConditions();
-        if (result == null) {
-            System.out.println("\nThere are no three numbers which can satisfy the conditions");
-        } else {
-            System.out.println("\nThe three numbers which can satisfy the equation a(i) + a(j) + a(k) = " + m + " are ");
-            for (int item : result) {
-                System.out.print(item + " ");
-            }
-        }
+        demonstrate();
     }
 }
