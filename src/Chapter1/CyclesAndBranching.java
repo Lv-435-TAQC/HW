@@ -1,6 +1,5 @@
 package Chapter1;
 
-<<<<<<< Updated upstream
 import java.util.ArrayList;
 
 public class CyclesAndBranching {
@@ -12,28 +11,5 @@ public class CyclesAndBranching {
             }
         }
         return a.size();
-=======
-import java.util.LinkedList;
-
-public class CyclesAndBranching {
-    public static int task178b (int[] array) {
-        int count = 0;
-        for(int item : array){
-            if((item % 3 == 0) && (item % 5 != 0)){
-                count ++;
-            }
-        }
-        return count;
-    }
-    public static LinkedList<Integer> task226(int m, int n){
-        LinkedList<Integer> listMultipleNumbers = new LinkedList<>();
-        int max = m * n;
-        for(int iter = max - 1; iter > 0; iter--){
-            if((iter % m) == 0  && (iter % n) == 0) {
-                listMultipleNumbers.add(iter);
-            }
-        }
-        return listMultipleNumbers;
->>>>>>> Stashed changes
     }
 }
