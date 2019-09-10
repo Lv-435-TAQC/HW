@@ -46,7 +46,7 @@ public class SimpleLoops {
         return sum;
     }
 
-    public int task108(int n) {
+    public static int task108(int n) {
         if (Math.pow(2, (Math.log(n) / Math.log(2))) == n) {
             return (Math.log(n) / Math.log(2));
         } else {
