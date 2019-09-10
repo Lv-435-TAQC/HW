@@ -1,6 +1,7 @@
 package Chapter2;
 import java.util.ArrayList;
 import java.util.LinkedList;
+
 public class Integers {
    public static LinkedList<Integer> task559(int n){
        LinkedList<Integer> numbers = new LinkedList<>();

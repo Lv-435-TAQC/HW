@@ -29,7 +29,7 @@ public class SimpleLoops {
         return res;
     }
 
-    public static int task87(int n, int m) {
+  public static int task87(int n, int m) {
         int sum = 0;
         for (; m > 0 && n != 0; m--) {
             sum += (n % 10);
@@ -45,5 +45,4 @@ public class SimpleLoops {
             return (Math.log(n) / Math.log(2)) + 1;
         }
     }
-
 }
