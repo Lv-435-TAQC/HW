@@ -38,4 +38,16 @@ public class ConsoleReader {
         }
         return result;
     }
+    public static int ReadNumber() {
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Hello, please input number");
+        int n = 0;
+        try {
+            n = keyboard.nextInt();
+        } catch (Exception e) {
+            System.out.println("This is not a number");
+            System.exit(1);
+        }
+        return n;
+    }
 }
