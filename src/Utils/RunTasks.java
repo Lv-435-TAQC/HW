@@ -1,7 +1,9 @@
 package Utils;
 
+import Chapter1.CyclesAndBranching;
 import Chapter1.SimpleLoops;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RunTasks {
@@ -11,20 +13,35 @@ public class RunTasks {
         System.out.println("Write number of task");
         switch (ConsoleReader.readString().toLowerCase()) {
             case "88b":
-                System.out.println(start88b() + " is reloaded number! ");
+                start88b();
             case "86h":
-               runTask86h();
+                runTask86h();
+            case "178h":
+                start178h();
+
         }
     }
 
-    static int start88b() {
+    private static void start88b() {
         System.out.println("Pls write number");
-        return SimpleLoops.task88b(ConsoleReader.readInt());
+        System.out.println(SimpleLoops.task88b(ConsoleReader.readInt()) + " is reloaded number! ");
     }
 
     private static void runTask86h() {
         final String number = ConsoleReader.readPositiveInteger();
         System.out.println("The sum of digits with consecutive sings of the number " + number + " is "
                 + SimpleLoops.task86h(number));
+    }
+
+    private static void start178h() {
+        System.out.println("Pls write how many number you want to check");
+        int size = ConsoleReader.readInt();
+        ArrayList<Integer> a = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            System.out.println("Write number");
+            a.add(ConsoleReader.readInt());
+        }
+        System.out.println(CyclesAndBranching.task178h(a) + " numbers are relevant! ");
+
     }
 }
