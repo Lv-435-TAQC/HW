@@ -16,9 +16,12 @@ public class RunTasks {
                 start88b();
             case "86h":
                 runTask86h();
+
+            case "86b":
+                System.out.println(start86b() + "  is sum of numbers! ");
+
             case "178h":
                 start178h();
-
         }
     }
 
@@ -33,15 +36,25 @@ public class RunTasks {
                 + SimpleLoops.task86h(number));
     }
 
-    private static void start178h() {
-        System.out.println("Pls write how many number you want to check");
-        int size = ConsoleReader.readInt();
-        ArrayList<Integer> a = new ArrayList<>();
-        for (int i = 0; i < size; i++) {
-            System.out.println("Write number");
-            a.add(ConsoleReader.readInt());
-        }
-        System.out.println(CyclesAndBranching.task178h(a) + " numbers are relevant! ");
 
+    public static int runTask86b() {
+        int n = ConsoleReader.ReadNaturalNumber();
+        if (n > 0) {
+            return SimpleLoops.task86b(n)
+        } else {
+            System.out.println("Not natural number");
+        }
+
+        private static void start178h () {
+            System.out.println("Pls write how many number you want to check");
+            int size = ConsoleReader.readInt();
+            ArrayList<Integer> a = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                System.out.println("Write number");
+                a.add(ConsoleReader.readInt());
+            }
+            System.out.println(CyclesAndBranching.task178h(a) + " numbers are relevant! ");
+
+
+        }
     }
-}
