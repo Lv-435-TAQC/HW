@@ -53,4 +53,12 @@ public class SimpleLoops {
             return (Math.log(n) / Math.log(2)) + 1;
         }
     }
+    public static boolean task88a(int num){
+        boolean result=false;
+        int pow = (int) Math.pow(num, 2);
+        String str = Integer.toString(pow);
+        if (str.indexOf("3")!=-1)
+            result=true;
+        return result;
+    }
 }
