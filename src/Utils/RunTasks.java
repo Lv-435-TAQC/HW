@@ -25,6 +25,9 @@ public class RunTasks {
             case "108":
                 start108();
 
+            case "178v":
+                start178v();
+
             case "178h":
                 start178h();
 
@@ -36,6 +39,9 @@ public class RunTasks {
 
             case "561":
                 start561();
+
+            case "88a":
+                start88a();
 
             case "exit":
                 break;
@@ -144,6 +150,9 @@ public class RunTasks {
         System.out.println("Pls write number");
         System.out.println(Integers.task561(ConsoleReader.readInt()) + " are relevant numbers! ");
     }
-
+    private static void start178b() {
+        System.out.println("Pls write 5 numbers");
+        System.out.println(SimpleLoops.task88a(ConsoleReader.readInt()));
+        }
 }
 
