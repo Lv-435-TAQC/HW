@@ -12,4 +12,16 @@ public class CyclesAndBranching {
         }
         return a.size();
     }
+    public static ArrayList<Integer> task243a(Integer n) {
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if ((i * i + j * j) == n) {
+                    a.add(i);
+                    a.add(j);
+                }
+            }
+        }
+        return a;
+    }
 }
