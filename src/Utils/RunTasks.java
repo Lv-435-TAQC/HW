@@ -1,4 +1,5 @@
-package edu.hw2.Utils;
+package Utils;
+
 
 import Chapter1.CyclesAndBranching;
 import Chapter1.NestedLoops;
@@ -39,6 +40,9 @@ public class RunTasks {
 
             case "561":
                 start561();
+
+            case "88a":
+                start88a();
 
             case "exit":
                 break;
@@ -152,5 +156,9 @@ public class RunTasks {
         CyclesAndBranching.task242(3);
     }
 
+    private static void start88a() {
+        System.out.println("Pls write number");
+        System.out.println(SimpleLoops.task88a(ConsoleReader.readInt()));
+        }
 }
 
