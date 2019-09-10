@@ -37,6 +37,9 @@ public class RunTasks {
             case "561":
                 start561();
 
+            case "88a":
+                start88a();
+
             case "exit":
                 break;
 
@@ -144,6 +147,9 @@ public class RunTasks {
         System.out.println("Pls write number");
         System.out.println(Integers.task561(ConsoleReader.readInt()) + " are relevant numbers! ");
     }
-
+    private static void start88a() {
+        System.out.println("Pls write number");
+        System.out.println(SimpleLoops.task88a(ConsoleReader.readInt()));
+        }
 }
 
