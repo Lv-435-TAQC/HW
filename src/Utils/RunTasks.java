@@ -66,6 +66,9 @@ public class RunTasks {
             case "227":
                 start227();
 
+            case "178v":
+                start178v();
+
             case "exit":
                 break;
 
@@ -209,6 +212,9 @@ public class RunTasks {
     static void start227() {
         System.out.println("Pls write 2 numbers");
         CyclesAndBranching.task243a(ConsoleReader.readInt());
+    }
+    static void start178v() {
+        CyclesAndBranching.task178v();
     }
 
 }

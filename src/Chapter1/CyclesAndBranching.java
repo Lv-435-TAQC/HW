@@ -1,6 +1,9 @@
 package Chapter1;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class CyclesAndBranching {
     public static int task178b(ArrayList<Integer> array) {
@@ -73,6 +76,11 @@ public class CyclesAndBranching {
                 res=i;
         }
         return res;
+    }
+    public static int task178v(){
+        List<Integer> nums = Arrays.asList(3,5,36,24,100,77);
+        List<Integer> list = nums.stream().filter(num->Math.sqrt(num)%2==0).collect(Collectors.toList());
+        return list.size();
     }
 
 }
