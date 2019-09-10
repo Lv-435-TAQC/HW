@@ -19,7 +19,7 @@ public class SimpleLoops {
         return result;
     }
 
-    public static double task86b(int n) {
+    public static int task86b(int n) {
         int res = 0;
         while (n > 0) {
             int a = n % 10;
