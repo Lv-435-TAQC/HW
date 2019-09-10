@@ -47,6 +47,15 @@ public class CyclesAndBranching {
         }
         return a.size();
     }
+    public static ArrayList<Integer> task225 (int n) {
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        for (int i = 1; i < Math.sqrt(n); i++) {
+            if ((n % (i * i) == 0) && (n % (i * i * i) != 0)) {
+                a.add(i);
+            }
+        }
+        return a;
+    }
 
     public static double task242(final int n) {
         double result = 0;

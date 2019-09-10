@@ -44,6 +44,9 @@ public class RunTasks {
             case "88a":
                 start88a();
 
+            case "225":
+                start225();
+
             case "exit":
                 break;
 
@@ -97,10 +100,9 @@ public class RunTasks {
         System.out.println(NestedLoops.task331a(ConsoleReader.readInt()) + " are couple of relevant numbers! ");
     }
         return n;
-    }
-    }
 
-    public static void runTask108() {
+
+    private static void runTask108() {
         int n = ConsoleReader.ReadNumber();
         if (n > 0) {
             System.out.println("The smallest number of appearance 2^r>n " + SimpleLoops.task108(n));
@@ -108,8 +110,6 @@ public class RunTasks {
             System.out.println("Not natural number");
         }
     }
-
-}
 
     private static void start178h() {
         System.out.println("Pls write how many number you want to check");
@@ -125,17 +125,15 @@ public class RunTasks {
 
     private static void start561() {
         System.out.println("Pls write number");
-        System.out.println(Integers.task561(ConsoleReader.readInt())+ " are relevant numbers! ");
+        System.out.println(Integers.task561(ConsoleReader.readInt()) + " are relevant numbers! ");
     }
 
-}
+
     static void start243a() {
         System.out.println("Pls write number");
         CyclesAndBranching.task243a(ConsoleReader.readInt());
     }
 
-
-    }
 
     private static void start243a() {
         System.out.println("Pls write number");
@@ -152,6 +150,7 @@ public class RunTasks {
         System.out.println(Integers.task561(ConsoleReader.readInt()) + " are relevant numbers! ");
     }
 
+
     private static void start242() {
         CyclesAndBranching.task242(3);
     }
@@ -159,6 +158,17 @@ public class RunTasks {
     private static void start88a() {
         System.out.println("Pls write number");
         System.out.println(SimpleLoops.task88a(ConsoleReader.readInt()));
-        }
-}
+    }
 
+
+    private static void start225() {
+        int n = ConsoleReader.ReadNumber();
+        if (n > 0) {
+            CyclesAndBranching.task225(n);
+        } else {
+            System.out.println("Not natural number");
+        }
+
+    }
+
+}
