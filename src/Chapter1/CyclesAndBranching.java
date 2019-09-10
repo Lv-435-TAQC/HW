@@ -66,6 +66,13 @@ public class CyclesAndBranching {
         }
         return result;
     }
-
+    public static int task227(int a , int b) {
+        int res=0;
+        for (int i = 1; i <= 40; i++) {
+            if ((a % i == 0) && (b % i == 0))
+                res=i;
+        }
+        return res;
+    }
 
 }
