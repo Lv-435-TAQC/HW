@@ -12,69 +12,90 @@ public class RunTasks {
 
 
     public static void menu() {
-        System.out.println("Write number of task");
-        switch (ConsoleReader.readString().toLowerCase()) {
-            case "88b":
-                start88b();
+        boolean check = true;
+        do {
+            System.out.println("Write number of task");
+            switch (ConsoleReader.readString().toLowerCase()) {
+                case "88b":
+                    start88b();
+                    break;
 
-            case "86h":
-                runTask86h();
+                case "86h":
+                    runTask86h();
+                    break;
 
 //            case "86b":
 //                start86b();
+//                break;
 //
 //            case "108":
 //                start108();
+//                break;
 
-            case "178h":
-                start178h();
+                case "178h":
+                    start178h();
 
-            case "242":
-                start242();
+                case "242":
+                    start242();
+                    break;
 
-            case "243a":
-                start243a();
+                case "243a":
+                    start243a();
+                    break;
 
-            case "331a":
-                start331a();
+                case "331a":
+                    start331a();
+                    break;
 
-            case "561":
-                start561();
+                case "561":
+                    start561();
+                    break;
 
 
-            case "87":
-                start87();
+                case "87":
+                    start87();
+                    break;
 
-            case "178b":
-                start178b();
+                case "178b":
+                    start178b();
+                    break;
 
-            case "226":
-                start226();
+                case "226":
+                    start226();
+                    break;
 
-            case "329":
-                start329();
+                case "329":
+                    start329();
+                    break;
 
-            case "559":
-                start559();
+                case "559":
+                    start559();
+                    break;
 
-            case "88a":
-                start88a();
+                case "88a":
+                    start88a();
+                    break;
 
-            case "225":
-                start225();
+                case "225":
+                    start225();
+                    break;
 
-            case "227":
-                start227();
+                case "227":
+                    start227();
+                    break;
 
-            case "178v":
-                start178v();
+                case "178v":
+                    start178v();
+                    break;
 
-            case "exit":
-                break;
+                case "exit":
+                    check = false;
+                    break;
 
-            default:
-                System.out.println("You write invalid number");
-        }
+                default:
+                    System.out.println("You write invalid number");
+            }
+        }while(check);
     }
 
     private static void start87() {
