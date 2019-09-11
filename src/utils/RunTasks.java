@@ -94,6 +94,10 @@ public class RunTasks {
                     start330();
                     break;
 
+                case "560":
+                    start560();
+                    break;
+
                 case "exit":
                     check = false;
                     break;
@@ -229,6 +233,17 @@ public class RunTasks {
                 listOfPerfectNumbers.add(i);
         }
         System.out.println(listOfPerfectNumbers);
+    }
+
+    private static void start560(){
+        int firstNum = 0;
+        int secondNum = 0;
+        for (int i = 200;i<=300;i++) {
+            firstNum = Integers.task560(i);
+            secondNum = Integers.task560(firstNum);
+            if (i == secondNum)
+                System.out.println(i + " " + secondNum);
+        }
     }
 
 }
