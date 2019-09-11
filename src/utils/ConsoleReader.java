@@ -13,10 +13,6 @@ public class ConsoleReader {
         return in.nextLine();
     }
 
-    static Integer readInt() {
-        return in.nextInt();
-    }
-
     public static String readPositiveInteger() {
         final InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         final BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
