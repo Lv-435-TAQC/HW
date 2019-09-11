@@ -6,7 +6,6 @@ import chapter1.NestedLoops;
 import chapter1.SimpleLoops;
 import chapter2.Integers;
 
-import javax.jnlp.ClipboardService;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -98,6 +97,10 @@ public class RunTasks {
                     start560();
                     break;
 
+                case "569":
+                    start569();
+                    break;
+
                 case "exit":
                     check = false;
                     break;
@@ -105,7 +108,7 @@ public class RunTasks {
                 default:
                     System.out.println("You write invalid number");
             }
-        }while(check);
+        } while (check);
     }
 
     private static void start87() {
@@ -218,27 +221,27 @@ public class RunTasks {
         System.out.println("Pls write 2 numbers");
         int firstNum = ConsoleReader.ReadNumber();
         int secondNum = ConsoleReader.ReadNumber();
-        CyclesAndBranching.task227(firstNum,secondNum);
+        CyclesAndBranching.task227(firstNum, secondNum);
     }
 
     static void start178v() {
         CyclesAndBranching.task178v();
     }
 
-    private static void start330(){
+    private static void start330() {
         List<Integer> listOfPerfectNumbers = new ArrayList();
         int number = ConsoleReader.ReadNumber();
-        for(int i=1;i<number;i++){
-            if(NestedLoops.task330(i)==i)
+        for (int i = 1; i < number; i++) {
+            if (NestedLoops.task330(i) == i)
                 listOfPerfectNumbers.add(i);
         }
         System.out.println(listOfPerfectNumbers);
     }
 
-    private static void start560(){
+    private static void start560() {
         int firstNum = 0;
         int secondNum = 0;
-        for (int i = 200;i<=300;i++) {
+        for (int i = 200; i <= 300; i++) {
             firstNum = Integers.task560(i);
             secondNum = Integers.task560(firstNum);
             if (i == secondNum)
@@ -246,4 +249,8 @@ public class RunTasks {
         }
     }
 
+
+    private static void start569() {
+        System.out.println(Integers.task569(Integer.parseInt(ConsoleReader.readPositiveInteger())));
+    }
 }
