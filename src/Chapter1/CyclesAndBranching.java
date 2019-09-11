@@ -5,6 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static edu.hw2.Utils.Util.factorial;
+
 public class CyclesAndBranching {
     public static int task178b(ArrayList<Integer> array) {
         int count = 0;
@@ -65,7 +67,7 @@ public class CyclesAndBranching {
         double k = 0;
         for (int i = (int) k; i <= n; i++) {
             k = i;
-            result += Math.pow(-1, k * (k - 1) / 2) / Util.factorial((int) k);
+            result += Math.pow(-1, k * (k - 1) / 2) / edu.hw2.Utils.Util.factorial((int) k);
         }
         return result;
     }

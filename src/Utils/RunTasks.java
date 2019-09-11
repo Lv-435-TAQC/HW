@@ -122,15 +122,14 @@ public class RunTasks {
 
 
     public static void runTask86b() {
-        int n = ConsoleReader.ReadNumber();
-        if (n > 0) {
-//            System.out.println(" Sum numbers is " + SimpleLoops.task86b(n));
-        } else {
-            System.out.println("Not natural number");
-        }
+                int n = ConsoleReader.ReadNumber();
+                if (n > 0) {
+                        System.out.println(" Sum numbers is " + SimpleLoops.task86b(n));
+                } else {
+                    System.out.println("Not natural number");
+                }
 
- //       return n;
-    }
+}
 
     private static void start178h() {
         System.out.println("Pls write how many number you want to check");
@@ -142,38 +141,15 @@ public class RunTasks {
         }
         System.out.println(CyclesAndBranching.task178h(a) + " numbers are relevant! ");
     }
-
-    private static void start243a() {
-        System.out.println("Pls write number");
-        CyclesAndBranching.task243a(ConsoleReader.readInt());
-    }
-
-    private static void start331a() {
-        System.out.println("Pls write number");
-        System.out.println(NestedLoops.task331a(ConsoleReader.readInt()) + " are couple of relevant numbers! ");
-    }
-        return n;
 
 
     private static void runTask108() {
         int n = ConsoleReader.ReadNumber();
         if (n > 0) {
-            System.out.println("The smallest number of appearance 2^r>n " + SimpleLoops.task108(n));
+ //           System.out.println("The smallest number of appearance 2^r>n " + SimpleLoops.task108(n));
         } else {
             System.out.println("Not natural number");
         }
-    }
-
-    private static void start178h() {
-        System.out.println("Pls write how many number you want to check");
-        int size = ConsoleReader.readInt();
-        ArrayList<Integer> a = new ArrayList<>();
-        for (int i = 0; i < size; i++) {
-            System.out.println("Write number");
-            a.add(ConsoleReader.readInt());
-        }
-        System.out.println(CyclesAndBranching.task178h(a) + " numbers are relevant! ");
-
     }
 
     private static void start561() {
@@ -181,7 +157,7 @@ public class RunTasks {
         System.out.println(Integers.task561(ConsoleReader.readInt()) + " are relevant numbers! ");
     }
 
-    static void start243a() {
+    static void start243a(){
         System.out.println("Pls write number");
         CyclesAndBranching.task243a(ConsoleReader.readInt());
     }
