@@ -6,6 +6,10 @@ import chapter1.NestedLoops;
 import chapter1.SimpleLoops;
 import chapter2.Integers;
 
+import javax.jnlp.ClipboardService;
+import java.util.ArrayList;
+import java.util.List;
+
 public class RunTasks {
 
 
@@ -84,6 +88,10 @@ public class RunTasks {
 
                 case "178v":
                     start178v();
+                    break;
+
+                case "330":
+                    start330();
                     break;
 
                 case "exit":
@@ -211,6 +219,16 @@ public class RunTasks {
 
     static void start178v() {
         CyclesAndBranching.task178v();
+    }
+
+    private static void start330(){
+        List<Integer> listOfPerfectNumbers = new ArrayList();
+        int number = ConsoleReader.ReadNumber();
+        for(int i=1;i<number;i++){
+            if(NestedLoops.task330(i)==i)
+                listOfPerfectNumbers.add(i);
+        }
+        System.out.println(listOfPerfectNumbers);
     }
 
 }
