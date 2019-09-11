@@ -204,7 +204,9 @@ public class RunTasks {
 
     static void start227() {
         System.out.println("Pls write 2 numbers");
-        CyclesAndBranching.task243a(Integer.parseInt(ConsoleReader.readInteger()));
+        int firstNum = ConsoleReader.ReadNumber();
+        int secondNum = ConsoleReader.ReadNumber();
+        CyclesAndBranching.task227(firstNum,secondNum);
     }
 
     static void start178v() {
