@@ -1,4 +1,4 @@
-package edu.hw2.Utils;
+package utils;
 
 public class Util {
 

@@ -1,19 +1,21 @@
-package Chapter2;
+package chapter2;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Integers {
-   public static LinkedList<Integer> task559(int n){
-       LinkedList<Integer> numbers = new LinkedList<>();
-       int mersensMumber = 0;
-       for(int i = 0 ; i < n ; i++ ){
-           mersensMumber = ((int)Math.pow( 2, i) - 1);
-            if(mersensMumber < n){
-                numbers.add(mersensMumber);
+    public static LinkedList<Integer> task559(int n) {
+        LinkedList<Integer> numbers = new LinkedList<>();
+        int numberOfMersen = 0;
+        for (int i = 0; i < n; i++) {
+            numberOfMersen = ((int) Math.pow(2, i) - 1);
+            if (numberOfMersen < n) {
+                numbers.add(numberOfMersen);
             }
-       }
-       return numbers;
-   }
+        }
+        return numbers;
+    }
+
     public static ArrayList<Integer> task561(Integer n) {
         ArrayList<Integer> a = new ArrayList<>();
         String test;

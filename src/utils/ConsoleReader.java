@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,12 +7,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ConsoleReader {
-   private static Scanner in = new Scanner(System.in);
-    static String readString(){
+    private static Scanner in = new Scanner(System.in);
+
+    static String readString() {
         return in.nextLine();
     }
-    static Integer readInt(){
-        return  in.nextInt();
+
+    static Integer readInt() {
+        return in.nextInt();
     }
 
     public static String readPositiveInteger() {
@@ -39,6 +41,7 @@ public class ConsoleReader {
         }
         return result;
     }
+
     public static int ReadNumber() {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Hello, please input number");
@@ -51,10 +54,11 @@ public class ConsoleReader {
         }
         return n;
     }
+
     public static String readInteger() {
         final InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         final BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-        String result = new String();
+        String result = "";
         do {
             System.out.println("Enter integer");
             try {
@@ -62,34 +66,36 @@ public class ConsoleReader {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } while (!isIntager(result));
+        } while (!isInteger(result));
         return result;
     }
-    private static boolean isIntager(String string) {
+
+    private static boolean isInteger(String string) {
         boolean result = true;
         try {
             Integer.parseInt(string);
-        } catch ( NumberFormatException | NullPointerException exception) {
+        } catch (NumberFormatException | NullPointerException exception) {
             System.out.println("Your number is incorrect, please try again");
-            return false;
+            result =  false;
         }
         return result;
     }
-    public static ArrayList<Integer> integersForArray(){
+
+    public static ArrayList<Integer> integersForArray() {
         final InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         final BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         ArrayList<Integer> array = new ArrayList<>();
-        String result = new String();
+        String result = "";
         do {
             System.out.println("Enter integer ('-' char - end of numbers)");
-            try{
+            try {
                 result = bufferedReader.readLine();
-                if(isIntager(result)){
+                if (isInteger(result)) {
                     array.add(Integer.valueOf(result));
                 }
-                }catch (IOException e) {
-                    e.printStackTrace();
-                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         } while (!result.contentEquals("/"));
         return array;
     }

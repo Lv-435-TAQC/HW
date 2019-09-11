@@ -1,10 +1,10 @@
-package Utils;
+package utils;
 
 
-import Chapter1.CyclesAndBranching;
-import Chapter1.NestedLoops;
-import Chapter1.SimpleLoops;
-import Chapter2.Integers;
+import chapter1.CyclesAndBranching;
+import chapter1.NestedLoops;
+import chapter1.SimpleLoops;
+import chapter2.Integers;
 
 import java.util.ArrayList;
 
@@ -78,35 +78,39 @@ public class RunTasks {
     }
 
     private static void start87() {
-        int n,m;
+        int n, m;
         System.out.println("Please write two integers:");
-        n = Integer.parseInt( ConsoleReader.readInteger());
-        m = Integer.parseInt( ConsoleReader.readInteger());
-        System.out.println("Task 87 with two arguments n = " + n + ", m = " + m + ", rezult = " + SimpleLoops.task87(n,m));
+        n = Integer.parseInt(ConsoleReader.readInteger());
+        m = Integer.parseInt(ConsoleReader.readInteger());
+        System.out.println("Task 87 with two arguments n = " + n + ", m = " + m + ", result = " + SimpleLoops.task87(n, m));
     }
+
     private static void start178b() {
         System.out.println("Please integers:");
-        System.out.println("Task 178b with your array, rezult = " + CyclesAndBranching.task178b(ConsoleReader.integersForArray()));
+        System.out.println("Task 178b with your array, result = " + CyclesAndBranching.task178b(ConsoleReader.integersForArray()));
     }
+
     private static void start226() {
-        int n,m;
+        int n, m;
         System.out.println("Please write two integers:");
-        n = Integer.parseInt( ConsoleReader.readInteger());
-        m = Integer.parseInt( ConsoleReader.readInteger());
-        System.out.println("Task 226 with two arguments n = " + n + ", m = " + m + ", rezult = " + CyclesAndBranching.task226(n,m));
+        n = Integer.parseInt(ConsoleReader.readInteger());
+        m = Integer.parseInt(ConsoleReader.readInteger());
+        System.out.println("Task 226 with two arguments n = " + n + ", m = " + m + ", result = " + CyclesAndBranching.task226(n, m));
     }
+
     private static void start329() {
-        int n,m;
+        int n, m;
         System.out.println("Please write two integers:");
-        n = Integer.parseInt( ConsoleReader.readInteger());
-        m = Integer.parseInt( ConsoleReader.readInteger());
-        System.out.println("Task 329 with two arguments n = " + n + ", m = " + m + ", rezult = " + NestedLoops.task329(n,m));
+        n = Integer.parseInt(ConsoleReader.readInteger());
+        m = Integer.parseInt(ConsoleReader.readInteger());
+        System.out.println("Task 329 with two arguments n = " + n + ", m = " + m + ", result = " + NestedLoops.task329(n, m));
     }
+
     private static void start559() {
-        int n,m;
+        int n, m;
         System.out.println("Please  integer:");
-        n = Integer.parseInt( ConsoleReader.readInteger());
-        System.out.println("Task 559 with two arguments n = " + n + ", rezult = " + Integers.task559(n));
+        n = Integer.parseInt(ConsoleReader.readInteger());
+        System.out.println("Task 559 with two arguments n = " + n + ", result = " + Integers.task559(n));
     }
 
     private static void start88b() {
@@ -122,14 +126,14 @@ public class RunTasks {
 
 
     public static void runTask86b() {
-                int n = ConsoleReader.ReadNumber();
-                if (n > 0) {
-                        System.out.println(" Sum numbers is " + SimpleLoops.task86b(n));
-                } else {
-                    System.out.println("Not natural number");
-                }
+        int n = ConsoleReader.ReadNumber();
+        if (n > 0) {
+            System.out.println(" Sum numbers is " + SimpleLoops.task86b(n));
+        } else {
+            System.out.println("Not natural number");
+        }
 
-}
+    }
 
     private static void start178h() {
         System.out.println("Pls write how many number you want to check");
@@ -146,7 +150,7 @@ public class RunTasks {
     private static void runTask108() {
         int n = ConsoleReader.ReadNumber();
         if (n > 0) {
- //           System.out.println("The smallest number of appearance 2^r>n " + SimpleLoops.task108(n));
+           System.out.println("The smallest number of appearance 2^r>n " + SimpleLoops.task108(n));
         } else {
             System.out.println("Not natural number");
         }
@@ -157,7 +161,7 @@ public class RunTasks {
         System.out.println(Integers.task561(ConsoleReader.readInt()) + " are relevant numbers! ");
     }
 
-    static void start243a(){
+    static void start243a() {
         System.out.println("Pls write number");
         CyclesAndBranching.task243a(ConsoleReader.readInt());
     }
@@ -185,10 +189,12 @@ public class RunTasks {
         }
 
     }
+
     static void start227() {
         System.out.println("Pls write 2 numbers");
         CyclesAndBranching.task243a(ConsoleReader.readInt());
     }
+
     static void start178v() {
         CyclesAndBranching.task178v();
     }

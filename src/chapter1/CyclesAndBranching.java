@@ -1,11 +1,10 @@
-package Chapter1;
+package chapter1;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static edu.hw2.Utils.Util.factorial;
 
 public class CyclesAndBranching {
     public static int task178b(ArrayList<Integer> array) {
@@ -21,9 +20,9 @@ public class CyclesAndBranching {
     public static LinkedList<Integer> task226(int m, int n) {
         LinkedList<Integer> listMultipleNumbers = new LinkedList<>();
         int max = m * n;
-        for (int iter = max - 1; iter > 0; iter--) {
-            if ((iter % m) == 0 && (iter % n) == 0) {
-                listMultipleNumbers.add(iter);
+        for (int i = max - 1; i > 0; i--) {
+            if ((i % m) == 0 && (i % n) == 0) {
+                listMultipleNumbers.add(i);
             }
         }
         return listMultipleNumbers;
@@ -31,7 +30,7 @@ public class CyclesAndBranching {
     }
 
     public static ArrayList<Integer> task243a(Integer n) {
-        ArrayList<Integer> a = new ArrayList<Integer>();
+        ArrayList<Integer> a = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 if ((i * i + j * j) == n) {
@@ -52,8 +51,9 @@ public class CyclesAndBranching {
         }
         return a.size();
     }
-    public static ArrayList<Integer> task225 (int n) {
-        ArrayList<Integer> a = new ArrayList<Integer>();
+
+    public static ArrayList<Integer> task225(int n) {
+        ArrayList<Integer> a = new ArrayList<>();
         for (int i = 1; i < Math.sqrt(n); i++) {
             if ((n % (i * i) == 0) && (n % (i * i * i) != 0)) {
                 a.add(i);
@@ -67,21 +67,23 @@ public class CyclesAndBranching {
         double k = 0;
         for (int i = (int) k; i <= n; i++) {
             k = i;
-            result += Math.pow(-1, k * (k - 1) / 2) / edu.hw2.Utils.Util.factorial((int) k);
+            result += Math.pow(-1, k * (k - 1) / 2) / utils.Util.factorial((int) k);
         }
         return result;
     }
-    public static int task227(int a , int b) {
-        int res=0;
+
+    public static int task227(int a, int b) {
+        int res = 0;
         for (int i = 1; i <= 40; i++) {
             if ((a % i == 0) && (b % i == 0))
-                res=i;
+                res = i;
         }
         return res;
     }
-    public static int task178v(){
-        List<Integer> nums = Arrays.asList(3,5,36,24,100,77);
-        List<Integer> list = nums.stream().filter(num->Math.sqrt(num)%2==0).collect(Collectors.toList());
+
+    public static int task178v() {
+        List<Integer> integerList = Arrays.asList(3, 5, 36, 24, 100, 77);
+        List<Integer> list = integerList.stream().filter(num -> Math.sqrt(num) % 2 == 0).collect(Collectors.toList());
         return list.size();
     }
 
