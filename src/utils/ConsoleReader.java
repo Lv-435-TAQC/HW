@@ -74,6 +74,10 @@ public class ConsoleReader {
             System.out.println("Your number is incorrect, please try again");
             result =  false;
         }
+        if(result == true && Integer.parseInt(string) < 0) {
+            result = false;
+        System.out.println("Your number is incorrect, please try again");
+        }
         return result;
     }
 
@@ -83,7 +87,7 @@ public class ConsoleReader {
         ArrayList<Integer> array = new ArrayList<>();
         String result = "";
         do {
-            System.out.println("Enter integer ('-' char - end of numbers)");
+            System.out.println("Enter integer ('/' char - end of numbers)");
             try {
                 result = bufferedReader.readLine();
                 if (isInteger(result)) {
