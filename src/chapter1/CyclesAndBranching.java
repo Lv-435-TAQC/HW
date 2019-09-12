@@ -102,6 +102,7 @@ public class CyclesAndBranching {
         }
         System.out.println();
     }
+
     public static Map task243b(int a) {
         Map<Integer,Integer> couple = new HashMap();
         for (int i=0; i<=a;i++){
@@ -116,4 +117,19 @@ public class CyclesAndBranching {
         }
         return couple;
     }
-}
+
+
+        public static ArrayList task224(int n){
+            ArrayList array = new ArrayList();
+            int num = 1;
+            while(num <= n){
+                if(n%num == 0) {
+                    array.add(num);
+                }
+                num++;
+            }
+            return array;
+        }
+    }
+
+
