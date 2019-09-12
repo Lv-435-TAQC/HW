@@ -118,6 +118,10 @@ public class RunTasks {
                     start107();
                     break;
 
+                case "243b":
+                    start243b();
+                    break;
+
                 case "exit":
                     check = false;
                     break;
@@ -284,5 +288,9 @@ public class RunTasks {
     private static void start107(){
         System.out.println("Pleas write number");
         System.out.println(SimpleLoops.task107(Integer.parseInt(ConsoleReader.readInteger()))+ " is pow of 4! ");
+    }
+    private static void start243b(){
+
+        System.out.println( CyclesAndBranching.task243b(ConsoleReader.ReadNumber()));
     }
 }
