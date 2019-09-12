@@ -35,6 +35,11 @@ public class RunTasks {
 
                 case "178h":
                     start178h();
+                    break;
+
+                case "184":
+                    start184();
+                    break;
 
                 case "242":
                     start242();
@@ -252,5 +257,9 @@ public class RunTasks {
 
     private static void start569() {
         System.out.println(Integers.task569(Integer.parseInt(ConsoleReader.readPositiveInteger())));
+    }
+
+    private static void start184() {
+        CyclesAndBranching.task184();
     }
 }
