@@ -1,7 +1,10 @@
 package chapter2;
 
+import utils.Util;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Integers {
     public static LinkedList<Integer> task559(int n) {
@@ -39,4 +42,27 @@ public class Integers {
 
     }
 
+    public static List<Integer> task569(int n) {
+        List<Integer> result = new ArrayList<>();
+        List<Integer> seriesOfNFirstPrimeNumbersAfterTwoThreeAndFive = new ArrayList<>();
+        int naturalNumber = 1;
+        int possiblePrimeNumber = 7;
+        while (seriesOfNFirstPrimeNumbersAfterTwoThreeAndFive.size() != n) {
+            if (Util.isPrimeNumber(possiblePrimeNumber)) {
+                seriesOfNFirstPrimeNumbersAfterTwoThreeAndFive.add(possiblePrimeNumber);
+            }
+            possiblePrimeNumber++;
+        }
+        while (result.size() != n) {
+            for (int j = 0; j < seriesOfNFirstPrimeNumbersAfterTwoThreeAndFive.size(); j++) {
+                if (naturalNumber % 2 == 0 && naturalNumber % 3 == 0 && naturalNumber % 5 == 0
+                        && naturalNumber % seriesOfNFirstPrimeNumbersAfterTwoThreeAndFive.get(j) != 0) {
+                    result.add(naturalNumber);
+                    break;
+                }
+            }
+            naturalNumber++;
+        }
+        return result;
+    }
 }

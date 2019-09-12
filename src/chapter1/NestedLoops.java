@@ -1,5 +1,8 @@
 package chapter1;
 
+
+import utils.Util;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -43,5 +46,25 @@ public class NestedLoops {
                 sum+=i;
         }
         return sum;
+    }
+
+    public static void task340() {
+        int[] resultArray;
+        int[] startingArray = Util.fillUpTheArray(20);
+        int m = 12;
+        System.out.print("The starting array is --> ");
+        for (int item : startingArray) {
+            System.out.print(item + " ");
+        }
+        resultArray = Util.findThreeNumbersWithSpecificConditions(startingArray, m);
+        if (resultArray == null) {
+            System.out.print("\nThere are no three numbers which can satisfy the conditions " + m);
+        } else {
+            System.out.print("\nThe three numbers which can satisfy the equation a(i) + a(j) + a(k) = " + m + " are --> ");
+            for (int item : resultArray) {
+                System.out.print(item + " ");
+            }
+        }
+        System.out.println();
     }
 }
