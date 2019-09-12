@@ -123,7 +123,10 @@ public class RunTasks {
 
                 case "224":
                     start224();
+                    break;
 
+                case "323":
+                    start323();
                     break;
 
                 case "exit":
@@ -257,7 +260,7 @@ public class RunTasks {
         }
     }
     private static void start86a(){
-        System.out.println("Pleas write number");
+        System.out.println("Please write number");
         System.out.println(SimpleLoops.task86a(Integer.parseInt(ConsoleReader.readInteger() ))+ " is digits of numbers! ");
     }
 
@@ -273,18 +276,22 @@ public class RunTasks {
         NestedLoops.task340();
     }
     private static void start107(){
-        System.out.println("Pleas write number");
+        System.out.println("Please write a number");
         System.out.println(SimpleLoops.task107(Integer.parseInt(ConsoleReader.readInteger()))+ " is a pow of 4! ");
     }
     private static void start224(){
-        System.out.println("Pleas write number");
+        System.out.println("Please write a number");
         System.out.println(CyclesAndBranching.task224(Integer.parseInt(ConsoleReader.readInteger()))+ " is natural dividers of your number" );
     }
     private static void start243b(){
-
         System.out.println( CyclesAndBranching.task243b(Integer.parseInt(ConsoleReader.readInteger())));
     }
     private static void start331b(){
         System.out.println();
+    }
+
+    private static void start323(){
+        System.out.println("Please write a number");
+        System.out.println(NestedLoops.task323(Integer.parseInt(ConsoleReader.readInteger()))+ " is relatively simple numbers to yours ");
     }
 }
