@@ -97,7 +97,9 @@ public class RunTasks {
                 case "560":
                     start560();
                     break;
-
+                case "86a":
+                    start86a();
+                    break;
                 case "exit":
                     check = false;
                     break;
@@ -244,6 +246,10 @@ public class RunTasks {
             if (i == secondNum)
                 System.out.println(i + " " + secondNum);
         }
+    }
+    private static void start86a(){
+        System.out.println("Pleas write number");
+        System.out.println(SimpleLoops.task86a(Integer.parseInt(ConsoleReader.readInteger() + " is digits of numbers! ")));
     }
 
 }
