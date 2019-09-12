@@ -24,17 +24,7 @@ public class ConsoleReader {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } while (result.substring(0, 1).equals("-") || !isNumeric(result));
-        return result;
-    }
-
-    private static boolean isNumeric(final String string) {
-        boolean result = true;
-        try {
-            Integer.parseInt(string);
-        } catch (NumberFormatException | NullPointerException exception) {
-            result = false;
-        }
+        } while (result.substring(0, 1).equals("-") || !Util.isNumeric(result));
         return result;
     }
 

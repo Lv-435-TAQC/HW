@@ -6,6 +6,9 @@ import chapter1.NestedLoops;
 import chapter1.SimpleLoops;
 import chapter2.Integers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RunTasks {
 
 
@@ -32,6 +35,11 @@ public class RunTasks {
 
                 case "178h":
                     start178h();
+                    break;
+
+                case "184":
+                    start184();
+                    break;
 
                 case "242":
                     start242();
@@ -83,6 +91,34 @@ public class RunTasks {
 
                 case "178v":
                     start178v();
+                    break;
+
+                case "330":
+                    start330();
+                    break;
+
+                case "340":
+                    start340();
+                    break;
+
+                case "560":
+                    start560();
+                    break;
+
+                case "86a":
+                    start86a();
+                    break;
+
+                case "569":
+                    start569();
+                    break;
+
+                case "107":
+                    start107();
+                    break;
+
+                case "224":
+                    start224();
                     break;
 
                 case "exit":
@@ -171,7 +207,7 @@ public class RunTasks {
     }
 
     private static void start242() {
-        CyclesAndBranching.task242(3);
+        System.out.println(CyclesAndBranching.task242(Integer.parseInt(ConsoleReader.readPositiveInteger())));
     }
 
     private static void start88a() {
@@ -186,11 +222,57 @@ public class RunTasks {
 
     static void start227() {
         System.out.println("Pls write 2 numbers");
-        CyclesAndBranching.task243a(Integer.parseInt(ConsoleReader.readInteger()));
+        int firstNum = ConsoleReader.ReadNumber();
+        int secondNum = ConsoleReader.ReadNumber();
+        CyclesAndBranching.task227(firstNum, secondNum);
     }
 
     static void start178v() {
         CyclesAndBranching.task178v();
     }
 
+    private static void start330() {
+        List<Integer> listOfPerfectNumbers = new ArrayList();
+        int number = ConsoleReader.ReadNumber();
+        for (int i = 1; i < number; i++) {
+            if (NestedLoops.task330(i) == i)
+                listOfPerfectNumbers.add(i);
+        }
+        System.out.println(listOfPerfectNumbers);
+    }
+
+    private static void start560() {
+        int firstNum = 0;
+        int secondNum = 0;
+        for (int i = 200; i <= 300; i++) {
+            firstNum = Integers.task560(i);
+            secondNum = Integers.task560(firstNum);
+            if (i == secondNum)
+                System.out.println(i + " " + secondNum);
+        }
+    }
+    private static void start86a(){
+        System.out.println("Pleas write number");
+        System.out.println(SimpleLoops.task86a(Integer.parseInt(ConsoleReader.readInteger() ))+ " is digits of numbers! ");
+    }
+
+    private static void start569() {
+        System.out.println(Integers.task569(Integer.parseInt(ConsoleReader.readPositiveInteger())));
+    }
+
+    private static void start184() {
+        CyclesAndBranching.task184();
+    }
+  
+    private static void start340() {
+        NestedLoops.task340();
+    }
+    private static void start107(){
+        System.out.println("Pleas write number");
+        System.out.println(SimpleLoops.task107(Integer.parseInt(ConsoleReader.readInteger()))+ " is a pow of 4! ");
+    }
+    private static void start224(){
+        System.out.println("Pleas write number");
+        System.out.println(CyclesAndBranching.task224(Integer.parseInt(ConsoleReader.readInteger()))+ " is natural dividers of your number" );
+    }
 }
