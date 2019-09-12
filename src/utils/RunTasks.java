@@ -118,8 +118,13 @@ public class RunTasks {
                     start107();
                     break;
 
+
+                case "243b":
+                    start243b();
+
                 case "224":
                     start224();
+
                     break;
 
                 case "exit":
@@ -292,5 +297,9 @@ public class RunTasks {
     private static void start224(){
         System.out.println("Pleas write number");
         System.out.println(CyclesAndBranching.task224(Integer.parseInt(ConsoleReader.readInteger()))+ " is natural dividers of your number" );
+    }
+    private static void start243b(){
+
+        System.out.println( CyclesAndBranching.task243b(ConsoleReader.ReadNumber()));
     }
 }
