@@ -125,6 +125,10 @@ public class RunTasks {
                     start224();
                     break;
 
+                case "323":
+                    start323();
+                    break;
+
                 case "exit":
                     check = false;
                     break;
@@ -284,5 +288,10 @@ public class RunTasks {
     }
     private static void start331b(){
         System.out.println();
+    }
+
+    private static void start323(){
+        System.out.println("Please write a number");
+        System.out.println(NestedLoops.task323(Integer.parseInt(ConsoleReader.readInteger()))+ " is relatively simple numbers to yours ");
     }
 }

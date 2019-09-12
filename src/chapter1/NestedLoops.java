@@ -80,4 +80,33 @@ public class NestedLoops {
             }
         }
     }
+
+    public static ArrayList task323(int n){
+        ArrayList relativelySimpleNumbers = new ArrayList();
+        for (int i = 2; i < n; i++) {
+            boolean a = true;
+            int q = (int) Math.sqrt(i);
+            for (int j = 2; j <= q; j++) {
+                if ((i % j) == 0) {
+                    a = false;
+                    break;
+                }
+            }
+            if (a) {
+                if(gcd(i, n) == 1)
+                    relativelySimpleNumbers.add(i);
+            }
+        }
+        return relativelySimpleNumbers;
+    }
+    private static int gcd(int a, int b) {
+        int t;
+        while(b != 0){
+            t = a;
+            a = b;
+            b = t%b;
+        }
+        return a;
+    }
+
 }
