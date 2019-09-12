@@ -63,4 +63,12 @@ public class SimpleLoops {
         }
         return counter;
     }
+    public static int task107(int m){
+        int k = 0;
+        while(Math.pow(4,k) < m){
+            k++;
+        }
+        return k-1;
+    }
+
 }

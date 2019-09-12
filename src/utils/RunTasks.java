@@ -114,6 +114,10 @@ public class RunTasks {
                     start569();
                     break;
 
+                case "107":
+                    start107();
+                    break;
+
                 case "exit":
                     check = false;
                     break;
@@ -276,5 +280,9 @@ public class RunTasks {
   
     private static void start340() {
         NestedLoops.task340();
+    }
+    private static void start107(){
+        System.out.println("Pleas write number");
+        System.out.println(SimpleLoops.task107(Integer.parseInt(ConsoleReader.readInteger()))+ " is pow of 4! ");
     }
 }
