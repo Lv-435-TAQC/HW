@@ -6,9 +6,9 @@ public class SimpleLoops {
         return Integer.parseInt(change);
     }
 
-    public static int task86h(final String number) {
+    public static int task86h(final int number) {
         int result = 0;
-        char[] digits = number.toCharArray();
+        char[] digits = String.valueOf(number).toCharArray();
         for (int i = 0; i < digits.length; i++) {
             if (i % 2 == 0) {
                 result += Integer.parseInt(String.valueOf(digits[i]));

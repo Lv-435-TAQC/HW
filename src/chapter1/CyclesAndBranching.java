@@ -86,10 +86,7 @@ public class CyclesAndBranching {
         return list.size();
     }
 
-    public static void task184() {
-        int[] startArray = Util.fillUpTheArray(67);
-        int p = (int) (Math.random() * 10);
-        int q = (int) (Math.random() * 10);
+    public static void task184(final int p, final int q, final int[] startArray) {
         System.out.print("Starting array --> ");
         for (int item : startArray) {
             System.out.print(item + " ");

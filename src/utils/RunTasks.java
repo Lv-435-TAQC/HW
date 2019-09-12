@@ -187,7 +187,7 @@ public class RunTasks {
     }
 
     private static void runTask86h() {
-        final String number = ConsoleReader.readPositiveInteger();
+        final int number = Integer.parseInt(ConsoleReader.readPositiveInteger());
         System.out.println("The sum of digits with consecutive sings of the number " + number + " is "
                 + SimpleLoops.task86h(number));
     }
@@ -275,11 +275,17 @@ public class RunTasks {
     }
 
     private static void start184() {
-        CyclesAndBranching.task184();
+        System.out.println("p");
+        final int p = Integer.parseInt(ConsoleReader.readPositiveInteger());
+        System.out.println("q");
+        final int q = Integer.parseInt(ConsoleReader.readPositiveInteger());
+        CyclesAndBranching.task184(p, q, Util.fillUpTheArray(67));
     }
 
     private static void start340() {
-        NestedLoops.task340();
+        System.out.println("m");
+        final int m = Integer.parseInt(ConsoleReader.readPositiveInteger());
+        NestedLoops.task340(m, Util.fillUpTheArray(20));
     }
 
     private static void start107() {
