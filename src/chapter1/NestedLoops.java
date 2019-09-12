@@ -64,5 +64,6 @@ public class NestedLoops {
                 System.out.print(item + " ");
             }
         }
+        System.out.println();
     }
 }
