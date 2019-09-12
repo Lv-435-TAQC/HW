@@ -1,5 +1,7 @@
 package chapter1;
 
+import utils.Util;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -87,4 +89,20 @@ public class CyclesAndBranching {
         return list.size();
     }
 
+    public static void task184() {
+        int[] startArray = Util.fillUpTheArray();
+        int p = (int) (Math.random() * 10);
+        int q = (int) (Math.random() * 10);
+        System.out.print("Starting array --> ");
+        for (int item : startArray) {
+            System.out.print(item + " ");
+        }
+        int[] array = Util.prepareArrayWithNilsInsteadOfNumbersWithSpecificCondition(startArray, p, q);
+        System.out.print("\nArray with nils instead of numbers, modulus of the division on "
+                + p + " of which gives in the remainder " + q + " -->");
+        for (int item : array) {
+            System.out.print(" " + item);
+        }
+        System.out.println();
+    }
 }
