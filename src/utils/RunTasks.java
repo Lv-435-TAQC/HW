@@ -266,7 +266,7 @@ public class RunTasks {
         }
     }
     private static void start86a(){
-        System.out.println("Pleas write number");
+        System.out.println("Please write number");
         System.out.println(SimpleLoops.task86a(Integer.parseInt(ConsoleReader.readInteger() ))+ " is digits of numbers! ");
     }
 
@@ -282,7 +282,7 @@ public class RunTasks {
         NestedLoops.task340();
     }
     private static void start107(){
-        System.out.println("Pleas write number");
+        System.out.println("Please write number");
         System.out.println(SimpleLoops.task107(Integer.parseInt(ConsoleReader.readInteger()))+ " is pow of 4! ");
     }
 }
