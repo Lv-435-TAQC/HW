@@ -118,6 +118,10 @@ public class RunTasks {
                     start107();
                     break;
 
+                case "224":
+                    start224();
+                    break;
+
                 case "exit":
                     check = false;
                     break;
@@ -283,6 +287,10 @@ public class RunTasks {
     }
     private static void start107(){
         System.out.println("Pleas write number");
-        System.out.println(SimpleLoops.task107(Integer.parseInt(ConsoleReader.readInteger()))+ " is pow of 4! ");
+        System.out.println(SimpleLoops.task107(Integer.parseInt(ConsoleReader.readInteger()))+ " is a pow of 4! ");
+    }
+    private static void start224(){
+        System.out.println("Pleas write number");
+        System.out.println(CyclesAndBranching.task224(Integer.parseInt(ConsoleReader.readInteger()))+ " is natural dividers of your number" );
     }
 }
