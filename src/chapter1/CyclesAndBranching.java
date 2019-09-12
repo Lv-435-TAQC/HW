@@ -105,4 +105,15 @@ public class CyclesAndBranching {
         }
         System.out.println();
     }
-}
+        public static ArrayList task224(int n){
+            ArrayList array = new ArrayList();
+            int num = 1;
+            while(num <= n){
+                if(n%num == 0) {
+                    array.add(num);
+                }
+                num++;
+            }
+            return array;
+        }
+    }
