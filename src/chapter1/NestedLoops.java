@@ -39,11 +39,12 @@ public class NestedLoops {
         return a;
 
     }
-    public static int task330(int n){
-        int sum=0;
-        for(int i=1;i<n;i++){
-            if (n%i==0)
-                sum+=i;
+
+    public static int task330(int n) {
+        int sum = 0;
+        for (int i = 1; i < n; i++) {
+            if (n % i == 0)
+                sum += i;
         }
         return sum;
     }
@@ -66,5 +67,17 @@ public class NestedLoops {
             }
         }
         System.out.println();
+    }
+
+    public static void task331b(int a) {
+        for (int i = 1; i < Math.sqrt(a); i++) {
+            for (int j = 1; j < i; j++) {
+                for (int k = 1; k < j; k++) {
+                    int sum = (int) (Math.pow(i, 2) + Math.pow(j, 2) + Math.pow(k, 2));
+                    if (sum == a)
+                        System.out.println(i + " " + j + " " + k);
+                }
+            }
+        }
     }
 }

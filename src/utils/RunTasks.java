@@ -123,7 +123,6 @@ public class RunTasks {
 
                 case "224":
                     start224();
-
                     break;
 
                 case "exit":
@@ -227,8 +226,8 @@ public class RunTasks {
 
     static void start227() {
         System.out.println("Pls write 2 numbers");
-        int firstNum = ConsoleReader.ReadNumber();
-        int secondNum = ConsoleReader.ReadNumber();
+        int firstNum = Integer.parseInt(ConsoleReader.readInteger());
+        int secondNum = Integer.parseInt(ConsoleReader.readInteger());
         CyclesAndBranching.task227(firstNum, secondNum);
     }
 
@@ -238,7 +237,7 @@ public class RunTasks {
 
     private static void start330() {
         List<Integer> listOfPerfectNumbers = new ArrayList();
-        int number = ConsoleReader.ReadNumber();
+        int number = Integer.parseInt(ConsoleReader.readInteger());
         for (int i = 1; i < number; i++) {
             if (NestedLoops.task330(i) == i)
                 listOfPerfectNumbers.add(i);
@@ -273,16 +272,17 @@ public class RunTasks {
         NestedLoops.task340();
     }
     private static void start107(){
-
-        System.out.println("Please write number");
+        System.out.println("Please write a number");
         System.out.println(SimpleLoops.task107(Integer.parseInt(ConsoleReader.readInteger()))+ " is a pow of 4! ");
     }
     private static void start224(){
-        System.out.println("Please write number");
+        System.out.println("Please write a number");
         System.out.println(CyclesAndBranching.task224(Integer.parseInt(ConsoleReader.readInteger()))+ " is natural dividers of your number" );
     }
     private static void start243b(){
-
-        System.out.println( CyclesAndBranching.task243b(ConsoleReader.ReadNumber()));
+        System.out.println( CyclesAndBranching.task243b(Integer.parseInt(ConsoleReader.readInteger())));
+    }
+    private static void start331b(){
+        System.out.println();
     }
 }
