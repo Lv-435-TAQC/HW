@@ -90,7 +90,7 @@ public class CyclesAndBranching {
     }
 
     public static void task184() {
-        int[] startArray = Util.fillUpTheArray();
+        int[] startArray = Util.fillUpTheArray(67);
         int p = (int) (Math.random() * 10);
         int q = (int) (Math.random() * 10);
         System.out.print("Starting array --> ");

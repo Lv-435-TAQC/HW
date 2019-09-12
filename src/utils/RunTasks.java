@@ -98,6 +98,10 @@ public class RunTasks {
                     start330();
                     break;
 
+                case "340":
+                    start340();
+                    break;
+
                 case "560":
                     start560();
                     break;
@@ -254,12 +258,15 @@ public class RunTasks {
         }
     }
 
-
     private static void start569() {
         System.out.println(Integers.task569(Integer.parseInt(ConsoleReader.readPositiveInteger())));
     }
 
     private static void start184() {
         CyclesAndBranching.task184();
+    }
+  
+    private static void start340() {
+        NestedLoops.task340();
     }
 }

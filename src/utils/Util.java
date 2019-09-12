@@ -31,8 +31,8 @@ public class Util {
         return true;
     }
 
-    public static int[] fillUpTheArray() {
-        int[] array = new int[67];
+    public static int[] fillUpTheArray(final int size) {
+        int[] array = new int[size];
         for (int i = 0; i < array.length; i++) {
             array[i] = i + ((int) (Math.random() * 10));
         }
@@ -46,5 +46,27 @@ public class Util {
             }
         }
         return startArray;
+    }
+
+    public static int[] findThreeNumbersWithSpecificConditions(int[] startArray, int m) {
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while (i < 20) {
+            if (startArray[i] + startArray[j] + startArray[k] == m) {
+                return new int[]{i, j, k};
+            }
+            if (k < 19) {
+                k++;
+            } else {
+                k = 0;
+                j++;
+            }
+            if (j == 20) {
+                j = 0;
+                i++;
+            }
+        }
+        return null;
     }
 }
