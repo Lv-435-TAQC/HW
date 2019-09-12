@@ -65,4 +65,22 @@ public class Integers {
         }
         return result;
     }
+    public static List<ArrayList<Integer>> task554(int n){
+        List<ArrayList<Integer>> pythagoreanTriples = new ArrayList<>();
+        for(int c=1; c<=n; c++){
+            for(int b=1; b<=c; b++){
+                for(int a=1; a<=b; a++){
+                    if((Math.pow(a,2)+Math.pow(b,2)) == Math.pow(c,2)){
+                        ArrayList<Integer> ints = new ArrayList<>();
+                                ints.add(a);
+                                ints.add(b);
+                                ints.add(c);
+                        pythagoreanTriples.add(ints);
+                    }
+                }
+            }
+        }
+        return pythagoreanTriples;
+    }
+
 }
