@@ -2,10 +2,7 @@ package chapter1;
 
 import utils.Util;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class CyclesAndBranching {
@@ -105,4 +102,34 @@ public class CyclesAndBranching {
         }
         System.out.println();
     }
-}
+
+    public static Map task243b(int a) {
+        Map<Integer,Integer> couple = new HashMap();
+        for (int i=0; i<=a;i++){
+            for (int j=0;j<a;j++){
+                if (Math.pow(i,2)+Math.pow(j,2)==a){
+                    if (i>=j)
+                        System.out.println(i+" "+j);
+                    couple.put(i,j);
+
+                }
+            }
+        }
+        return couple;
+    }
+
+
+        public static ArrayList task224(int n){
+            ArrayList array = new ArrayList();
+            int num = 1;
+            while(num <= n){
+                if(n%num == 0) {
+                    array.add(num);
+                }
+                num++;
+            }
+            return array;
+        }
+    }
+
+
