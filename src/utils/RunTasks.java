@@ -227,8 +227,8 @@ public class RunTasks {
 
     static void start227() {
         System.out.println("Pls write 2 numbers");
-        int firstNum = ConsoleReader.ReadNumber();
-        int secondNum = ConsoleReader.ReadNumber();
+        int firstNum = Integer.parseInt(ConsoleReader.readInteger());
+        int secondNum = Integer.parseInt(ConsoleReader.readInteger());
         CyclesAndBranching.task227(firstNum, secondNum);
     }
 
@@ -238,7 +238,7 @@ public class RunTasks {
 
     private static void start330() {
         List<Integer> listOfPerfectNumbers = new ArrayList();
-        int number = ConsoleReader.ReadNumber();
+        int number = Integer.parseInt(ConsoleReader.readInteger());
         for (int i = 1; i < number; i++) {
             if (NestedLoops.task330(i) == i)
                 listOfPerfectNumbers.add(i);
@@ -282,6 +282,9 @@ public class RunTasks {
     }
     private static void start243b(){
 
-        System.out.println( CyclesAndBranching.task243b(ConsoleReader.ReadNumber()));
+        System.out.println( CyclesAndBranching.task243b(Integer.parseInt(ConsoleReader.readInteger())));
+    }
+    private static void start331b(){
+        System.out.println();
     }
 }
