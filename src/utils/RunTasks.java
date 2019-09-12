@@ -263,7 +263,7 @@ public class RunTasks {
     }
     private static void start86a(){
         System.out.println("Pleas write number");
-        System.out.println(SimpleLoops.task86a(Integer.parseInt(ConsoleReader.readInteger() + " is digits of numbers! ")));
+        System.out.println(SimpleLoops.task86a(Integer.parseInt(ConsoleReader.readInteger() ))+ " is digits of numbers! ");
     }
 
     private static void start569() {
