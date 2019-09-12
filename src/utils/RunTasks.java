@@ -25,13 +25,13 @@ public class RunTasks {
                     runTask86h();
                     break;
 
-//            case "86b":
-//                start86b();
-//                break;
-//
-//            case "108":
-//                start108();
-//                break;
+                case "86b":
+                    start86b();
+                    break;
+
+                case "108":
+                    start108();
+                    break;
 
                 case "178h":
                     start178h();
@@ -56,7 +56,6 @@ public class RunTasks {
                 case "561":
                     start561();
                     break;
-
 
                 case "87":
                     start87();
@@ -167,7 +166,7 @@ public class RunTasks {
     }
 
     private static void start559() {
-        int n, m;
+        int n;
         System.out.println("Please  integer:");
         n = Integer.parseInt(ConsoleReader.readInteger());
         System.out.println("Task 559 with two arguments n = " + n + ", result = " + Integers.task559(n));
@@ -184,15 +183,8 @@ public class RunTasks {
                 + SimpleLoops.task86h(number));
     }
 
-
-    public static void runTask86b() {
-        int n = ConsoleReader.ReadNumber();
-        if (n > 0) {
-            System.out.println(" Sum numbers is " + SimpleLoops.task86b(n));
-        } else {
-            System.out.println("Not natural number");
-        }
-
+    private static void start86b() {
+        System.out.println("Sum of numbers is  " + SimpleLoops.task86b(Integer.parseInt(ConsoleReader.readInteger())));
     }
 
     private static void start178h() {
@@ -200,13 +192,8 @@ public class RunTasks {
     }
 
 
-    private static void runTask108() {
-        int n = ConsoleReader.ReadNumber();
-        if (n > 0) {
-            System.out.println("The smallest number of appearance 2^r>n " + SimpleLoops.task108(n));
-        } else {
-            System.out.println("Not natural number");
-        }
+    private static void start108() {
+        System.out.println("The smallest number of appearance 2^r>n is  " + SimpleLoops.task108(Integer.parseInt(ConsoleReader.readInteger())));
     }
 
     private static void start561() {
@@ -234,13 +221,8 @@ public class RunTasks {
     }
 
     private static void start225() {
-        int n = ConsoleReader.ReadNumber();
-        if (n > 0) {
-            CyclesAndBranching.task225(n);
-        } else {
-            System.out.println("Not natural number");
-        }
 
+        System.out.println("This q is " + CyclesAndBranching.task225(Integer.parseInt(ConsoleReader.readInteger())));
     }
 
     static void start227() {

@@ -28,19 +28,6 @@ public class ConsoleReader {
         return result;
     }
 
-    public static int ReadNumber() {
-        Scanner keyboard = new Scanner(System.in);
-        System.out.println("Hello, please input number");
-        int n = 0;
-        try {
-            n = keyboard.nextInt();
-        } catch (Exception e) {
-            System.out.println("This is not a number");
-            System.exit(1);
-        }
-        return n;
-    }
-
     public static String readInteger() {
         final InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         final BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
@@ -62,11 +49,11 @@ public class ConsoleReader {
             Integer.parseInt(string);
         } catch (NumberFormatException | NullPointerException exception) {
             System.out.println("Your number is incorrect, please try again");
-            result =  false;
-        }
-        if(result == true && Integer.parseInt(string) < 0) {
             result = false;
-        System.out.println("Your number is incorrect, please try again");
+        }
+        if (result == true && Integer.parseInt(string) < 0) {
+            result = false;
+            System.out.println("Your number is incorrect, please try again");
         }
         return result;
     }
