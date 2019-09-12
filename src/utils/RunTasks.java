@@ -11,7 +11,6 @@ import java.util.List;
 
 public class RunTasks {
 
-
     public static void menu() {
         boolean check = true;
         do {
@@ -117,7 +116,6 @@ public class RunTasks {
                     start107();
                     break;
 
-
                 case "243b":
                     start243b();
 
@@ -135,6 +133,10 @@ public class RunTasks {
 
                 case "exit":
                     check = false;
+                    break;
+
+                case "325":
+                    start325();
                     break;
 
                 default:
@@ -198,9 +200,9 @@ public class RunTasks {
         System.out.println(CyclesAndBranching.task178h(ConsoleReader.integersForArray()) + " numbers are relevant! ");
     }
 
-
     private static void start108() {
-        System.out.println("The smallest number of appearance 2^r>n is  " + SimpleLoops.task108(Integer.parseInt(ConsoleReader.readInteger())));
+        System.out.println("The smallest number of appearance 2^r>n is  "
+                + SimpleLoops.task108(Integer.parseInt(ConsoleReader.readInteger())));
     }
 
     private static void start561() {
@@ -228,7 +230,6 @@ public class RunTasks {
     }
 
     private static void start225() {
-
         System.out.println("This q is " + CyclesAndBranching.task225(Integer.parseInt(ConsoleReader.readInteger())));
     }
 
@@ -263,9 +264,10 @@ public class RunTasks {
                 System.out.println(i + " " + secondNum);
         }
     }
-    private static void start86a(){
+
+    private static void start86a() {
         System.out.println("Please write number");
-        System.out.println(SimpleLoops.task86a(Integer.parseInt(ConsoleReader.readInteger() ))+ " is digits of numbers! ");
+        System.out.println(SimpleLoops.task86a(Integer.parseInt(ConsoleReader.readInteger())) + " is digits of numbers! ");
     }
 
     private static void start569() {
@@ -275,32 +277,40 @@ public class RunTasks {
     private static void start184() {
         CyclesAndBranching.task184();
     }
-  
+
     private static void start340() {
         NestedLoops.task340();
     }
-    private static void start107(){
+
+    private static void start107() {
         System.out.println("Please write a number");
-        System.out.println(SimpleLoops.task107(Integer.parseInt(ConsoleReader.readInteger()))+ " is a pow of 4! ");
+        System.out.println(SimpleLoops.task107(Integer.parseInt(ConsoleReader.readInteger())) + " is a pow of 4! ");
     }
-    private static void start224(){
+
+    private static void start224() {
         System.out.println("Please write a number");
-        System.out.println(CyclesAndBranching.task224(Integer.parseInt(ConsoleReader.readInteger()))+ " is natural dividers of your number" );
+        System.out.println(CyclesAndBranching.task224(Integer.parseInt(ConsoleReader.readInteger())) + " is natural dividers of your number");
     }
-    private static void start243b(){
-        System.out.println( CyclesAndBranching.task243b(Integer.parseInt(ConsoleReader.readInteger())));
+
+    private static void start243b() {
+        System.out.println(CyclesAndBranching.task243b(Integer.parseInt(ConsoleReader.readInteger())));
     }
-    private static void start331b(){
+
+    private static void start331b() {
         System.out.println();
     }
 
-    private static void start323(){
+    private static void start323() {
         System.out.println("Please write a number");
-        System.out.println(NestedLoops.task323(Integer.parseInt(ConsoleReader.readInteger()))+ " is relatively simple numbers to yours ");
+        System.out.println(NestedLoops.task323(Integer.parseInt(ConsoleReader.readInteger())) + " is relatively simple numbers to yours ");
     }
 
-    private static void start554(){
+    private static void start554() {
         System.out.println("Please write a number");
-        System.out.println(Integers.task554(Integer.parseInt(ConsoleReader.readInteger()))+ " is Pythagorean triples");
+        System.out.println(Integers.task554(Integer.parseInt(ConsoleReader.readInteger())) + " is Pythagorean triples");
+    }
+
+    private static void start325() {
+        System.out.println("Prime divisors of a number is " + NestedLoops.task325(Integer.parseInt(ConsoleReader.readInteger())));
     }
 }
