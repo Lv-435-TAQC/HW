@@ -49,17 +49,15 @@ public class NestedLoops {
         return sum;
     }
 
-    public static void task340() {
+    public static void task340(final int m, final int[] startingArray) {
         int[] resultArray;
-        int[] startingArray = Util.fillUpTheArray(20);
-        int m = 12;
         System.out.print("The starting array is --> ");
         for (int item : startingArray) {
             System.out.print(item + " ");
         }
         resultArray = Util.findThreeNumbersWithSpecificConditions(startingArray, m);
         if (resultArray == null) {
-            System.out.print("\nThere are no three numbers which can satisfy the conditions " + m);
+            System.out.print("\nThere are no three numbers which can satisfy the conditions with m = " + m);
         } else {
             System.out.print("\nThe three numbers which can satisfy the equation a(i) + a(j) + a(k) = " + m + " are --> ");
             for (int item : resultArray) {
