@@ -208,7 +208,7 @@ public class RunTasks {
     }
 
     private static void start242() {
-        CyclesAndBranching.task242(3);
+        System.out.println(CyclesAndBranching.task242(Integer.parseInt(ConsoleReader.readPositiveInteger())));
     }
 
     private static void start88a() {
