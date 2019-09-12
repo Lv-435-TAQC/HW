@@ -129,6 +129,10 @@ public class RunTasks {
                     start323();
                     break;
 
+                case "554":
+                    start554();
+                    break;
+
                 case "exit":
                     check = false;
                     break;
@@ -293,5 +297,10 @@ public class RunTasks {
     private static void start323(){
         System.out.println("Please write a number");
         System.out.println(NestedLoops.task323(Integer.parseInt(ConsoleReader.readInteger()))+ " is relatively simple numbers to yours ");
+    }
+
+    private static void start554(){
+        System.out.println("Please write a number");
+        System.out.println(Integers.task554(Integer.parseInt(ConsoleReader.readInteger()))+ " is Pythagorean triples");
     }
 }
