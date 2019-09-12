@@ -81,7 +81,7 @@ public class NestedLoops {
         }
     }
 
-    public static ArrayList task323(int n){
+    public static ArrayList task323(int n) {
         ArrayList relativelySimpleNumbers = new ArrayList();
         for (int i = 2; i < n; i++) {
             boolean a = true;
@@ -93,20 +93,30 @@ public class NestedLoops {
                 }
             }
             if (a) {
-                if(gcd(i, n) == 1)
+                if (gcd(i, n) == 1)
                     relativelySimpleNumbers.add(i);
             }
         }
         return relativelySimpleNumbers;
     }
+
     private static int gcd(int a, int b) {
         int t;
-        while(b != 0){
+        while (b != 0) {
             t = a;
             a = b;
-            b = t%b;
+            b = t % b;
         }
         return a;
     }
 
+    public static ArrayList<Integer> task325(int n) {
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0 && Util.isPrimeNumber(i)) {
+                a.add(i);
+            }
+        }
+        return a;
+    }
 }
