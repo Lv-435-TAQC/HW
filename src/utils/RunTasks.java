@@ -6,8 +6,7 @@ import chapter1.NestedLoops;
 import chapter1.SimpleLoops;
 import chapter2.Integers;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
 
 public class RunTasks {
 
@@ -138,6 +137,21 @@ public class RunTasks {
                 case "325":
                     start325();
                     break;
+                case "182":
+                    start182();
+                    break;
+
+                case "241":
+                    start241();
+                    break;
+
+                case "332":
+                    start332();
+                    break;
+
+                case "88g":
+                    start88g();
+                    break;
 
                 case "555":
                     start555();
@@ -249,24 +263,12 @@ public class RunTasks {
     }
 
     private static void start330() {
-        List<Integer> listOfPerfectNumbers = new ArrayList();
         int number = Integer.parseInt(ConsoleReader.readInteger());
-        for (int i = 1; i < number; i++) {
-            if (NestedLoops.task330(i) == i)
-                listOfPerfectNumbers.add(i);
-        }
-        System.out.println(listOfPerfectNumbers);
+        NestedLoops.task330(number);
     }
 
     private static void start560() {
-        int firstNum = 0;
-        int secondNum = 0;
-        for (int i = 200; i <= 300; i++) {
-            firstNum = Integers.task560(i);
-            secondNum = Integers.task560(firstNum);
-            if (i == secondNum)
-                System.out.println(i + " " + secondNum);
-        }
+        System.out.println(Integers.task560());
     }
 
     private static void start86a() {
@@ -324,10 +326,49 @@ public class RunTasks {
         System.out.println("Prime divisors of a number is " + NestedLoops.task325(Integer.parseInt(ConsoleReader.readInteger())));
     }
 
-    private static void start555(){
+    private static void start555() {
         int n = Integer.parseInt(ConsoleReader.readInteger());
         int[][] triangle = Integers.task555(n);
-        Util.showPascalTriangle(n,triangle);
+        Util.showPascalTriangle(n, triangle);
+    }
+
+    public static void start182() {
+        int sum = 0;
+        int counter = 0;
+
+        CyclesAndBranching.task182(sum, counter);
+    }
+
+    public static void start241() {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter positive integer number");
+        int n = scan.nextInt();
+        double sum = 0;
+        if (n <= 0) {
+            System.out.println("You entered invalid number");
+        }
+        System.out.println("Enter any number");
+        int x = scan.nextInt();
+
+        CyclesAndBranching.task241(sum, n, x);
+    }
+
+    public static void start332() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter natural number");
+        int n = scan.nextInt();
+
+        NestedLoops.task332(n);
+    }
+
+    public static void start88g() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter natural number");
+        int n = scan.nextInt();
+        String strvalue = Integer.toString(n);
+
+        SimpleLoops.task88g(strvalue);
     }
 
 }

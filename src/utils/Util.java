@@ -70,6 +70,7 @@ public class Util {
         return null;
     }
 
+
     private static int getTriangleDigitsCount(int value) {
         int maxSize=10000;
         int digitCounter = 1;
@@ -103,18 +104,25 @@ public class Util {
         return spaces;
     }
 
-    public static void showPascalTriangle(int n, int[][] triangle)
-    {
+    public static void showPascalTriangle(int n, int[][] triangle) {
         final int linesCount = n;
         int pascalTriangle[][] = triangle;
-        for (int level[]: pascalTriangle) {
+        for (int level[] : pascalTriangle) {
             System.out.print(getTriangleSpaces(level, getTriangleLineLength(pascalTriangle[linesCount - 1])));
-            for (int var: level) {
+            for (int var : level) {
                 if (var != 0) {
                     System.out.print(var + " ");
                 }
             }
             System.out.println();
         }
+    }
+    public static int getSumtoFindPerfectNumbers(int n){
+        int sum = 0;
+        for (int i = 1; i < n; i++) {
+            if (n % i == 0)
+                sum += i;
+        }
+        return sum;
     }
 }

@@ -106,7 +106,7 @@ public class CyclesAndBranching {
             for (int j=0;j<a;j++){
                 if (Math.pow(i,2)+Math.pow(j,2)==a){
                     if (i>=j)
-                        System.out.println(i+" "+j);
+
                     couple.put(i,j);
 
                 }
@@ -127,6 +127,43 @@ public class CyclesAndBranching {
             }
             return array;
         }
+
+    public static int task182(int sum, int counter) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(2);
+        arr.add(5);
+        arr.add(9);
+        arr.add(10);
+        arr.add(15);
+        arr.add(21);
+
+        System.out.println(arr.toString());
+
+        for (Integer i : arr) {
+            if (i % 5 == 0 && i % 7 != 0) {
+
+                sum += i;
+                counter++;
+            }
+        }
+        System.out.println("The number of operations: " + counter + " \nThe summary of valid numbers:   " + sum);
+
+        return sum + counter;
+    }
+
+
+    public static double task241 (double sum, int n, int x){
+        for (int i = 1; i<=n; i++ ){
+            double part1 = (-1 ^ (int) Math.sqrt(i));
+            double part2 = i*x^i;
+            double devide = part1/part2;
+            sum = sum + devide;
+
+        }
+        System.out.println("\n sum is "+ sum );
+        return sum;
+    }
+
     }
 
 
