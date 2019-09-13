@@ -147,6 +147,9 @@ public class RunTasks {
                     start241();
                     break;
 
+                case "332":
+                    start332();
+                    break;
 
                 default:
                     System.out.println("You write invalid number");
@@ -337,5 +340,13 @@ public class RunTasks {
         int x = scan.nextInt();
 
         CyclesAndBranching.task241(sum, n, x);
+    }
+
+    public static void start332 () {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter natural number");
+        int n = scan.nextInt();
+
+        NestedLoops.task332(n);
     }
 }

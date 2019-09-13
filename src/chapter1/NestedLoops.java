@@ -6,6 +6,7 @@ import utils.Util;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 
 public class NestedLoops {
     public static LinkedList<Integer> task329(int n, int m) {
@@ -119,4 +120,23 @@ public class NestedLoops {
         }
         return a;
     }
+
+    public static int task332 (int n){
+        int x, y, t;
+
+        for (int i = (int) Math.sqrt(n / 4); i * i <= n; i++) {
+            x = n - i * i;
+            for (int j = (int) Math.sqrt(x / 3); j <= i && j * j <= x; j++) {
+                y = x - j * j;
+                for (int k = (int) Math.sqrt(y / 2); k <= j && k * k <= y; k++) {
+                    t = (int) Math.sqrt(y - k * k);
+                    if (t <= k && t * t == y - k * k) {
+                        System.out.println("Offered options are: \n(" + i + "^2) + (" + j + "^2) + (" + k + "^2) + (" + t + "^2)");
+                    }
+                }
+            }
+        }
+        return n;
+    }
+
 }
