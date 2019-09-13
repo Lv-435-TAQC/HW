@@ -127,6 +127,31 @@ public class CyclesAndBranching {
             }
             return array;
         }
+
+    public static int task182(int sum, int counter) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(2);
+        arr.add(5);
+        arr.add(9);
+        arr.add(10);
+        arr.add(15);
+        arr.add(21);
+
+        System.out.println(arr.toString());
+
+        for (Integer i : arr) {
+            if (i % 5 == 0 && i % 7 != 0) {
+
+                sum += i;
+                counter++;
+            }
+        }
+        System.out.println("The number of operations: " + counter + " \nThe summary of valid numbers:   " + sum);
+
+        return sum + counter;
+    }
+
+
     }
 
 

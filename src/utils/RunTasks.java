@@ -138,6 +138,9 @@ public class RunTasks {
                 case "325":
                     start325();
                     break;
+                case "182":
+                    start182();
+                    break;
 
                 default:
                     System.out.println("You write invalid number");
@@ -318,5 +321,12 @@ public class RunTasks {
 
     private static void start325() {
         System.out.println("Prime divisors of a number is " + NestedLoops.task325(Integer.parseInt(ConsoleReader.readInteger())));
+    }
+
+    public static void start182() {
+        int sum = 0;
+        int counter = 0;
+
+        CyclesAndBranching.task182(sum, counter);
     }
 }
