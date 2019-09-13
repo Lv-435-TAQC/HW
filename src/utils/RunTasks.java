@@ -151,6 +151,10 @@ public class RunTasks {
                     start332();
                     break;
 
+                case "88g":
+                    start88g();
+                    break;
+
                 default:
                     System.out.println("You write invalid number");
             }
@@ -349,4 +353,15 @@ public class RunTasks {
 
         NestedLoops.task332(n);
     }
+
+    public static void start88g() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter natural number");
+        int n = scan.nextInt();
+        String strvalue = Integer.toString(n);
+
+        SimpleLoops.task88g(strvalue);
+    }
+
+
 }

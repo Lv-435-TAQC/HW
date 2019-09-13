@@ -1,5 +1,7 @@
 package chapter1;
 
+import java.util.Scanner;
+
 public class SimpleLoops {
     public static int task88b(Integer n) {
         String change = new StringBuffer(Integer.toString(n)).reverse().toString();
@@ -70,5 +72,13 @@ public class SimpleLoops {
         }
         return k-1;
     }
+
+    public static String task88g (String strvalue){
+        String val = "1";
+        System.out.println(val + strvalue + val);
+        return val + strvalue + val;
+
+    }
+
 
 }
