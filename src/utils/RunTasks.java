@@ -244,13 +244,10 @@ public class RunTasks {
     }
 
     private static void start330() {
-        List<Integer> listOfPerfectNumbers = new ArrayList();
+
         int number = Integer.parseInt(ConsoleReader.readInteger());
-        for (int i = 1; i < number; i++) {
-            if (NestedLoops.task330(i) == i)
-                listOfPerfectNumbers.add(i);
-        }
-        System.out.println(listOfPerfectNumbers);
+        NestedLoops.task330(number);
+
     }
 
     private static void start560() {
