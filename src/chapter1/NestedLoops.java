@@ -51,17 +51,15 @@ public class NestedLoops {
         return listOfPerfectNumbers;
     }
 
-    public static void task340() {
+    public static void task340(final int m, final int[] startingArray) {
         int[] resultArray;
-        int[] startingArray = Util.fillUpTheArray(20);
-        int m = 12;
         System.out.print("The starting array is --> ");
         for (int item : startingArray) {
             System.out.print(item + " ");
         }
         resultArray = Util.findThreeNumbersWithSpecificConditions(startingArray, m);
         if (resultArray == null) {
-            System.out.print("\nThere are no three numbers which can satisfy the conditions " + m);
+            System.out.print("\nThere are no three numbers which can satisfy the conditions with m = " + m);
         } else {
             System.out.print("\nThe three numbers which can satisfy the equation a(i) + a(j) + a(k) = " + m + " are --> ");
             for (int item : resultArray) {
@@ -83,7 +81,7 @@ public class NestedLoops {
         }
     }
 
-    public static ArrayList task323(int n){
+    public static ArrayList task323(int n) {
         ArrayList relativelySimpleNumbers = new ArrayList();
         for (int i = 2; i < n; i++) {
             boolean a = true;
@@ -95,20 +93,30 @@ public class NestedLoops {
                 }
             }
             if (a) {
-                if(gcd(i, n) == 1)
+                if (gcd(i, n) == 1)
                     relativelySimpleNumbers.add(i);
             }
         }
         return relativelySimpleNumbers;
     }
+
     private static int gcd(int a, int b) {
         int t;
-        while(b != 0){
+        while (b != 0) {
             t = a;
             a = b;
-            b = t%b;
+            b = t % b;
         }
         return a;
     }
 
+    public static ArrayList<Integer> task325(int n) {
+        ArrayList<Integer> a = new ArrayList<Integer>();
+        for (int i = 2; i <= n / 2; i++) {
+            if (n % i == 0 && Util.isPrimeNumber(i)) {
+                a.add(i);
+            }
+        }
+        return a;
+    }
 }
