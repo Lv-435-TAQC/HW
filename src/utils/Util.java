@@ -69,6 +69,54 @@ public class Util {
         }
         return null;
     }
+
+
+    private static int getTriangleDigitsCount(int value) {
+        int maxSize=10000;
+        int digitCounter = 1;
+        for (int divider = 10; digitCounter < maxSize; digitCounter++, divider *= 10) {
+            if (value / divider < 1) {
+                break;
+            }
+        }
+        return digitCounter;
+    }
+
+    private static int getTriangleLineLength(int line[]) {
+        int length = -1;
+        for (int value : line) {
+            if (value == 0) {
+                break;
+            }
+            length++;
+            length += getTriangleDigitsCount(value);
+        }
+        return length;
+    }
+
+    private static String getTriangleSpaces(int line[], int maxLineLength) {
+        String spaces = "";
+        int spaceCount = maxLineLength - getTriangleLineLength(line);
+        spaceCount /= 2;
+        for (int i = 0; i < spaceCount; i++) {
+            spaces += " ";
+        }
+        return spaces;
+    }
+
+    public static void showPascalTriangle(int n, int[][] triangle) {
+        final int linesCount = n;
+        int pascalTriangle[][] = triangle;
+        for (int level[] : pascalTriangle) {
+            System.out.print(getTriangleSpaces(level, getTriangleLineLength(pascalTriangle[linesCount - 1])));
+            for (int var : level) {
+                if (var != 0) {
+                    System.out.print(var + " ");
+                }
+            }
+            System.out.println();
+        }
+    }
     public static int getSumtoFindPerfectNumbers(int n){
         int sum = 0;
         for (int i = 1; i < n; i++) {

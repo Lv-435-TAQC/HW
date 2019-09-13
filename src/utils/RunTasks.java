@@ -6,8 +6,6 @@ import chapter1.NestedLoops;
 import chapter1.SimpleLoops;
 import chapter2.Integers;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class RunTasks {
@@ -153,6 +151,10 @@ public class RunTasks {
 
                 case "88g":
                     start88g();
+                    break;
+
+                case "555":
+                    start555();
                     break;
 
                 default:
@@ -324,6 +326,12 @@ public class RunTasks {
         System.out.println("Prime divisors of a number is " + NestedLoops.task325(Integer.parseInt(ConsoleReader.readInteger())));
     }
 
+    private static void start555() {
+        int n = Integer.parseInt(ConsoleReader.readInteger());
+        int[][] triangle = Integers.task555(n);
+        Util.showPascalTriangle(n, triangle);
+    }
+
     public static void start182() {
         int sum = 0;
         int counter = 0;
@@ -346,7 +354,7 @@ public class RunTasks {
         CyclesAndBranching.task241(sum, n, x);
     }
 
-    public static void start332 () {
+    public static void start332() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter natural number");
         int n = scan.nextInt();
@@ -362,6 +370,5 @@ public class RunTasks {
 
         SimpleLoops.task88g(strvalue);
     }
-
 
 }
