@@ -139,6 +139,10 @@ public class RunTasks {
                     start325();
                     break;
 
+                case "555":
+                    start555();
+                    break;
+
                 default:
                     System.out.println("You write invalid number");
             }
@@ -319,4 +323,11 @@ public class RunTasks {
     private static void start325() {
         System.out.println("Prime divisors of a number is " + NestedLoops.task325(Integer.parseInt(ConsoleReader.readInteger())));
     }
+
+    private static void start555(){
+        int n = Integer.parseInt(ConsoleReader.readInteger());
+        int[][] triangle = Integers.task555(n);
+        Util.showPascalTriangle(n,triangle);
+    }
+
 }

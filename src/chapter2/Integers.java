@@ -32,12 +32,12 @@ public class Integers {
         return a;
     }
 
-    public static int task560(int n){
-        int sum=0;
-        for(int i=1;i<n;i++) {
-                if (n%i==0)
-                    sum+=i;
-            }
+    public static int task560(int n) {
+        int sum = 0;
+        for (int i = 1; i < n; i++) {
+            if (n % i == 0)
+                sum += i;
+        }
         return sum;
 
     }
@@ -65,22 +65,44 @@ public class Integers {
         }
         return result;
     }
-    public static List<ArrayList<Integer>> task554(int n){
+
+    public static List<ArrayList<Integer>> task554(int n) {
         List<ArrayList<Integer>> pythagoreanTriples = new ArrayList<>();
-        for(int c=1; c<=n; c++){
-            for(int b=1; b<=c; b++){
-                for(int a=1; a<=b; a++){
-                    if((Math.pow(a,2)+Math.pow(b,2)) == Math.pow(c,2)){
+        for (int c = 1; c <= n; c++) {
+            for (int b = 1; b <= c; b++) {
+                for (int a = 1; a <= b; a++) {
+                    if ((Math.pow(a, 2) + Math.pow(b, 2)) == Math.pow(c, 2)) {
                         ArrayList<Integer> ints = new ArrayList<>();
-                                ints.add(a);
-                                ints.add(b);
-                                ints.add(c);
+                        ints.add(a);
+                        ints.add(b);
+                        ints.add(c);
                         pythagoreanTriples.add(ints);
                     }
                 }
             }
         }
         return pythagoreanTriples;
+    }
+
+    public static int[][] task555(int n) {
+        int pascalTriangle[][] = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i + 1; j++) {
+                try {
+                    pascalTriangle[i][j] =
+                            pascalTriangle[i - 1][j - 1] + pascalTriangle[i - 1][j];
+                } catch (ArrayIndexOutOfBoundsException ex) {
+                    if (j == 0) {
+                        pascalTriangle[i][j] = 1;
+                    }
+                } catch (NullPointerException ex) {
+                    if (j == i) {
+                        pascalTriangle[i][j] = 1;
+                    }
+                }
+            }
+        }
+        return pascalTriangle;
     }
 
 }
