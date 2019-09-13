@@ -109,7 +109,7 @@ public class CyclesAndBranching {
             for (int j=0;j<a;j++){
                 if (Math.pow(i,2)+Math.pow(j,2)==a){
                     if (i>=j)
-                        System.out.println(i+" "+j);
+
                     couple.put(i,j);
 
                 }
