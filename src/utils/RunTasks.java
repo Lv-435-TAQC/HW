@@ -243,27 +243,14 @@ public class RunTasks {
     static void start178v() {
         CyclesAndBranching.task178v();
     }
-
     private static void start330() {
-        List<Integer> listOfPerfectNumbers = new ArrayList();
         int number = Integer.parseInt(ConsoleReader.readInteger());
-        for (int i = 1; i < number; i++) {
-            if (NestedLoops.task330(i) == i)
-                listOfPerfectNumbers.add(i);
-        }
-        System.out.println(listOfPerfectNumbers);
+        NestedLoops.task330(number);
     }
 
     private static void start560() {
-        int firstNum = 0;
-        int secondNum = 0;
-        for (int i = 200; i <= 300; i++) {
-            firstNum = Integers.task560(i);
-            secondNum = Integers.task560(firstNum);
-            if (i == secondNum)
-                System.out.println(i + " " + secondNum);
+        System.out.println(Integers.task560());
         }
-    }
 
     private static void start86a() {
         System.out.println("Please write number");
