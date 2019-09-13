@@ -2,9 +2,7 @@ package chapter2;
 
 import utils.Util;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Integers {
     public static LinkedList<Integer> task559(int n) {
@@ -32,14 +30,17 @@ public class Integers {
         return a;
     }
 
-    public static int task560(int n){
-        int sum=0;
-        for(int i=1;i<n;i++) {
-                if (n%i==0)
-                    sum+=i;
-            }
-        return sum;
-
+    public static Map<Integer,Integer> task560() {
+        int firstNum = 0;
+        int secondNum = 0;
+        Map<Integer,Integer> friendlyNumbers = new HashMap();
+        for (int i = 200; i <= 300; i++) {
+            firstNum = Util.getSumtoFindPerfectNumbers(i);
+            secondNum = Util.getSumtoFindPerfectNumbers(firstNum);
+            if (i == secondNum)
+                friendlyNumbers.put(firstNum,secondNum);
+        }
+        return friendlyNumbers;
     }
 
     public static List<Integer> task569(int n) {
