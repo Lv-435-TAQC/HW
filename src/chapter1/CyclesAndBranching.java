@@ -152,6 +152,18 @@ public class CyclesAndBranching {
     }
 
 
+    public static double task241 (double sum, int n, int x){
+        for (int i = 1; i<=n; i++ ){
+            double part1 = (-1 ^ (int) Math.sqrt(i));
+            double part2 = i*x^i;
+            double devide = part1/part2;
+            sum = sum + devide;
+
+        }
+        System.out.println("\n sum is "+ sum );
+        return sum;
+    }
+
     }
 
 

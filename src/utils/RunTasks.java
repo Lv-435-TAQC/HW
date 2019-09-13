@@ -8,6 +8,7 @@ import chapter2.Integers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class RunTasks {
 
@@ -142,6 +143,11 @@ public class RunTasks {
                     start182();
                     break;
 
+                case "241":
+                    start241();
+                    break;
+
+
                 default:
                     System.out.println("You write invalid number");
             }
@@ -246,6 +252,7 @@ public class RunTasks {
     static void start178v() {
         CyclesAndBranching.task178v();
     }
+
     private static void start330() {
         int number = Integer.parseInt(ConsoleReader.readInteger());
         NestedLoops.task330(number);
@@ -253,7 +260,7 @@ public class RunTasks {
 
     private static void start560() {
         System.out.println(Integers.task560());
-        }
+    }
 
     private static void start86a() {
         System.out.println("Please write number");
@@ -315,5 +322,20 @@ public class RunTasks {
         int counter = 0;
 
         CyclesAndBranching.task182(sum, counter);
+    }
+
+    public static void start241() {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter positive integer number");
+        int n = scan.nextInt();
+        double sum = 0;
+        if (n <= 0) {
+            System.out.println("You entered invalid number");
+        }
+        System.out.println("Enter any number");
+        int x = scan.nextInt();
+
+        CyclesAndBranching.task241(sum, n, x);
     }
 }
