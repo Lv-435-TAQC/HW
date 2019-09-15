@@ -153,6 +153,11 @@ public class RunTasks {
                     start88g();
                     break;
 
+
+                case "88v":
+                    start88v();
+                    break;
+                
                 case "555":
                     start555();
                     break;
@@ -371,4 +376,8 @@ public class RunTasks {
         SimpleLoops.task88g(strvalue);
     }
 
+    private static void start88v() {
+        System.out.println("Please enter your number");
+        System.out.println(SimpleLoops.task88v(Integer.parseInt(ConsoleReader.readInteger())) + " is number with reversed first and last item");
+    }
 }
