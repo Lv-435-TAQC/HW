@@ -1,9 +1,11 @@
 package tests.chapter1;
+import chapter1.CyclesAndBranching;
 import chapter1.NestedLoops;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,6 +13,8 @@ class NestedLoopsTest {
 
     @org.junit.jupiter.api.Test
     void task329() {
+        assertEquals(new LinkedList<Integer>(Arrays.asList(3)), NestedLoops.task329(5, 9), "Simple example");
+        assertEquals(new LinkedList<Integer>(Arrays.asList()), NestedLoops.task329(5, 49), "Example with empty result");
     }
 
     @org.junit.jupiter.api.Test
@@ -42,4 +46,5 @@ class NestedLoopsTest {
         ArrayList<Integer> actual = chapter1.NestedLoops.task323(2);
         assertIterableEquals(expected,actual);
     }
+
 }
