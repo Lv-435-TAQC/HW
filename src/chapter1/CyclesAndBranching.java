@@ -163,6 +163,25 @@ public class CyclesAndBranching {
         System.out.println("\n sum is "+ sum );
         return sum;
     }
+    public static int task178d(int b) {
+        int [] armstrongList = new int[b];
+        int suma=0;
+        Random random = new Random();
+
+        for (int i=0; i<armstrongList.length; i++){
+            armstrongList[i]= random.nextInt(200);
+        }
+
+        for (int i=0; i<armstrongList.length;i++){
+            boolean dva2= Math.pow(2,i)<(armstrongList[i]);
+            boolean faktorial = armstrongList[i]<(Util.factorial(i));
+
+            if(dva2&&faktorial){
+                suma++;
+            }
+        }
+        return suma;
+    }
 
     }
 

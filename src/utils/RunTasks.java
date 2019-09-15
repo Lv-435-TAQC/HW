@@ -162,6 +162,10 @@ public class RunTasks {
                     start555();
                     break;
 
+                case "178d":
+                    start178d();
+                    break;
+
                 default:
                     System.out.println("You write invalid number");
             }
@@ -379,5 +383,8 @@ public class RunTasks {
     private static void start88v() {
         System.out.println("Please enter your number");
         System.out.println(SimpleLoops.task88v(Integer.parseInt(ConsoleReader.readInteger())) + " is number with reversed first and last item");
+    }
+    private static void start178d() {
+        System.out.println(CyclesAndBranching.task178d(Integer.parseInt(ConsoleReader.readInteger())) + " numbers are relevant! ");
     }
 }
