@@ -6,8 +6,6 @@ import chapter1.NestedLoops;
 import chapter1.SimpleLoops;
 import chapter2.Integers;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class RunTasks {
@@ -153,6 +151,10 @@ public class RunTasks {
 
                 case "88g":
                     start88g();
+                    break;
+
+                case "88v":
+                    start88v();
                     break;
 
                 default:
@@ -363,5 +365,9 @@ public class RunTasks {
         SimpleLoops.task88g(strvalue);
     }
 
+    private static void start88v() {
+        System.out.println("Please enter your number");
+        System.out.println(SimpleLoops.task88v(Integer.parseInt(ConsoleReader.readInteger())) + " is number with reversed first and last item");
+    }
 
 }
