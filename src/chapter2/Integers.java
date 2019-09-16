@@ -114,4 +114,13 @@ public class Integers {
         return pascalTriangle;
     }
 
+    public static int task567 (int n){
+        for (int i = 1; i<n; i++){
+            if (i * (i+1) * (i+2)==n){
+                return i;
+            }
+            System.out.println(i * (i+1) * (i+2));
+        }
+        return 0;
+    }
 }

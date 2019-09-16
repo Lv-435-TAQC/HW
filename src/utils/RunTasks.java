@@ -166,6 +166,11 @@ public class RunTasks {
                     start178d();
                     break;
 
+                case "567":
+                    start567();
+                    break;
+
+
                 default:
                     System.out.println("You write invalid number");
             }
@@ -387,4 +392,12 @@ public class RunTasks {
     private static void start178d() {
         System.out.println(CyclesAndBranching.task178d(Integer.parseInt(ConsoleReader.readInteger())) + " numbers are relevant! ");
     }
+
+    public static void start567() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter any positive integer number");
+        int n = scan.nextInt();
+        Integers.task567(n);
+    }
+
 }
