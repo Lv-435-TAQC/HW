@@ -24,7 +24,7 @@ public class ConsoleReader {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } while (result.substring(0, 1).equals("-") || !Util.isNumeric(result));
+        } while (result.equals("") || result.substring(0, 1).equals("-") || !Util.isNumeric(result));
         return result;
     }
 
