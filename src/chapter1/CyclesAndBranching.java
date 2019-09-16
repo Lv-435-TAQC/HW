@@ -102,11 +102,13 @@ public class CyclesAndBranching {
 
     public static Map task243b(int a) {
         Map<Integer,Integer> couple = new HashMap();
-        for (int i=1; i<=a;i++){
-            for (int j=1;j<a;j++){
+        for (int i=0; i<=a;i++){
+            for (int j=0;j<a;j++){
                 if (Math.pow(i,2)+Math.pow(j,2)==a){
                     if (i>=j)
+
                     couple.put(i,j);
+
                 }
             }
         }
@@ -160,25 +162,6 @@ public class CyclesAndBranching {
         }
         System.out.println("\n sum is "+ sum );
         return sum;
-    }
-    public static int task178d(int b) {
-        int [] armstrongList = new int[b];
-        int suma=0;
-        Random random = new Random();
-
-        for (int i=0; i<armstrongList.length; i++){
-            armstrongList[i]= random.nextInt(200);
-        }
-
-        for (int i=0; i<armstrongList.length;i++){
-            boolean dva2= Math.pow(2,i)<(armstrongList[i]);
-            boolean faktorial = armstrongList[i]<(Util.factorial(i));
-
-            if(dva2&&faktorial){
-                suma++;
-            }
-        }
-        return suma;
     }
 
     }
