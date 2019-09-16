@@ -37,8 +37,15 @@ class SimpleLoopsTest {
 
     @Test
     void task88v() {
-        int expected = 12221;
-        int actual = SimpleLoops.task88v(222);
+        int expected = 334;
+        int actual = SimpleLoops.task88v(433);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void task88vOnlyOneDigit() {
+        int expected = 5;
+        int actual = SimpleLoops.task88v(5);
         assertEquals(expected,actual);
     }
 
@@ -46,5 +53,19 @@ class SimpleLoopsTest {
     void task87(){
         assertEquals(7,SimpleLoops.task87(1234,2),"Simple example");
         assertEquals(46,SimpleLoops.task87(95743567,10), "Example when m more than in n digits");
+    }
+
+    @Test
+    void task88a() {
+        boolean expected = true;
+        boolean actual = SimpleLoops.task88a(18);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void task88aNegative() {
+        boolean expected = false;
+        boolean actual = SimpleLoops.task88a(3);
+        assertEquals(expected,actual);
     }
 }

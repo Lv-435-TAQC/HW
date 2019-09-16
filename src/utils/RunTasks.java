@@ -157,10 +157,27 @@ public class RunTasks {
                 case "88v":
                     start88v();
                     break;
-                
+
                 case "555":
                     start555();
                     break;
+
+                case "178d":
+                    start178d();
+                    break;
+
+                case "567":
+                    start567();
+                    break;
+
+                case "331b":
+                    start331b();
+                    break;
+
+                case "562":
+                    start562();
+                    break;
+
 
                 default:
                     System.out.println("You write invalid number");
@@ -290,13 +307,22 @@ public class RunTasks {
         final int p = Integer.parseInt(ConsoleReader.readPositiveInteger());
         System.out.println("q");
         final int q = Integer.parseInt(ConsoleReader.readPositiveInteger());
-        CyclesAndBranching.task184(p, q, Util.fillUpTheArray(67));
+        System.out.print("The array with nils instead of digits, modulus of which gives in remainder " + q
+                + "\nduring the division on " + p + " is -->");
+        Util.writeIntArrayToConsole(CyclesAndBranching.task184(p, q, Util.fillUpTheArray(67)));
     }
 
     private static void start340() {
         System.out.println("m");
         final int m = Integer.parseInt(ConsoleReader.readPositiveInteger());
-        NestedLoops.task340(m, Util.fillUpTheArray(20));
+        int[] resultArray = NestedLoops.task340(m, Util.fillUpTheArray(20));
+        if (resultArray == null) {
+            System.out.println("\nThere are no three indexes which can satisfy the conditions with m = " + m);
+        } else {
+            System.out.print("\nThe three indexes (i, j, k) which can satisfy the equation a(i) + a(j) + a(k) = " + m
+                    + " are -->");
+            Util.writeIntArrayToConsole(resultArray);
+        }
     }
 
     private static void start107() {
@@ -314,7 +340,7 @@ public class RunTasks {
     }
 
     private static void start331b() {
-        System.out.println();
+        System.out.println(NestedLoops.task331b(Integer.parseInt(ConsoleReader.readInteger())));
     }
 
     private static void start323() {
@@ -380,4 +406,22 @@ public class RunTasks {
         System.out.println("Please enter your number");
         System.out.println(SimpleLoops.task88v(Integer.parseInt(ConsoleReader.readInteger())) + " is number with reversed first and last item");
     }
+
+    private static void start178d() {
+        System.out.println(CyclesAndBranching.task178d(Integer.parseInt(ConsoleReader.readInteger())) + " numbers are relevant! ");
+    }
+
+    public static void start567() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter any positive integer number");
+        int n = scan.nextInt();
+        Integers.task567(n);
+    }
+
+    private static void start562() {
+
+        System.out.println(Integers.task562(Integer.parseInt(ConsoleReader.readInteger())));
+    }
+
+
 }

@@ -86,18 +86,16 @@ public class CyclesAndBranching {
         return list.size();
     }
 
-    public static void task184(final int p, final int q, final int[] startArray) {
-        System.out.print("Starting array --> ");
-        for (int item : startArray) {
-            System.out.print(item + " ");
+    public static int[] task184(final int p, final int q, final int[] startArray) {
+        int[] result = new int[startArray.length];
+        for (int i = 0; i < startArray.length; i++) {
+            if (startArray[i] % p == q) {
+                result[i] = 0;
+            } else {
+                result[i] = startArray[i];
+            }
         }
-        int[] array = Util.prepareArrayWithNilsInsteadOfNumbersWithSpecificCondition(startArray, p, q);
-        System.out.print("\nArray with nils instead of numbers, modulus of the division on "
-                + p + " of which gives in the remainder " + q + " -->");
-        for (int item : array) {
-            System.out.print(" " + item);
-        }
-        System.out.println();
+        return result;
     }
 
     public static Map task243b(int a) {
@@ -108,7 +106,6 @@ public class CyclesAndBranching {
                     if (i>=j)
 
                     couple.put(i,j);
-
                 }
             }
         }
@@ -116,17 +113,17 @@ public class CyclesAndBranching {
     }
 
 
-        public static ArrayList task224(int n){
-            ArrayList array = new ArrayList();
-            int num = 1;
-            while(num <= n){
-                if(n%num == 0) {
-                    array.add(num);
-                }
-                num++;
+    public static ArrayList task224(int n) {
+        ArrayList array = new ArrayList();
+        int num = 1;
+        while (num <= n) {
+            if (n % num == 0) {
+                array.add(num);
             }
-            return array;
+            num++;
         }
+        return array;
+    }
 
     public static int task182(int sum, int counter) {
         ArrayList<Integer> arr = new ArrayList<>();
@@ -152,18 +149,38 @@ public class CyclesAndBranching {
     }
 
 
-    public static double task241 (double sum, int n, int x){
-        for (int i = 1; i<=n; i++ ){
+    public static double task241(double sum, int n, int x) {
+        for (int i = 1; i <= n; i++) {
             double part1 = (-1 ^ (int) Math.sqrt(i));
-            double part2 = i*x^i;
-            double devide = part1/part2;
+            double part2 = i * x ^ i;
+            double devide = part1 / part2;
             sum = sum + devide;
 
         }
-        System.out.println("\n sum is "+ sum );
+        System.out.println("\n sum is " + sum);
         return sum;
     }
 
+    public static int task178d(int b) {
+        int[] armstrongList = new int[b];
+        int suma = 0;
+        Random random = new Random();
+
+        for (int i = 0; i < armstrongList.length; i++) {
+            armstrongList[i] = random.nextInt(200);
+        }
+
+        for (int i = 0; i < armstrongList.length; i++) {
+            boolean dva2 = Math.pow(2, i) < (armstrongList[i]);
+            boolean faktorial = armstrongList[i] < (Util.factorial(i));
+
+            if (dva2 && faktorial) {
+                suma++;
+            }
+        }
+        return suma;
     }
+
+}
 
 

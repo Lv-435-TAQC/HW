@@ -55,23 +55,25 @@ public class SimpleLoops {
             result = true;
         return result;
     }
-    public static int task86a(int n){
+
+    public static int task86a(int n) {
         int counter = 0;
-        while(n > 1){
-            n = n/10;
+        while (n > 1) {
+            n = n / 10;
             counter++;
         }
         return counter;
     }
-    public static int task107(int m){
+
+    public static int task107(int m) {
         int k = 0;
-        while(Math.pow(4,k) < m){
+        while (Math.pow(4, k) < m) {
             k++;
         }
-        return k-1;
+        return k - 1;
     }
 
-    public static String task88g (String strvalue){
+    public static String task88g(String strvalue) {
         String val = "1";
         System.out.println(val + strvalue + val);
         return val + strvalue + val;
@@ -88,7 +90,6 @@ public class SimpleLoops {
 
         return number;
     }
-
 
 
 }

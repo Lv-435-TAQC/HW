@@ -39,40 +39,8 @@ public class Util {
         return array;
     }
 
-    public static int[] prepareArrayWithNilsInsteadOfNumbersWithSpecificCondition(int[] startArray, int p, int q) {
-        for (int i = 0; i < startArray.length; i++) {
-            if (startArray[i] % p == q) {
-                startArray[i] = 0;
-            }
-        }
-        return startArray;
-    }
-
-    public static int[] findThreeNumbersWithSpecificConditions(int[] startArray, int m) {
-        int i = 0;
-        int j = 0;
-        int k = 0;
-        while (i < 20) {
-            if (startArray[i] + startArray[j] + startArray[k] == m) {
-                return new int[]{i, j, k};
-            }
-            if (k < 19) {
-                k++;
-            } else {
-                k = 0;
-                j++;
-            }
-            if (j == 20) {
-                j = 0;
-                i++;
-            }
-        }
-        return null;
-    }
-
-
     private static int getTriangleDigitsCount(int value) {
-        int maxSize=10000;
+        int maxSize = 10000;
         int digitCounter = 1;
         for (int divider = 10; digitCounter < maxSize; digitCounter++, divider *= 10) {
             if (value / divider < 1) {
@@ -117,12 +85,20 @@ public class Util {
             System.out.println();
         }
     }
-    public static int getSumtoFindPerfectNumbers(int n){
+
+    public static int getSumtoFindPerfectNumbers(int n) {
         int sum = 0;
         for (int i = 1; i < n; i++) {
             if (n % i == 0)
                 sum += i;
         }
         return sum;
+    }
+
+    public static void writeIntArrayToConsole(final int[] array) {
+        for (int item : array) {
+            System.out.print(" " + item);
+        }
+        System.out.println();
     }
 }

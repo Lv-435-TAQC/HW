@@ -30,23 +30,17 @@ public class Integers {
         return a;
     }
 
-    public static int task560(int n) {
-        int sum = 0;
-        for (int i = 1; i < n; i++) {
-            if (n % i == 0)
-                sum += i;
-        }
-        return sum;
-    }
-    public static Map<Integer,Integer> task560() {
+    public static Map<Integer, Integer> task560() {
         int firstNum = 0;
         int secondNum = 0;
-        Map<Integer,Integer> friendlyNumbers = new HashMap();
+        Map<Integer, Integer> friendlyNumbers = new HashMap();
         for (int i = 200; i <= 300; i++) {
             firstNum = Util.getSumtoFindPerfectNumbers(i);
             secondNum = Util.getSumtoFindPerfectNumbers(firstNum);
-            if (i == secondNum)
-                friendlyNumbers.put(firstNum,secondNum);
+            if (i == secondNum) {
+                if (firstNum > secondNum)
+                    friendlyNumbers.put(firstNum, secondNum);
+            }
         }
         return friendlyNumbers;
     }
@@ -114,4 +108,30 @@ public class Integers {
         return pascalTriangle;
     }
 
+    public static int task567(int n) {
+        for (int i = 1; i < n; i++) {
+            if (i * (i + 1) * (i + 2) == n) {
+                return i;
+            }
+            System.out.println(i * (i + 1) * (i + 2));
+        }
+        return 0;
+    }
+
+    public static List<Integer> task562(int n) {
+        List<Integer> armstrongsNumbers = new ArrayList();
+        for (int i = 100; i < n; i++) {
+            String text = String.valueOf(i);
+            String firstItem = text.substring(0, 1);
+            String secondItem = text.substring(1, text.length() - 1);
+            String lastItem = text.substring(text.length() - 1);
+            int firstNum = Integer.parseInt(firstItem);
+            int secondNum = Integer.parseInt(secondItem);
+            int thirdNum = Integer.parseInt(lastItem);
+            if (Math.pow(firstNum, 3) + Math.pow(secondNum, 3) + Math.pow(thirdNum, 3) == i) {
+                armstrongsNumbers.add(i);
+            }
+        }
+        return armstrongsNumbers;
+    }
 }
