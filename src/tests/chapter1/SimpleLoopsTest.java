@@ -37,8 +37,15 @@ class SimpleLoopsTest {
 
     @Test
     void task88v() {
-        int expected = 12221;
-        int actual = SimpleLoops.task88v(222);
+        int expected = 334;
+        int actual = SimpleLoops.task88v(433);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void task88vOnlyOneDigit() {
+        int expected = 5;
+        int actual = SimpleLoops.task88v(5);
         assertEquals(expected,actual);
     }
 

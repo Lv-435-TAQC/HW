@@ -1,11 +1,14 @@
 package tests.chapter1;
 import chapter1.CyclesAndBranching;
 import chapter1.NestedLoops;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -47,4 +50,17 @@ class NestedLoopsTest {
         assertIterableEquals(expected,actual);
     }
 
+    @Test
+    void task331b() {
+        List<Integer> expected = Arrays.asList(4,3,2);
+        List<Integer> actual = NestedLoops.task331b(29);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void task331bEmpty() {
+        List<Integer> expected = Arrays.asList();
+        List<Integer> actual = NestedLoops.task331b(31);
+        assertEquals(expected,actual);
+    }
 }
