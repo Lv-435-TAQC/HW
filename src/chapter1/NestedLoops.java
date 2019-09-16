@@ -6,7 +6,6 @@ import utils.Util;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Scanner;
 
 public class NestedLoops {
     public static LinkedList<Integer> task329(int n, int m) {
@@ -48,7 +47,6 @@ public class NestedLoops {
             if (Util.getSumtoFindPerfectNumbers(i)==i)
                 listOfPerfectNumbers.add(i);
         }
-        System.out.println(listOfPerfectNumbers);
         return listOfPerfectNumbers;
     }
 
@@ -70,16 +68,22 @@ public class NestedLoops {
         System.out.println();
     }
 
-    public static void task331b(int a) {
+    public static List<Integer> task331b(int a) {
+        List<Integer> numbers = new ArrayList();
         for (int i = 1; i < Math.sqrt(a); i++) {
             for (int j = 1; j < i; j++) {
                 for (int k = 1; k < j; k++) {
                     int sum = (int) (Math.pow(i, 2) + Math.pow(j, 2) + Math.pow(k, 2));
-                    if (sum == a)
-                        System.out.println(i + " " + j + " " + k);
+                    if (sum == a){
+                        numbers.add(i);
+                        numbers.add(j);
+                        numbers.add(k);
+                    }
                 }
             }
+
         }
+        return numbers;
     }
 
     public static ArrayList task323(int n) {

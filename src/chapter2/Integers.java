@@ -30,14 +30,6 @@ public class Integers {
         return a;
     }
 
-    public static int task560(int n) {
-        int sum = 0;
-        for (int i = 1; i < n; i++) {
-            if (n % i == 0)
-                sum += i;
-        }
-        return sum;
-    }
     public static Map<Integer,Integer> task560() {
         int firstNum = 0;
         int secondNum = 0;
@@ -45,8 +37,10 @@ public class Integers {
         for (int i = 200; i <= 300; i++) {
             firstNum = Util.getSumtoFindPerfectNumbers(i);
             secondNum = Util.getSumtoFindPerfectNumbers(firstNum);
-            if (i == secondNum)
-                friendlyNumbers.put(firstNum,secondNum);
+            if (i == secondNum){
+                if(firstNum>secondNum)
+                    friendlyNumbers.put(firstNum,secondNum);
+            }
         }
         return friendlyNumbers;
     }

@@ -170,6 +170,10 @@ public class RunTasks {
                     start567();
                     break;
 
+                case "331b":
+                    start331b();
+                    break;
+
 
                 default:
                     System.out.println("You write invalid number");
@@ -323,7 +327,7 @@ public class RunTasks {
     }
 
     private static void start331b() {
-        System.out.println();
+        System.out.println(NestedLoops.task331b(Integer.parseInt(ConsoleReader.readInteger())));
     }
 
     private static void start323() {
