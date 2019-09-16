@@ -24,7 +24,7 @@ class IntegersTest {
         assertIterableEquals(expected,actual);
     }
     @Test
-    void task554WithNullResult() {
+    void task554WithNoullResult() {
         List<ArrayList<Integer>> expected  = new ArrayList<>();
         List<ArrayList<Integer>> actual = Integers.task554(1);
         assertIterableEquals(expected,actual);

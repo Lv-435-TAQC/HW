@@ -218,7 +218,7 @@ public class RunTasks {
         int n;
         System.out.println("Please  integer:");
         n = ConsoleReader.readInteger();
-        System.out.println("Task 559 with  argument n = " + n + ", result = " + Integers.task559(n));
+        System.out.println("Task 559 with two arguments n = " + n + ", result = " + Integers.task559(n));
     }
 
     private static void start88b() {
