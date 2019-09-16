@@ -47,4 +47,18 @@ class SimpleLoopsTest {
         assertEquals(7,SimpleLoops.task87(1234,2),"Simple example");
         assertEquals(46,SimpleLoops.task87(95743567,10), "Example when m more than in n digits");
     }
+
+    @Test
+    void task88a() {
+        boolean expected = true;
+        boolean actual = SimpleLoops.task88a(18);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void task88aNegative() {
+        boolean expected = false;
+        boolean actual = SimpleLoops.task88a(3);
+        assertEquals(expected,actual);
+    }
 }
