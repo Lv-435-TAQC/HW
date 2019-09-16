@@ -101,4 +101,18 @@ public class Util {
         }
         System.out.println();
     }
+    public static boolean isNaturalNumber (int number) {
+        boolean b = true;
+        if(number < 2)
+            return false;
+        if(number == 2 || number == 3)
+            return true;
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                b = false;
+                break;
+            }
+        }
+        return b;
+    }
 }

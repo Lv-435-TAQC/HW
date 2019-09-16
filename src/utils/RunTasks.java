@@ -188,8 +188,8 @@ public class RunTasks {
     private static void start87() {
         int n, m;
         System.out.println("Please write two integers:");
-        n = Integer.parseInt(ConsoleReader.readInteger());
-        m = Integer.parseInt(ConsoleReader.readInteger());
+        n = ConsoleReader.readInteger();
+        m = ConsoleReader.readInteger();
         System.out.println("Task 87 with two arguments n = " + n + ", m = " + m + ", result = " + SimpleLoops.task87(n, m));
     }
 
@@ -201,29 +201,29 @@ public class RunTasks {
     private static void start226() {
         int n, m;
         System.out.println("Please write two integers:");
-        n = Integer.parseInt(ConsoleReader.readInteger());
-        m = Integer.parseInt(ConsoleReader.readInteger());
+        n = ConsoleReader.readInteger();
+        m = ConsoleReader.readInteger();
         System.out.println("Task 226 with two arguments n = " + n + ", m = " + m + ", result = " + CyclesAndBranching.task226(n, m));
     }
 
     private static void start329() {
         int n, m;
         System.out.println("Please write two integers:");
-        n = Integer.parseInt(ConsoleReader.readInteger());
-        m = Integer.parseInt(ConsoleReader.readInteger());
+        n = ConsoleReader.readInteger();
+        m = ConsoleReader.readInteger();
         System.out.println("Task 329 with two arguments n = " + n + ", m = " + m + ", result = " + NestedLoops.task329(n, m));
     }
 
     private static void start559() {
         int n;
         System.out.println("Please  integer:");
-        n = Integer.parseInt(ConsoleReader.readInteger());
+        n = ConsoleReader.readInteger();
         System.out.println("Task 559 with two arguments n = " + n + ", result = " + Integers.task559(n));
     }
 
     private static void start88b() {
         System.out.println("Pls write number");
-        System.out.println(SimpleLoops.task88b(Integer.parseInt(ConsoleReader.readInteger())) + " is reloaded number! ");
+        System.out.println(SimpleLoops.task88b(ConsoleReader.readInteger()) + " is reloaded number! ");
     }
 
     private static void runTask86h() {
@@ -233,7 +233,7 @@ public class RunTasks {
     }
 
     private static void start86b() {
-        System.out.println("Sum of numbers is  " + SimpleLoops.task86b(Integer.parseInt(ConsoleReader.readInteger())));
+        System.out.println("Sum of numbers is  " + SimpleLoops.task86b(ConsoleReader.readInteger()));
     }
 
     private static void start178h() {
@@ -242,22 +242,22 @@ public class RunTasks {
 
     private static void start108() {
         System.out.println("The smallest number of appearance 2^r>n is  "
-                + SimpleLoops.task108(Integer.parseInt(ConsoleReader.readInteger())));
+                + SimpleLoops.task108(ConsoleReader.readInteger()));
     }
 
     private static void start561() {
         System.out.println("Pls write number");
-        System.out.println(Integers.task561(Integer.parseInt(ConsoleReader.readInteger())) + " are relevant numbers! ");
+        System.out.println(Integers.task561(ConsoleReader.readInteger()) + " are relevant numbers! ");
     }
 
     static void start243a() {
         System.out.println("Pls write number");
-        CyclesAndBranching.task243a(Integer.parseInt(ConsoleReader.readInteger()));
+        CyclesAndBranching.task243a(ConsoleReader.readInteger());
     }
 
     private static void start331a() {
         System.out.println("Pls write number");
-        System.out.println(NestedLoops.task331a(Integer.parseInt(ConsoleReader.readInteger())) + " are couple of relevant numbers! ");
+        System.out.println(NestedLoops.task331a(ConsoleReader.readInteger()) + " are couple of relevant numbers! ");
     }
 
     private static void start242() {
@@ -266,17 +266,17 @@ public class RunTasks {
 
     private static void start88a() {
         System.out.println("Pls write number");
-        System.out.println(SimpleLoops.task88a(Integer.parseInt(ConsoleReader.readInteger())));
+        System.out.println(SimpleLoops.task88a(ConsoleReader.readInteger()));
     }
 
     private static void start225() {
-        System.out.println("This q is " + CyclesAndBranching.task225(Integer.parseInt(ConsoleReader.readInteger())));
+        System.out.println("This q is " + CyclesAndBranching.task225(ConsoleReader.readInteger()));
     }
 
     static void start227() {
         System.out.println("Pls write 2 numbers");
-        int firstNum = Integer.parseInt(ConsoleReader.readInteger());
-        int secondNum = Integer.parseInt(ConsoleReader.readInteger());
+        int firstNum = ConsoleReader.readInteger();
+        int secondNum = ConsoleReader.readInteger();
         CyclesAndBranching.task227(firstNum, secondNum);
     }
 
@@ -285,7 +285,7 @@ public class RunTasks {
     }
 
     private static void start330() {
-        int number = Integer.parseInt(ConsoleReader.readInteger());
+        int number = ConsoleReader.readInteger();
         NestedLoops.task330(number);
     }
 
@@ -295,7 +295,7 @@ public class RunTasks {
 
     private static void start86a() {
         System.out.println("Please write number");
-        System.out.println(SimpleLoops.task86a(Integer.parseInt(ConsoleReader.readInteger())) + " is digits of numbers! ");
+        System.out.println(SimpleLoops.task86a(ConsoleReader.readInteger()) + " is digits of numbers! ");
     }
 
     private static void start569() {
@@ -327,38 +327,38 @@ public class RunTasks {
 
     private static void start107() {
         System.out.println("Please write a number");
-        System.out.println(SimpleLoops.task107(Integer.parseInt(ConsoleReader.readInteger())) + " is a pow of 4! ");
+        System.out.println(SimpleLoops.task107(ConsoleReader.readInteger()) + " is a pow of 4! ");
     }
 
     private static void start224() {
         System.out.println("Please write a number");
-        System.out.println(CyclesAndBranching.task224(Integer.parseInt(ConsoleReader.readInteger())) + " is natural dividers of your number");
+        System.out.println(CyclesAndBranching.task224(ConsoleReader.readInteger()) + " is natural dividers of your number");
     }
 
     private static void start243b() {
-        System.out.println(CyclesAndBranching.task243b(Integer.parseInt(ConsoleReader.readInteger())));
+        System.out.println(CyclesAndBranching.task243b(ConsoleReader.readInteger()));
     }
 
     private static void start331b() {
-        System.out.println(NestedLoops.task331b(Integer.parseInt(ConsoleReader.readInteger())));
+        System.out.println(NestedLoops.task331b(ConsoleReader.readInteger()));
     }
 
     private static void start323() {
         System.out.println("Please write a number");
-        System.out.println(NestedLoops.task323(Integer.parseInt(ConsoleReader.readInteger())) + " is relatively simple numbers to yours ");
+        System.out.println(NestedLoops.task323(ConsoleReader.readInteger()) + " is relatively simple numbers to yours ");
     }
 
     private static void start554() {
         System.out.println("Please write a number");
-        System.out.println(Integers.task554(Integer.parseInt(ConsoleReader.readInteger())) + " is Pythagorean triples");
+        System.out.println(Integers.task554(ConsoleReader.readInteger()) + " is Pythagorean triples");
     }
 
     private static void start325() {
-        System.out.println("Prime divisors of a number is " + NestedLoops.task325(Integer.parseInt(ConsoleReader.readInteger())));
+        System.out.println("Prime divisors of a number is " + NestedLoops.task325(ConsoleReader.readInteger()));
     }
 
     private static void start555() {
-        int n = Integer.parseInt(ConsoleReader.readInteger());
+        int n = ConsoleReader.readInteger();
         int[][] triangle = Integers.task555(n);
         Util.showPascalTriangle(n, triangle);
     }
@@ -404,11 +404,11 @@ public class RunTasks {
 
     private static void start88v() {
         System.out.println("Please enter your number");
-        System.out.println(SimpleLoops.task88v(Integer.parseInt(ConsoleReader.readInteger())) + " is number with reversed first and last item");
+        System.out.println(SimpleLoops.task88v(ConsoleReader.readInteger()) + " is number with reversed first and last item");
     }
 
     private static void start178d() {
-        System.out.println(CyclesAndBranching.task178d(Integer.parseInt(ConsoleReader.readInteger())) + " numbers are relevant! ");
+        System.out.println(CyclesAndBranching.task178d(ConsoleReader.readInteger()) + " numbers are relevant! ");
     }
 
     public static void start567() {
@@ -419,8 +419,7 @@ public class RunTasks {
     }
 
     private static void start562() {
-
-        System.out.println(Integers.task562(Integer.parseInt(ConsoleReader.readInteger())));
+        System.out.println(Integers.task562(ConsoleReader.readInteger()));
     }
 
 
