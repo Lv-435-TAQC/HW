@@ -174,6 +174,10 @@ public class RunTasks {
                     start331b();
                     break;
 
+                case "562":
+                    start562();
+                    break;
+
 
                 default:
                     System.out.println("You write invalid number");
@@ -403,5 +407,10 @@ public class RunTasks {
         int n = scan.nextInt();
         Integers.task567(n);
     }
+    private static void start562(){
+
+        System.out.println(Integers.task562(Integer.parseInt(ConsoleReader.readInteger())));
+    }
+
 
 }

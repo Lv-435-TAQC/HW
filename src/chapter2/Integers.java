@@ -117,4 +117,20 @@ public class Integers {
         }
         return 0;
     }
+    public static List<Integer> task562(int n) {
+        List<Integer> armstrongsNumbers = new ArrayList();
+        for (int i = 100; i < n; i++) {
+            String text = String.valueOf(i);
+            String firstItem = text.substring(0, 1);
+            String secondItem = text.substring(1, text.length() - 1);
+            String lastItem = text.substring(text.length() - 1);
+            int firstNum = Integer.parseInt(firstItem);
+            int secondNum = Integer.parseInt(secondItem);
+            int thirdNum = Integer.parseInt(lastItem);
+            if (Math.pow(firstNum, 3) + Math.pow(secondNum, 3) + Math.pow(thirdNum, 3) == i) {
+                armstrongsNumbers.add(i);
+            }
+        }
+        return armstrongsNumbers;
+    }
 }
