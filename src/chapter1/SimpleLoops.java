@@ -55,6 +55,7 @@ public class SimpleLoops {
             result = true;
         return result;
     }
+
     public static int task86a(int n){
         int counter = 0;
         while(n > 1){
