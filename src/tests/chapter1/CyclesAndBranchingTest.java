@@ -54,4 +54,18 @@ class CyclesAndBranchingTest {
         assertEquals(new LinkedList<Integer>(Arrays.asList(36, 18)),CyclesAndBranching.task226(6,9), "Simple example");
         assertEquals(new LinkedList<Integer>(Arrays.asList()),CyclesAndBranching.task226(5,9), "Example with empty result");
     }
+
+    @Test
+    void task178d() {
+        int expected = 2;
+        int actual = CyclesAndBranching.task178d(40);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void task178dReturnZero() {
+        int expected = 0;
+        int actual = CyclesAndBranching.task178d(3);
+        assertEquals(expected,actual);
+    }
 }
