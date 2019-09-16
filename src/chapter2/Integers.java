@@ -8,7 +8,9 @@ public class Integers {
     public static LinkedList<Integer> task559(int n) {
         LinkedList<Integer> numbers = new LinkedList<>();
         int numberOfMersen = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 2; i < n; i++) {
+            if(!Util.isNaturalNumber(i))
+                continue;
             numberOfMersen = ((int) Math.pow(2, i) - 1);
             if (numberOfMersen < n) {
                 numbers.add(numberOfMersen);
