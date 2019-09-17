@@ -8,7 +8,10 @@ import java.util.Scanner;
 
 public class ConsoleReader {
     private static Scanner in = new Scanner(System.in);
-
+    private static BufferedReader bufferedReader = null;
+    public ConsoleReader(BufferedReader br){
+        bufferedReader = br;
+    }
     static String readString() {
         return in.nextLine();
     }
@@ -28,9 +31,9 @@ public class ConsoleReader {
         return result;
     }
 
-    public static int readInteger() {
-        final InputStreamReader inputStreamReader = new InputStreamReader(System.in);
-        final BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+    public  int readInteger() {
+//        final InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+//         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         String result = "";
         do {
             System.out.println("Enter integer");
