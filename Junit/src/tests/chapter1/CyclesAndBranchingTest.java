@@ -68,4 +68,18 @@ class CyclesAndBranchingTest {
         int actual = CyclesAndBranching.task178d(3);
         assertEquals(expected,actual);
     }
+
+    @Test
+    void task178v() {
+        int expected = 2;
+        int actual = CyclesAndBranching.task178v();
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void task227() {
+     List<Integer> expected = Arrays.asList(-9,-3,-1,1,3,9);
+    List<Integer> actual = CyclesAndBranching.task227(9,-9);
+    assertEquals(expected,actual);
+    }
 }
