@@ -278,6 +278,7 @@ public class RunTasks {
         int firstNum = ConsoleReader.readInteger();
         int secondNum = ConsoleReader.readInteger();
         CyclesAndBranching.task227(firstNum, secondNum);
+
     }
 
     static void start178v() {
