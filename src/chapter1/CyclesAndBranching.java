@@ -71,13 +71,25 @@ public class CyclesAndBranching {
         return result;
     }
 
-    public static int task227(int a, int b) {
-        int res = 0;
-        for (int i = 1; i <= 40; i++) {
-            if ((a % i == 0) && (b % i == 0))
-                res = i;
+    public static List<Integer> task227(int a, int b) {
+        List<Integer> list = new ArrayList();
+        if (a>b){
+            for (int i = -a; i <= a; i++) {
+                if (i != 0) {
+                    if ((a % i == 0) && (b % i == 0))
+                        list.add(i);
+                }
+            }
         }
-        return res;
+        else{
+            for (int i = -b; i <= b; i++) {
+                if (i != 0) {
+                    if ((a % i == 0) && (b % i == 0))
+                        list.add(i);
+                }
+            }
+        }
+        return list;
     }
 
     public static int task178v() {
