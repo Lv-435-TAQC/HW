@@ -68,4 +68,18 @@ class CyclesAndBranchingTest {
         int actual = CyclesAndBranching.task178d(3);
         assertEquals(expected,actual);
     }
+
+    @Test
+    public void task225Test() {
+        List<Integer> expectedResult = new ArrayList<>(Arrays.asList(5));
+        List<Integer> actualResult = CyclesAndBranching.task225(150);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void task225NegativeTest() {
+        List<Integer> expectedResult = new ArrayList<>(Arrays.asList());
+        List<Integer> actualResult = CyclesAndBranching.task225(25);
+        assertEquals(expectedResult, actualResult);
+    }
 }
