@@ -20,7 +20,19 @@ class IntegersTest {
         values.add(4);
         values.add(5);
         expected.add(values);
-        List<ArrayList<Integer>> actual = Integers.task554(6);
+        List<ArrayList<Integer>> actual = Integers.task554(5);
+        assertIterableEquals(expected,actual);
+    }
+    @Test
+    void task554WithNullResult() {
+        List<ArrayList<Integer>> expected  = new ArrayList<>();
+        List<ArrayList<Integer>> actual = Integers.task554(1);
+        assertIterableEquals(expected,actual);
+    }
+    @Test
+    void task554NoCorrect() {
+        List<ArrayList<Integer>> expected  = new ArrayList<>();
+        List<ArrayList<Integer>> actual = Integers.task554(-1);
         assertIterableEquals(expected,actual);
     }
 

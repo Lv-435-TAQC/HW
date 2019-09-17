@@ -28,7 +28,7 @@ public class ConsoleReader {
         return result;
     }
 
-    public static String readInteger() {
+    public static int readInteger() {
         final InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         final BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         String result = "";
@@ -40,10 +40,10 @@ public class ConsoleReader {
                 e.printStackTrace();
             }
         } while (!isInteger(result));
-        return result;
+        return Integer.parseInt(result);
     }
 
-    private static boolean isInteger(String string) {
+    public static boolean isInteger(String string) {
         boolean result = true;
         try {
             Integer.parseInt(string);
