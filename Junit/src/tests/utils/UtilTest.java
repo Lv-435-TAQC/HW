@@ -9,18 +9,43 @@ class UtilTest {
 
     @Test
     void factorial() {
+        int expected = 24;
+        int actual = Util.factorial(4);
+        assertEquals(expected,actual);
+    }
+    @Test
+    void isNumeric() {
+        boolean expected = true;
+        boolean actual = Util.isNumeric("7");
+        assertEquals(expected,actual);
     }
 
     @Test
-    void isNumeric() {
+    void isNotNumeric() {
+        boolean expected = false;
+        boolean actual = Util.isNumeric("Seven");
+        assertEquals(expected,actual);
     }
 
     @Test
     void isPrimeNumber() {
+        boolean expected = true;
+        boolean actual = Util.isPrimeNumber(11);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void isNotPrimeNumber() {
+        boolean expected = false;
+        boolean actual = Util.isPrimeNumber(12);
+        assertEquals(expected,actual);
     }
 
     @Test
     void fillUpTheArray() {
+        int [] expected = new int[19];
+        int [] actual = Util.fillUpTheArray(19);
+        assertEquals(expected.length,actual.length);
     }
 
     @Test
@@ -29,6 +54,9 @@ class UtilTest {
 
     @Test
     void getSumtoFindPerfectNumbers() {
+        int expected = 6;
+        int actual = Util.getSumtoFindPerfectNumbers(6);
+        assertEquals(expected,actual);
     }
 
     @Test
