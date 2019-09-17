@@ -1,19 +1,9 @@
 package tests.utils;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-import org.powermock.api.mockito.PowerMockito;
 import utils.ConsoleReader;
 
-
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.powermock.api.mockito.PowerMockito.*;
 
 
 class ConsoleReaderTest {
