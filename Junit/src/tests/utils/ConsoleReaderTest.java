@@ -1,56 +1,49 @@
-package tests.utils;
+package src.tests.utils;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.powermock.api.mockito.PowerMockito;
+import org.powermock.core.classloader.annotations.PrepareForTest;
+import org.powermock.reflect.Whitebox;
 import utils.ConsoleReader;
 
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.powermock.api.mockito.PowerMockito.*;
 
+import  utils.ConsoleReader;
 
+
+@PrepareForTest(ConsoleReader.class)
 class ConsoleReaderTest {
 
     @Test
     void readString() {
     }
 
- //   @Test
-//    void readPositiveInteger() {
-//    }
-//    public class MockBufferReader extends BufferedReader{
-//        public  String readLine(){
-//            return "1";
-//        }
-//    };
-//
-//    public MockBufferReader setup(){
-//
-//        return new MockBufferReader();
-//    }
-//
-//    @Test
-//    void readInteger() {
-//        InputStream in = mock(InputStream.class);
-//        BufferedReader bufferedReader = mock(BufferedReader.class);
-//        try {
-//           whenNew(BufferedReader.class).withArguments(in).thenReturn(MockBufferReader.class);
-//           when(bufferedReader.readLine()).thenReturn(new MockBufferReader().readLine());
-//        }catch (java.lang.Exception ex ){
-//
-//        }
-//        String expected = "1";
-//        String actual = "1";
-//        readInteger();
-//        assertEquals(expected,actual);
-//    }
+    @Test
+    void readPositiveInteger() {
+    }
+
+
+
+
+    @Test
+    void readIntegerTest() throws IOException {
+        BufferedReader bufferedReader = mock(BufferedReader.class);
+        when(bufferedReader.readLine()).thenReturn("1");
+
+        ConsoleReader c = new ConsoleReader(bufferedReader);
+
+        Integer expected = 1;
+        Integer actual = c.readInteger();
+        assertEquals(1,actual);
+    }
 
     @Test
     void integersForArray() {
