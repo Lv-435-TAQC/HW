@@ -3,13 +3,13 @@ package tests.chapter1;
 import chapter1.NestedLoops;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 class NestedLoopsTest {
 
@@ -59,6 +59,13 @@ class NestedLoopsTest {
     void task331bEmpty() {
         List<Integer> expected = Arrays.asList();
         List<Integer> actual = NestedLoops.task331b(31);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void testTask330() {
+        List<Integer> expected = Arrays.asList(6,28);
+        List<Integer> actual = NestedLoops.task330(30);
         assertEquals(expected,actual);
     }
 }
