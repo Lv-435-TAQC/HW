@@ -112,11 +112,10 @@ public class CyclesAndBranching {
 
     public static Map task243b(int a) {
         Map<Integer,Integer> couple = new HashMap();
-        for (int i=0; i<=a;i++){
-            for (int j=0;j<a;j++){
+        for (int i=1; i<=a;i++){
+            for (int j=1;j<a;j++){
                 if (Math.pow(i,2)+Math.pow(j,2)==a){
                     if (i>=j)
-
                     couple.put(i,j);
                 }
             }

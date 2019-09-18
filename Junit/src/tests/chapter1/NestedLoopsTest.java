@@ -8,15 +8,22 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertIterableEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class NestedLoopsTest {
 
-    @org.junit.jupiter.api.Test
-    void task329() {
-        assertEquals(new LinkedList<Integer>(Arrays.asList(3)), NestedLoops.task329(5, 9), "Simple example");
-        assertEquals(new LinkedList<Integer>(Arrays.asList()), NestedLoops.task329(5, 49), "Example with empty result");
+    @Test
+    void task329Simple() {
+        LinkedList expected = new LinkedList<Integer>(Arrays.asList(3));
+        LinkedList actual = NestedLoops.task329(5, 9);
+        assertEquals(expected, actual, "Simple example");
+    }
+
+    @Test
+    void task329EmptyRes() {
+        LinkedList expected = new LinkedList<Integer>(Arrays.asList());
+        LinkedList actual = NestedLoops.task329(5, 49);
+        assertTrue(expected.equals(actual), "Example with empty result");
     }
 
     @org.junit.jupiter.api.Test
