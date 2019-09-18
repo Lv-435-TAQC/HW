@@ -40,39 +40,55 @@ class NestedLoopsTest {
 
     @Test
     void task323() {
-        ArrayList<Integer>expected; new ArrayList<Integer>();
-        Integer[] array =  {2,3,4,5,6,7,8,9,10,11,12};
+        ArrayList<Integer> expected;
+        new ArrayList<Integer>();
+        Integer[] array = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
         expected = new ArrayList<Integer>(Arrays.asList(array));
         ArrayList<Integer> actual = chapter1.NestedLoops.task323(13);
-        assertIterableEquals(expected,actual);
+        assertIterableEquals(expected, actual);
     }
 
     @Test
     void task323MinValue() {
-        ArrayList<Integer>expected; new ArrayList<Integer>();
+        ArrayList<Integer> expected;
+        new ArrayList<Integer>();
         expected = new ArrayList<Integer>();
         ArrayList<Integer> actual = chapter1.NestedLoops.task323(1);
-        assertIterableEquals(expected,actual);
+        assertIterableEquals(expected, actual);
     }
 
     @Test
     void task331b() {
-        List<Integer> expected = Arrays.asList(4,3,2);
+        List<Integer> expected = Arrays.asList(4, 3, 2);
         List<Integer> actual = NestedLoops.task331b(29);
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     void task331bEmpty() {
         List<Integer> expected = Arrays.asList();
         List<Integer> actual = NestedLoops.task331b(31);
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
     void testTask330() {
-        List<Integer> expected = Arrays.asList(6,28);
+        List<Integer> expected = Arrays.asList(6, 28);
         List<Integer> actual = NestedLoops.task330(30);
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void task325Test() {
+        List<Integer> expectedResult = new ArrayList<>(Arrays.asList(2, 5));
+        List<Integer> actualResult = NestedLoops.task325(100);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void task325NegativeTest() {
+        List<Integer> expectedResult = new ArrayList<>(Arrays.asList());
+        List<Integer> actualResult = NestedLoops.task325(1);
+        assertEquals(expectedResult, actualResult);
     }
 }
