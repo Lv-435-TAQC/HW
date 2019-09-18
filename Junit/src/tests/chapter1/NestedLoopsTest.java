@@ -88,7 +88,7 @@ class NestedLoopsTest {
     @Test
     public void task325NegativeTest() {
         List<Integer> expectedResult = new ArrayList<>(Arrays.asList());
-        List<Integer> actualResult = NestedLoops.task325(5);
+        List<Integer> actualResult = NestedLoops.task325(1);
         assertEquals(expectedResult, actualResult);
     }
 }
