@@ -50,10 +50,26 @@ class SimpleLoopsTest {
     }
 
     @Test
-    void task87(){
-        assertEquals(7,SimpleLoops.task87(1234,2),"Simple example");
-        assertEquals(46,SimpleLoops.task87(95743567,10), "Example when m more than in n digits");
+    void task87Simple(){
+        int expected = 7;
+        int actual = SimpleLoops.task87(1234,2);
+        assertEquals(expected,actual,"Simple example");
     }
+
+    @Test
+    void task87CounterMoreThanDigits(){
+        int expected = 15;
+        int actual = SimpleLoops.task87(12345, 8);
+        assertEquals(expected, actual, "Example when m more than in n digits");
+    }
+
+    @Test
+    void task87CounterIsZero(){
+        int expected = 0;
+        int actual = SimpleLoops.task87(12345, 0);
+        assertEquals(expected, actual, "Example when m is zero");
+    }
+
 
     @Test
     void task88a() {

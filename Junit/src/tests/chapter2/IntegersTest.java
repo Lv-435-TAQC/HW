@@ -37,9 +37,17 @@ class IntegersTest {
     }
 
     @Test
-    void task559(){
-        assertEquals(new LinkedList<Integer>(Arrays.asList(3,7)), Integers.task559(19), "Simple example");
+    void task559Simple(){
+        LinkedList expected = new LinkedList<Integer>(Arrays.asList(3,7));
+        LinkedList actual = Integers.task559(19);
+        assertEquals(expected, actual, "Simple example");
+    }
 
+    @Test
+    void task559MinValue(){
+        LinkedList expected = new LinkedList<Integer>(Arrays.asList());
+        LinkedList actual = Integers.task559(1);
+        assertIterableEquals(expected, actual, "Example with min nature number");
     }
 
     @Test

@@ -1,46 +1,47 @@
 package tests.utils;
 
+
 import org.junit.jupiter.api.Test;
+import org.powermock.core.classloader.annotations.PrepareForTest;
 import utils.ConsoleReader;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.powermock.api.mockito.PowerMockito.*;
 
 
+@PrepareForTest(ConsoleReader.class)
 class ConsoleReaderTest {
 
     @Test
     void readString() {
     }
 
- //   @Test
-//    void readPositiveInteger() {
-//    }
-//    public class MockBufferReader extends BufferedReader{
-//        public  String readLine(){
-//            return "1";
-//        }
-//    };
-//
-//    public MockBufferReader setup(){
-//
-//        return new MockBufferReader();
-//    }
-//
-//    @Test
-//    void readInteger() {
-//        InputStream in = mock(InputStream.class);
+    @Test
+    void readPositiveIntegerTest() throws IOException {
 //        BufferedReader bufferedReader = mock(BufferedReader.class);
-//        try {
-//           whenNew(BufferedReader.class).withArguments(in).thenReturn(MockBufferReader.class);
-//           when(bufferedReader.readLine()).thenReturn(new MockBufferReader().readLine());
-//        }catch (java.lang.Exception ex ){
+//        when(bufferedReader.readLine()).thenReturn("-1");
 //
-//        }
-//        String expected = "1";
-//        String actual = "1";
-//        readInteger();
+//        ConsoleReader consoleReader = new ConsoleReader(bufferedReader);
+//
+//        Integer expected = 1;
+//        Integer actual = consoleReader.readInteger();
 //        assertEquals(expected,actual);
-//    }
+    }
+
+    @Test
+    void readIntegerTest() throws IOException {
+        BufferedReader bufferedReader = mock(BufferedReader.class);
+        when(bufferedReader.readLine()).thenReturn("1");
+
+        ConsoleReader c = new ConsoleReader(bufferedReader);
+
+        Integer expected = 1;
+        Integer actual = c.readInteger();
+        assertEquals(1,actual);
+    }
 
     @Test
     void integersForArray() {

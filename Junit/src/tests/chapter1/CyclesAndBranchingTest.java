@@ -5,8 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertIterableEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class CyclesAndBranchingTest {
 
@@ -48,15 +47,38 @@ class CyclesAndBranchingTest {
     }
 
     @Test
-    void task178b() {
-        assertEquals(4, CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 5, 9, 12, 21))), "Simple example");
-        assertEquals(0, CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(2, 5, 10, 15))), "Example without multiples of 3");
+    void task178bSimple() {
+        int expected = 4;
+        int actual = CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 5, 9, 12, 21)));
+        assertEquals(expected, actual , "Simple example");
     }
 
     @Test
-    void task226() {
-        assertEquals(new LinkedList<Integer>(Arrays.asList(36, 18)), CyclesAndBranching.task226(6, 9), "Simple example");
-        assertEquals(new LinkedList<Integer>(Arrays.asList()), CyclesAndBranching.task226(5, 9), "Example with empty result");
+    void task178bWithoutMultOf3() {
+        int expected = 0;
+        int actual = CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(2, 5, 10, 19,22)));
+        assertEquals(expected, actual, "Example without multiples of 3");
+    }
+
+    @Test
+    void task178bWithEmptyArray() {
+        int expected = 0;
+        int actual = CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList()));
+        assertEquals(expected, actual, "Example with empty array");
+    }
+
+    @Test
+    void task226Simple() {
+        LinkedList expected = new LinkedList<Integer>(Arrays.asList(36, 18));
+        LinkedList actual = CyclesAndBranching.task226(6, 9);
+        assertEquals(expected, actual, "Simple example");
+    }
+
+    @Test
+    void task226ExpectNotTrue() {
+        LinkedList expected = new LinkedList<Integer>(Arrays.asList(3, 5));
+        LinkedList actual = CyclesAndBranching.task226(5, 9);
+        assertNotEquals(expected, actual);
     }
 
     @Test
