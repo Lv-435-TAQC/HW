@@ -51,14 +51,14 @@ public class CyclesAndBranching {
         return a.size();
     }
 
-    public static ArrayList<Integer> task225(int n) {
-        ArrayList<Integer> a = new ArrayList<>();
+    public static List<Integer> task225(int n) {
+        List<Integer> list = new ArrayList<Integer>();
         for (int i = 1; i < Math.sqrt(n); i++) {
             if ((n % (i * i) == 0) && (n % (i * i * i) != 0)) {
-                a.add(i);
+               list.add(i);
             }
         }
-        return a;
+        return list;
     }
 
     public static double task242(final int n) {
@@ -112,11 +112,10 @@ public class CyclesAndBranching {
 
     public static Map task243b(int a) {
         Map<Integer,Integer> couple = new HashMap();
-        for (int i=0; i<=a;i++){
-            for (int j=0;j<a;j++){
+        for (int i=1; i<=a;i++){
+            for (int j=1;j<a;j++){
                 if (Math.pow(i,2)+Math.pow(j,2)==a){
                     if (i>=j)
-
                     couple.put(i,j);
                 }
             }

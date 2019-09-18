@@ -1,22 +1,15 @@
-package src.tests.utils;
+package tests.utils;
 
-import org.junit.jupiter.api.BeforeEach;
+
 import org.junit.jupiter.api.Test;
-import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.reflect.Whitebox;
 import utils.ConsoleReader;
 
-
-import java.io.*;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
-
+import java.io.BufferedReader;
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.powermock.api.mockito.PowerMockito.*;
-
-import  utils.ConsoleReader;
 
 
 @PrepareForTest(ConsoleReader.class)
@@ -27,11 +20,16 @@ class ConsoleReaderTest {
     }
 
     @Test
-    void readPositiveInteger() {
+    void readPositiveIntegerTest() throws IOException {
+//        BufferedReader bufferedReader = mock(BufferedReader.class);
+//        when(bufferedReader.readLine()).thenReturn("-1");
+//
+//        ConsoleReader consoleReader = new ConsoleReader(bufferedReader);
+//
+//        Integer expected = 1;
+//        Integer actual = consoleReader.readInteger();
+//        assertEquals(expected,actual);
     }
-
-
-
 
     @Test
     void readIntegerTest() throws IOException {

@@ -1,6 +1,5 @@
 package chapter1;
 
-
 import utils.Util;
 
 import java.util.ArrayList;
@@ -112,14 +111,18 @@ public class NestedLoops {
         return a;
     }
 
-    public static ArrayList<Integer> task325(int n) {
-        ArrayList<Integer> a = new ArrayList<Integer>();
+    public static List<Integer> task325(int n) {
+        List<Integer> list = new ArrayList<Integer>();
         for (int i = 2; i <= n / 2; i++) {
             if (n % i == 0 && Util.isPrimeNumber(i)) {
-                a.add(i);
+               list.add(i);
             }
         }
-        return a;
+        if(Util.isPrimeNumber(n))
+        {
+            list.add(n);
+        }
+        return list;
     }
 
     public static int task332(int n) {
