@@ -133,12 +133,5 @@ class CyclesAndBranchingTest {
         int[] actualResult = CyclesAndBranching.task184(5, 1, insert);
         assertArrayEquals(expectedResult, actualResult);
     }
-    @Test
-    void task242() {
-        PowerMockito.mockStatic(Util.class);
-        BDDMockito.given(Util.factorial()).willReturn();
-        Double expectedResult = 1.381773278231005;
-        Double actualResult = CyclesAndBranching.task242(23);
-        assertEquals(expectedResult, actualResult);
-    }
+
 }
