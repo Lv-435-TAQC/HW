@@ -40,10 +40,12 @@ public class SimpleLoops {
 
 
     public static int task108(int n) {
-        if (Math.pow(2, (Math.log(n) / Math.log(2))) == n) {
-            return (int) ((Math.log(n) / Math.log(2)));
+        int res=(int) (Math.log(n) / Math.log(2));
+        if (Math.pow(2, res) == n) {
+            return (int) Math.pow(2, res);
         } else {
-            return (int) ((Math.log(n) / Math.log(2)) + 1);
+            res+=1;
+            return (int) (Math.pow(2, res));
         }
     }
 
