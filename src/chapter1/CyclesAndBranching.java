@@ -51,22 +51,20 @@ public class CyclesAndBranching {
         return a.size();
     }
 
-    public static ArrayList<Integer> task225(int n) {
-        ArrayList<Integer> a = new ArrayList<>();
+    public static List<Integer> task225(int n) {
+        List<Integer> list = new ArrayList<Integer>();
         for (int i = 1; i < Math.sqrt(n); i++) {
             if ((n % (i * i) == 0) && (n % (i * i * i) != 0)) {
-                a.add(i);
+               list.add(i);
             }
         }
-        return a;
+        return list;
     }
 
     public static double task242(final int n) {
         double result = 0;
-        double k = 0;
-        for (int i = (int) k; i <= n; i++) {
-            k = i;
-            result += Math.pow(-1, k * (k - 1) / 2) / utils.Util.factorial((int) k);
+        for (int k = 0; k <= n; k++) {
+            result += Math.pow(-1, k * (double)(k - 1) / 2) / utils.Util.factorial(k);
         }
         return result;
     }

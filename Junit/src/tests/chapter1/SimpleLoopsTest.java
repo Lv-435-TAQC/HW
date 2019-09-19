@@ -84,4 +84,17 @@ class SimpleLoopsTest {
         boolean actual = SimpleLoops.task88a(3);
         assertEquals(expected,actual);
     }
+    @Test
+    void task86h() {
+        int expectedResult = 9;
+        int actualResult = SimpleLoops.task86h(537);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void task108Test() {
+        int expectedResult = 128;
+        int actualResult = SimpleLoops.task108(76);
+        assertEquals(expectedResult, actualResult);
+    }
 }

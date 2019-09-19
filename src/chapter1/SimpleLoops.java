@@ -38,12 +38,13 @@ public class SimpleLoops {
         return sum;
     }
 
-
     public static int task108(int n) {
-        if (Math.pow(2, (Math.log(n) / Math.log(2))) == n) {
-            return (int) ((Math.log(n) / Math.log(2)));
+        int res = (int) (Math.log(n) / Math.log(2));
+        if (Math.pow(2, res) == n) {
+            return (int) Math.pow(2, res);
         } else {
-            return (int) ((Math.log(n) / Math.log(2)) + 1);
+            res += 1;
+            return (int) (Math.pow(2, res));
         }
     }
 
@@ -81,15 +82,19 @@ public class SimpleLoops {
     }
 
     public static int task88v(int number) {
-        String text = String.valueOf(number);
-        String firstItem = text.substring(0, 1);
-        String lastItem = text.substring(text.length() - 1);
-        String middlePart = text.substring(1, text.length() - 1);
-        text = lastItem + middlePart + firstItem;
-        number = Integer.parseInt(text);
+        if (number >= 10) {
+            String text = String.valueOf(number);
+            String firstItem = text.substring(0, 1);
+            String lastItem = text.substring(text.length() - 1);
+            String middlePart = text.substring(1, text.length() - 1);
+            text = lastItem + middlePart + firstItem;
+            number = Integer.parseInt(text);
 
+
+        } else {
+            number = number;
+        }
         return number;
     }
-
 
 }

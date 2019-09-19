@@ -2,10 +2,14 @@ package tests.chapter1;
 
 import chapter1.CyclesAndBranching;
 import org.junit.jupiter.api.Test;
+import org.mockito.BDDMockito;
+import org.powermock.api.mockito.PowerMockito;
+import utils.Util;
 
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 
 class CyclesAndBranchingTest {
 
@@ -122,4 +126,12 @@ class CyclesAndBranchingTest {
         List<Integer> actual = CyclesAndBranching.task227(9, -9);
         assertEquals(expected, actual);
     }
+    @Test
+    void task184() {
+        int[] expectedResult = {0, 12, 15, 0, 25, 24, 0};
+        int[] insert = {16, 12, 15, 21, 25, 24, 26};
+        int[] actualResult = CyclesAndBranching.task184(5, 1, insert);
+        assertArrayEquals(expectedResult, actualResult);
+    }
+
 }
