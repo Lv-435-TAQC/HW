@@ -21,14 +21,14 @@ class ConsoleReaderTest {
 
     @Test
     void readPositiveIntegerTest() throws IOException {
-//        BufferedReader bufferedReader = mock(BufferedReader.class);
-//        when(bufferedReader.readLine()).thenReturn("-1");
-//
-//        ConsoleReader consoleReader = new ConsoleReader(bufferedReader);
-//
-//        Integer expected = 1;
-//        Integer actual = consoleReader.readInteger();
-//        assertEquals(expected,actual);
+        BufferedReader bufferedReader = mock(BufferedReader.class);
+        when(bufferedReader.readLine()).thenReturn("1");
+
+        ConsoleReader consoleReader = new ConsoleReader(bufferedReader);
+
+        Integer expected = 1;
+        Integer actual = consoleReader.readInteger();
+        assertEquals(expected,actual);
     }
 
     @Test
