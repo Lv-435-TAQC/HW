@@ -83,15 +83,21 @@ public class SimpleLoops {
     }
 
     public static int task88v(int number) {
-        String text = String.valueOf(number);
-        String firstItem = text.substring(0, 1);
-        String lastItem = text.substring(text.length() - 1);
-        String middlePart = text.substring(1, text.length() - 1);
-        text = lastItem + middlePart + firstItem;
-        number = Integer.parseInt(text);
+        if (number >= 10) {
+            String text = String.valueOf(number);
+            String firstItem = text.substring(0, 1);
+            String lastItem = text.substring(text.length() - 1);
+            String middlePart = text.substring(1, text.length() - 1);
+            text = lastItem + middlePart + firstItem;
+            number = Integer.parseInt(text);
 
+
+        }
+        else
+        {
+            number=number;
+        }
         return number;
     }
-
 
 }
