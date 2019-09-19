@@ -38,13 +38,12 @@ public class SimpleLoops {
         return sum;
     }
 
-
     public static int task108(int n) {
-        int res=(int) (Math.log(n) / Math.log(2));
+        int res = (int) (Math.log(n) / Math.log(2));
         if (Math.pow(2, res) == n) {
             return (int) Math.pow(2, res);
         } else {
-            res+=1;
+            res += 1;
             return (int) (Math.pow(2, res));
         }
     }
@@ -92,10 +91,8 @@ public class SimpleLoops {
             number = Integer.parseInt(text);
 
 
-        }
-        else
-        {
-            number=number;
+        } else {
+            number = number;
         }
         return number;
     }
