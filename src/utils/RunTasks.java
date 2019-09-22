@@ -239,7 +239,7 @@ public class RunTasks {
     }
 
     private static void start178h() {
-        System.out.println(CyclesAndBranching.task178h(consoleReader.readInteger() +consoleReader.integersForArray()) + " numbers are relevant! ");
+        System.out.println(CyclesAndBranching.task178h(consoleReader.readInteger(),consoleReader.integersForArray()) + " numbers are relevant! ");
     }
 
     private static void start108() {
