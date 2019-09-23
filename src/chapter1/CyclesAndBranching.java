@@ -41,14 +41,14 @@ public class CyclesAndBranching {
         return a;
     }
 
-    public static int task178h(ArrayList<Integer> a) {
-        for (int i = 1; i < a.size() - 1; i++) {
+    public static int task178h(int n, ArrayList<Integer> a) {
+        ArrayList<Integer> k  = new ArrayList<>();
+        for (int i = 1; i < n - 1; i++) {
             if (a.get(i) < (a.get(i - 1) + a.get(i + 1)) / 2) {
-                a.remove(i);
-                i--;
+               k.add(a.get(i));
             }
         }
-        return a.size();
+        return k.size();
     }
 
     public static List<Integer> task225(int n) {
