@@ -134,4 +134,10 @@ class CyclesAndBranchingTest {
         assertArrayEquals(expectedResult, actualResult);
     }
 
+    @Test
+    void task178gIsGood() {
+        int expected = 4;
+        int actual = CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 5, 9, 12, 21)));
+        assertEquals(expected, actual , "Simple example");
+    }
 }
