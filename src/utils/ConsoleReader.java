@@ -32,12 +32,11 @@ public class ConsoleReader {
     }
 
     public  int readInteger() {
-//        final InputStreamReader inputStreamReader = new InputStreamReader(System.in);
-//         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         String result = "";
         do {
             System.out.println("Enter integer");
             try {
+
                 result = bufferedReader.readLine();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -62,14 +61,14 @@ public class ConsoleReader {
     }
 
     public static ArrayList<Integer> integersForArray() {
-        final InputStreamReader inputStreamReader = new InputStreamReader(System.in);
-        final BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         ArrayList<Integer> array = new ArrayList<>();
         String result = "";
         do {
             System.out.println("Enter integer ('/' char - end of numbers)");
             try {
                 result = bufferedReader.readLine();
+                if(result.contentEquals("/"))
+                    continue;
                 if (isInteger(result)) {
                     array.add(Integer.valueOf(result));
                 }

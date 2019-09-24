@@ -1,4 +1,4 @@
-package tests.chapter1;
+package src.tests.chapter1;
 
 import chapter1.NestedLoops;
 import org.junit.jupiter.api.Test;
@@ -39,7 +39,7 @@ class NestedLoopsTest {
     }
 
     @Test
-    void task323() {
+    void task323WithCorrectDataTest() {
         ArrayList<Integer>expected; new ArrayList<Integer>();
         Integer[] array =  {2,3,4,5,6,7,8,9,10,11,12};
         expected = new ArrayList<Integer>(Arrays.asList(array));
@@ -48,7 +48,7 @@ class NestedLoopsTest {
     }
 
     @Test
-    void task323MinValue() {
+    void task323MinValueTest() {
         ArrayList<Integer>expected; new ArrayList<Integer>();
         expected = new ArrayList<Integer>();
         ArrayList<Integer> actual = chapter1.NestedLoops.task323(1);
