@@ -1,10 +1,7 @@
-package tests.chapter1;
+package src.tests.chapter1;
 
 import chapter1.CyclesAndBranching;
 import org.junit.jupiter.api.Test;
-import org.mockito.BDDMockito;
-import org.powermock.api.mockito.PowerMockito;
-import utils.Util;
 
 import java.util.*;
 
@@ -87,7 +84,7 @@ class CyclesAndBranchingTest {
 
     @Test
     void task178d() {
-        int expected = 1;
+        int expected = 2;
         int actual = CyclesAndBranching.task178d(40);
         assertEquals(expected, actual);
     }
