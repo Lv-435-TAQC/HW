@@ -1,4 +1,4 @@
-package tests.chapter1;
+package src.tests.chapter1;
 
 import chapter1.CyclesAndBranching;
 import org.junit.jupiter.api.Test;

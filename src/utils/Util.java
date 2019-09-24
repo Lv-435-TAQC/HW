@@ -101,7 +101,7 @@ public class Util {
         }
         System.out.println();
     }
-    public static boolean isNaturalNumber (int number) {
+    public static boolean isNaturalPrimeNumber(int number) {
         boolean b = true;
         if(number < 2)
             return false;
