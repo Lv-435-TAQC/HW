@@ -87,4 +87,25 @@ class IntegersTest {
         int[][] actualResult = Integers.task555(0);
         assertArrayEquals(expectedResult, actualResult);
     }
+
+    @Test
+    public void testtask561() {
+        ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 5, 6, 25, 76));
+        ArrayList<Integer> actual = Integers.task561(300);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+    @Test
+    public void testtask561RetunEmpty() {
+        ArrayList<Integer> expected = new ArrayList<Integer>();
+        ArrayList<Integer> actual = Integers.task561(0);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+    @Test
+    public void testtask561Border() {
+        ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1));
+        ArrayList<Integer> actual = Integers.task561(1);
+        assertEquals(expected, actual, "Something wrong");
+    }
 }
