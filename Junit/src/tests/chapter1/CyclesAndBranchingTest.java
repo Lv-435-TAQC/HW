@@ -83,13 +83,6 @@ class CyclesAndBranchingTest {
     }
 
     @Test
-    void task178d() {
-        int expected = 1;
-        int actual = CyclesAndBranching.task178d(40);
-        assertEquals(expected, actual);
-    }
-
-    @Test
     void task178dReturnZero() {
         int expected = 0;
         int actual = CyclesAndBranching.task178d(3);

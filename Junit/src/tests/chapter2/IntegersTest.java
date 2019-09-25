@@ -1,4 +1,4 @@
-package tests.chapter2;
+package src.tests.chapter2;
 
 import chapter2.Integers;
 import org.junit.jupiter.api.Test;
@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class IntegersTest {
 
     @Test
-    void task554() {
+    void task554WithCorrectDataTest() {
         List<ArrayList<Integer>> expected = new ArrayList<>();
         ArrayList<Integer> values = new ArrayList<>();
         values.add(3);
@@ -25,14 +25,14 @@ class IntegersTest {
     }
 
     @Test
-    void task554WithNullResult() {
+    void task554WithNullResultTest() {
         List<ArrayList<Integer>> expected = new ArrayList<>();
         List<ArrayList<Integer>> actual = Integers.task554(1);
         assertIterableEquals(expected, actual);
     }
 
     @Test
-    void task554NoCorrect() {
+    void task554WithNoCorrectDataTest() {
         List<ArrayList<Integer>> expected = new ArrayList<>();
         List<ArrayList<Integer>> actual = Integers.task554(-1);
         assertIterableEquals(expected, actual);
