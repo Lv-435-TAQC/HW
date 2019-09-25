@@ -1,10 +1,7 @@
-package tests.chapter1;
+package src.tests.chapter1;
 
 import chapter1.CyclesAndBranching;
 import org.junit.jupiter.api.Test;
-import org.mockito.BDDMockito;
-import org.powermock.api.mockito.PowerMockito;
-import utils.Util;
 
 import java.util.*;
 
@@ -54,13 +51,13 @@ class CyclesAndBranchingTest {
     void task178bSimple() {
         int expected = 4;
         int actual = CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 5, 9, 12, 21)));
-        assertEquals(expected, actual , "Simple example");
+        assertEquals(expected, actual, "Simple example");
     }
 
     @Test
     void task178bWithoutMultOf3() {
         int expected = 0;
-        int actual = CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(2, 5, 10, 19,22)));
+        int actual = CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(2, 5, 10, 19, 22)));
         assertEquals(expected, actual, "Example without multiples of 3");
     }
 
@@ -126,6 +123,7 @@ class CyclesAndBranchingTest {
         List<Integer> actual = CyclesAndBranching.task227(9, -9);
         assertEquals(expected, actual);
     }
+
     @Test
     void task184() {
         int[] expectedResult = {0, 12, 15, 0, 25, 24, 0};
@@ -135,9 +133,40 @@ class CyclesAndBranchingTest {
     }
 
     @Test
-    void task178gIsGood() {
-        int expected = 4;
-        int actual = CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 5, 9, 12, 21)));
-        assertEquals(expected, actual , "Simple example");
+    public void testtask178hIsGood() {
+        int expected = 2;
+        ArrayList<Integer> arrayList = new ArrayList<Integer>(Arrays.asList(2, 5, 10, 15, 30));
+        int actual = CyclesAndBranching.task178h(5, arrayList);
+        assertEquals(expected, actual, "Something wrong");
     }
+
+    @Test
+    public void testtask178hBorder() {
+        int expected = 0;
+        ArrayList<Integer> arrayList = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
+        int actual = CyclesAndBranching.task178h(7, arrayList);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+    @Test
+    public void task243a() {
+        ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 2, 2, 1));
+        ArrayList<Integer> actual = CyclesAndBranching.task243a(5);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+    @Test
+    public void task243aBigNumber() {
+        ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(10, 30, 18, 26, 26, 18, 30, 10));
+        ArrayList<Integer> actual = CyclesAndBranching.task243a(1000);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+    @Test
+    public void task243aReturnEmpty() {
+        ArrayList<Integer> expected = new ArrayList<Integer>();
+        ArrayList<Integer> actual = CyclesAndBranching.task243a(3);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
 }
