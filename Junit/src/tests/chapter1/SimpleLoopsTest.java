@@ -92,6 +92,14 @@ class SimpleLoopsTest {
     }
 
     @Test
+    void zeroTestTask86h() {
+        int expectedResult = 0;
+        int actualResult = SimpleLoops.task86h(0);
+        assertEquals(expectedResult, actualResult);
+    }
+
+
+    @Test
     public void task108Test() {
         int expectedResult = 128;
         int actualResult = SimpleLoops.task108(76);

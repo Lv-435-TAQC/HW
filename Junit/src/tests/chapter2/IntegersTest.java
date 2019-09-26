@@ -108,4 +108,21 @@ class IntegersTest {
         ArrayList<Integer> actual = Integers.task561(1);
         assertEquals(expected, actual, "Something wrong");
     }
+    @Test
+    void task569() {
+        List<Integer> expectedResult = new ArrayList<>();
+        expectedResult.add(30);
+        expectedResult.add(60);
+        expectedResult.add(90);
+
+        List<Integer> actualResult = Integers.task569(3);
+        assertEquals(expectedResult,actualResult);
+    }
+    @Test
+    void zeroTestTask569() {
+        List<Integer> expectedResult = new ArrayList<>();
+        List<Integer> actualResult = Integers.task569(0);
+        assertEquals(expectedResult,actualResult);
+    }
+
 }

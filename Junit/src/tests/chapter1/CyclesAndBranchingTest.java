@@ -123,6 +123,20 @@ class CyclesAndBranchingTest {
         int[] actualResult = CyclesAndBranching.task184(5, 1, insert);
         assertArrayEquals(expectedResult, actualResult);
     }
+    @Test
+    void secondTestTask184() {
+        int[] expectedResult = {16, 12, 15, 21, 25, 24, 26};
+        int[] insert = {16, 12, 15, 21, 25, 24, 26};
+        int[] actualResult = CyclesAndBranching.task184(9, 15, insert);
+        assertArrayEquals(expectedResult, actualResult);
+    }
+    @Test
+    void ZeroTestTask184() {
+        int[] expectedResult = {};
+        int[] insert = {};
+        int[] actualResult = CyclesAndBranching.task184(9, 15, insert);
+        assertArrayEquals(expectedResult, actualResult);
+    }
 
     @Test
 
