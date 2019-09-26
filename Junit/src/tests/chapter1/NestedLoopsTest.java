@@ -60,14 +60,14 @@ class NestedLoopsTest {
     void task331b() {
         List<Integer> expected = Arrays.asList(4, 3, 2);
         List<Integer> actual = NestedLoops.task331b(29);
-        assertEquals(expected, actual);
+        assertIterableEquals(expected,actual);
     }
 
     @Test
     void task331bEmpty() {
         List<Integer> expected = Arrays.asList();
         List<Integer> actual = NestedLoops.task331b(31);
-        assertEquals(expected, actual);
+        assertIterableEquals(expected,actual);
     }
 
     @Test
