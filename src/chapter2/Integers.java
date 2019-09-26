@@ -9,7 +9,7 @@ public class Integers {
         LinkedList<Integer> numbers = new LinkedList<>();
         int numberOfMersen = 0;
         for (int i = 2; i < n; i++) {
-            if(!Util.isNaturalPrimeNumber(i))
+            if (!Util.isNaturalPrimeNumber(i))
                 continue;
             numberOfMersen = ((int) Math.pow(2, i) - 1);
             if (numberOfMersen < n) {
@@ -19,6 +19,12 @@ public class Integers {
         return numbers;
     }
 
+    /**
+     * Find numbers from 1 to n, which looks like 6^2 = 36, or 25^2=625
+     *
+     * @param n number for search
+     * @return ArrayList with numbers which pass condition
+     */
     public static ArrayList<Integer> task561(Integer n) {
         ArrayList<Integer> a = new ArrayList<>();
         String test;

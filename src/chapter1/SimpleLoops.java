@@ -1,6 +1,12 @@
 package chapter1;
 
 public class SimpleLoops {
+    /**
+     * We need to reverse number
+     *
+     * @param n - it`s number what we will reverse
+     * @return reversed number Integer type
+     */
     public static int task88b(Integer n) {
         String change = new StringBuffer(Integer.toString(n)).reverse().toString();
         return Integer.parseInt(change);
