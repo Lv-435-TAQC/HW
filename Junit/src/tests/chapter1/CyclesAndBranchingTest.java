@@ -1,15 +1,11 @@
-package tests.chapter1;
+package src.tests.chapter1;
 
 import chapter1.CyclesAndBranching;
 import org.junit.jupiter.api.Test;
-import org.mockito.BDDMockito;
-import org.powermock.api.mockito.PowerMockito;
-import utils.Util;
 
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 
 class CyclesAndBranchingTest {
 
@@ -54,13 +50,13 @@ class CyclesAndBranchingTest {
     void task178bSimple() {
         int expected = 4;
         int actual = CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(1, 2, 3, 5, 9, 12, 21)));
-        assertEquals(expected, actual , "Simple example");
+        assertEquals(expected, actual, "Simple example");
     }
 
     @Test
     void task178bWithoutMultOf3() {
         int expected = 0;
-        int actual = CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(2, 5, 10, 19,22)));
+        int actual = CyclesAndBranching.task178b(new ArrayList<Integer>(Arrays.asList(2, 5, 10, 19, 22)));
         assertEquals(expected, actual, "Example without multiples of 3");
     }
 
@@ -126,6 +122,7 @@ class CyclesAndBranchingTest {
         List<Integer> actual = CyclesAndBranching.task227(9, -9);
         assertEquals(expected, actual);
     }
+
     @Test
     void task184() {
         int[] expectedResult = {0, 12, 15, 0, 25, 24, 0};
@@ -134,4 +131,27 @@ class CyclesAndBranchingTest {
         assertArrayEquals(expectedResult, actualResult);
     }
 
+    @Test
+    public void task242() {
+        Double expectedResult = 1.3817460317460317;
+        Double actualResult = CyclesAndBranching.task242(7);
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    public void negativeTestTask242() {
+        Double expectedResult = 0.0;
+        Double actualResult = CyclesAndBranching.task242(-7);
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    public void zeroTestTask242() {
+        Double expectedResult = 1.0;
+        Double actualResult = CyclesAndBranching.task242(0);
+        assertEquals(expectedResult, actualResult);
+
+    }
 }

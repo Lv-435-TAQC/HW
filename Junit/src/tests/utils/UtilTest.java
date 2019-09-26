@@ -1,4 +1,4 @@
-package tests.utils;
+package src.tests.utils;
 
 import org.junit.jupiter.api.Test;
 import utils.Util;

@@ -1,4 +1,4 @@
-package tests.chapter2;
+package src.tests.chapter2;
 
 import chapter2.Integers;
 import org.junit.jupiter.api.Test;
