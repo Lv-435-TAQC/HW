@@ -11,7 +11,9 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class RunTasks {
+
     private static ConsoleReader consoleReader = new ConsoleReader(new BufferedReader(new InputStreamReader(System.in)));
+
     public static void menu() {
         boolean check = true;
         do {
@@ -132,17 +134,13 @@ public class RunTasks {
                     start554();
                     break;
 
-                case "exit":
-                    check = false;
-                    break;
-
                 case "325":
                     start325();
                     break;
+
                 case "182":
                     start182();
                     break;
-
                 case "241":
                     start241();
                     break;
@@ -154,7 +152,6 @@ public class RunTasks {
                 case "88g":
                     start88g();
                     break;
-
 
                 case "88v":
                     start88v();
@@ -180,6 +177,9 @@ public class RunTasks {
                     start562();
                     break;
 
+                case "exit":
+                    check = false;
+                    break;
 
                 default:
                     System.out.println("You write invalid number");
@@ -229,7 +229,7 @@ public class RunTasks {
     }
 
     private static void runTask86h() {
-        final int number = Integer.parseInt(consoleReader.readPositiveInteger());
+        final int number = consoleReader.readInteger();
         System.out.println("The sum of digits with consecutive sings of the number " + number + " is "
                 + SimpleLoops.task86h(number));
     }
@@ -239,7 +239,7 @@ public class RunTasks {
     }
 
     private static void start178h() {
-        System.out.println(CyclesAndBranching.task178h(consoleReader.readInteger(),consoleReader.integersForArray()) + " numbers are relevant! ");
+        System.out.println(CyclesAndBranching.task178h(consoleReader.readInteger(), consoleReader.integersForArray()) + " numbers are relevant! ");
     }
 
     private static void start108() {
@@ -263,7 +263,7 @@ public class RunTasks {
     }
 
     private static void start242() {
-        System.out.println(CyclesAndBranching.task242(Integer.parseInt(consoleReader.readPositiveInteger())));
+        System.out.println(CyclesAndBranching.task242(consoleReader.readInteger()));
     }
 
     private static void start88a() {
@@ -302,14 +302,14 @@ public class RunTasks {
     }
 
     private static void start569() {
-        System.out.println(Integers.task569(Integer.parseInt(consoleReader.readPositiveInteger())));
+        System.out.println(Integers.task569(consoleReader.readInteger()));
     }
 
     private static void start184() {
         System.out.println("p");
-        final int p = Integer.parseInt(consoleReader.readPositiveInteger());
+        final int p = consoleReader.readInteger();
         System.out.println("q");
-        final int q = Integer.parseInt(consoleReader.readPositiveInteger());
+        final int q = consoleReader.readInteger();
         System.out.print("The array with nils instead of digits, modulus of which gives in remainder " + q
                 + "\nduring the division on " + p + " is -->");
         Util.writeIntArrayToConsole(CyclesAndBranching.task184(p, q, Util.fillUpTheArray(67)));
@@ -317,7 +317,7 @@ public class RunTasks {
 
     private static void start340() {
         System.out.println("m");
-        final int m = Integer.parseInt(consoleReader.readPositiveInteger());
+        final int m = consoleReader.readInteger();
         int[] resultArray = NestedLoops.task340(m, Util.fillUpTheArray(20));
         if (resultArray == null) {
             System.out.println("\nThere are no three indexes which can satisfy the conditions with m = " + m);
@@ -424,6 +424,4 @@ public class RunTasks {
     private static void start562() {
         System.out.println(Integers.task562(consoleReader.readInteger()));
     }
-
-
 }

@@ -10,16 +10,6 @@ public class Util {
         return result;
     }
 
-    public static boolean isNumeric(final String string) {
-        boolean result = true;
-        try {
-            Integer.parseInt(string);
-        } catch (NumberFormatException | NullPointerException exception) {
-            result = false;
-        }
-        return result;
-    }
-
     public static boolean isPrimeNumber(int n) {
         if (n == 1) {
             return false;
@@ -101,11 +91,12 @@ public class Util {
         }
         System.out.println();
     }
+
     public static boolean isNaturalPrimeNumber(int number) {
         boolean b = true;
-        if(number < 2)
+        if (number < 2)
             return false;
-        if(number == 2 || number == 3)
+        if (number == 2 || number == 3)
             return true;
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
