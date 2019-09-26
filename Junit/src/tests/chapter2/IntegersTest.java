@@ -56,14 +56,14 @@ class IntegersTest {
     void task562() {
         List<Integer> expected = Arrays.asList(153, 370, 371, 407);
         List<Integer> actual = Integers.task562(1000);
-        assertEquals(expected, actual);
+        assertIterableEquals(expected,actual);
     }
 
     @Test
     void task562returnEmpty() {
         List<Integer> expected = Arrays.asList();
         List<Integer> actual = Integers.task562(102);
-        assertEquals(expected, actual);
+        assertIterableEquals(expected,actual);
     }
 
     @Test

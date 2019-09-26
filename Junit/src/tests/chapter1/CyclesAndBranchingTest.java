@@ -33,9 +33,9 @@ class CyclesAndBranchingTest {
     void task243b() {
         Map<Integer, Integer> expected = new HashMap();
         expected.put(8, 6);
-        Map<Integer, Integer> actual = new HashMap();
+        Map<Integer, Integer> actual;
         actual = CyclesAndBranching.task243b(100);
-        assertEquals(expected, actual);
+        assertTrue(expected.equals(actual));
     }
 
     @Test
@@ -43,7 +43,7 @@ class CyclesAndBranchingTest {
         Map<Integer, Integer> expected = new HashMap();
         Map<Integer, Integer> actual = new HashMap();
         actual = CyclesAndBranching.task243b(33);
-        assertEquals(expected, actual);
+        assertTrue(expected.equals(actual));
     }
 
     @Test
