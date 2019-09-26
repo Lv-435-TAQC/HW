@@ -38,12 +38,13 @@ public class SimpleLoops {
         return sum;
     }
 
-
     public static int task108(int n) {
-        if (Math.pow(2, (Math.log(n) / Math.log(2))) == n) {
-            return (int) ((Math.log(n) / Math.log(2)));
+        int res = (int) (Math.log(n) / Math.log(2));
+        if (Math.pow(2, res) == n) {
+            return (int) Math.pow(2, res);
         } else {
-            return (int) ((Math.log(n) / Math.log(2)) + 1);
+            res += 1;
+            return (int) (Math.pow(2, res));
         }
     }
 
@@ -56,23 +57,24 @@ public class SimpleLoops {
         return result;
     }
 
-    public static int task86a(int n){
+    public static int task86a(int n) {
         int counter = 0;
-        while(n > 1){
-            n = n/10;
+        while (n > 1) {
+            n = n / 10;
             counter++;
         }
         return counter;
     }
-    public static int task107(int m){
+
+    public static int task107(int m) {
         int k = 0;
-        while(Math.pow(4,k) < m){
+        while (Math.pow(4, k) < m) {
             k++;
         }
-        return k-1;
+        return k - 1;
     }
 
-    public static String task88g (String strvalue){
+    public static String task88g(String strvalue) {
         String val = "1";
         System.out.println(val + strvalue + val);
         return val + strvalue + val;
@@ -80,16 +82,19 @@ public class SimpleLoops {
     }
 
     public static int task88v(int number) {
-        String text = String.valueOf(number);
-        String firstItem = text.substring(0, 1);
-        String lastItem = text.substring(text.length() - 1);
-        String middlePart = text.substring(1, text.length() - 1);
-        text = lastItem + middlePart + firstItem;
-        number = Integer.parseInt(text);
+        if (number >= 10) {
+            String text = String.valueOf(number);
+            String firstItem = text.substring(0, 1);
+            String lastItem = text.substring(text.length() - 1);
+            String middlePart = text.substring(1, text.length() - 1);
+            text = lastItem + middlePart + firstItem;
+            number = Integer.parseInt(text);
 
+
+        } else {
+            number = number;
+        }
         return number;
     }
-
-
 
 }

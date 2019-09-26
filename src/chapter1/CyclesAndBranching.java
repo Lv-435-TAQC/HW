@@ -41,43 +41,53 @@ public class CyclesAndBranching {
         return a;
     }
 
-    public static int task178h(ArrayList<Integer> a) {
-        for (int i = 1; i < a.size() - 1; i++) {
+    public static int task178h(int n, ArrayList<Integer> a) {
+        ArrayList<Integer> k  = new ArrayList<>();
+        for (int i = 1; i < n - 1; i++) {
             if (a.get(i) < (a.get(i - 1) + a.get(i + 1)) / 2) {
-                a.remove(i);
-                i--;
+               k.add(a.get(i));
             }
         }
-        return a.size();
+        return k.size();
     }
 
-    public static ArrayList<Integer> task225(int n) {
-        ArrayList<Integer> a = new ArrayList<>();
+    public static List<Integer> task225(int n) {
+        List<Integer> list = new ArrayList<Integer>();
         for (int i = 1; i < Math.sqrt(n); i++) {
             if ((n % (i * i) == 0) && (n % (i * i * i) != 0)) {
-                a.add(i);
+               list.add(i);
             }
         }
-        return a;
+        return list;
     }
 
     public static double task242(final int n) {
         double result = 0;
-        double k = 0;
-        for (int i = (int) k; i <= n; i++) {
-            k = i;
-            result += Math.pow(-1, k * (k - 1) / 2) / utils.Util.factorial((int) k);
+        for (int k = 0; k <= n; k++) {
+            result += Math.pow(-1, k * (double)(k - 1) / 2) / utils.Util.factorial(k);
         }
         return result;
     }
 
-    public static int task227(int a, int b) {
-        int res = 0;
-        for (int i = 1; i <= 40; i++) {
-            if ((a % i == 0) && (b % i == 0))
-                res = i;
+    public static List<Integer> task227(int a, int b) {
+        List<Integer> list = new ArrayList();
+        if (a>b){
+            for (int i = -a; i <= a; i++) {
+                if (i != 0) {
+                    if ((a % i == 0) && (b % i == 0))
+                        list.add(i);
+                }
+            }
         }
-        return res;
+        else{
+            for (int i = -b; i <= b; i++) {
+                if (i != 0) {
+                    if ((a % i == 0) && (b % i == 0))
+                        list.add(i);
+                }
+            }
+        }
+        return list;
     }
 
     public static int task178v() {
@@ -86,29 +96,25 @@ public class CyclesAndBranching {
         return list.size();
     }
 
-    public static void task184(final int p, final int q, final int[] startArray) {
-        System.out.print("Starting array --> ");
-        for (int item : startArray) {
-            System.out.print(item + " ");
+    public static int[] task184(final int p, final int q, final int[] startArray) {
+        int[] result = new int[startArray.length];
+        for (int i = 0; i < startArray.length; i++) {
+            if (startArray[i] % p == q) {
+                result[i] = 0;
+            } else {
+                result[i] = startArray[i];
+            }
         }
-        int[] array = Util.prepareArrayWithNilsInsteadOfNumbersWithSpecificCondition(startArray, p, q);
-        System.out.print("\nArray with nils instead of numbers, modulus of the division on "
-                + p + " of which gives in the remainder " + q + " -->");
-        for (int item : array) {
-            System.out.print(" " + item);
-        }
-        System.out.println();
+        return result;
     }
 
     public static Map task243b(int a) {
         Map<Integer,Integer> couple = new HashMap();
-        for (int i=0; i<=a;i++){
-            for (int j=0;j<a;j++){
+        for (int i=1; i<=a;i++){
+            for (int j=1;j<a;j++){
                 if (Math.pow(i,2)+Math.pow(j,2)==a){
                     if (i>=j)
-
                     couple.put(i,j);
-
                 }
             }
         }
@@ -116,17 +122,17 @@ public class CyclesAndBranching {
     }
 
 
-        public static ArrayList task224(int n){
-            ArrayList array = new ArrayList();
-            int num = 1;
-            while(num <= n){
-                if(n%num == 0) {
-                    array.add(num);
-                }
-                num++;
+    public static ArrayList task224(int n) {
+        ArrayList array = new ArrayList();
+        int num = 1;
+        while (num <= n) {
+            if (n % num == 0) {
+                array.add(num);
             }
-            return array;
+            num++;
         }
+        return array;
+    }
 
     public static int task182(int sum, int counter) {
         ArrayList<Integer> arr = new ArrayList<>();
@@ -152,37 +158,38 @@ public class CyclesAndBranching {
     }
 
 
-    public static double task241 (double sum, int n, int x){
-        for (int i = 1; i<=n; i++ ){
+    public static double task241(double sum, int n, int x) {
+        for (int i = 1; i <= n; i++) {
             double part1 = (-1 ^ (int) Math.sqrt(i));
-            double part2 = i*x^i;
-            double devide = part1/part2;
+            double part2 = i * x ^ i;
+            double devide = part1 / part2;
             sum = sum + devide;
 
         }
-        System.out.println("\n sum is "+ sum );
+        System.out.println("\n sum is " + sum);
         return sum;
     }
+
     public static int task178d(int b) {
-        int [] armstrongList = new int[b];
-        int suma=0;
+        int[] armstrongList = new int[b];
+        int suma = 0;
         Random random = new Random();
 
-        for (int i=0; i<armstrongList.length; i++){
-            armstrongList[i]= random.nextInt(200);
+        for (int i = 0; i < armstrongList.length; i++) {
+            armstrongList[i] = random.nextInt(200);
         }
 
-        for (int i=0; i<armstrongList.length;i++){
-            boolean dva2= Math.pow(2,i)<(armstrongList[i]);
-            boolean faktorial = armstrongList[i]<(Util.factorial(i));
+        for (int i = 0; i < armstrongList.length; i++) {
+            boolean dva2 = Math.pow(2, i) < (armstrongList[i]);
+            boolean faktorial = armstrongList[i] < (Util.factorial(i));
 
-            if(dva2&&faktorial){
+            if (dva2 && faktorial) {
                 suma++;
             }
         }
         return suma;
     }
 
-    }
+}
 
 
