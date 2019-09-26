@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class IntegersTest {
 
     @Test
-    void task554() {
+    void task554WithCorrectDataTest() {
         List<ArrayList<Integer>> expected = new ArrayList<>();
         ArrayList<Integer> values = new ArrayList<>();
         values.add(3);
@@ -25,14 +25,14 @@ class IntegersTest {
     }
 
     @Test
-    void task554WithNullResult() {
+    void task554WithNullResultTest() {
         List<ArrayList<Integer>> expected = new ArrayList<>();
         List<ArrayList<Integer>> actual = Integers.task554(1);
         assertIterableEquals(expected, actual);
     }
 
     @Test
-    void task554NoCorrect() {
+    void task554WithNoCorrectDataTest() {
         List<ArrayList<Integer>> expected = new ArrayList<>();
         List<ArrayList<Integer>> actual = Integers.task554(-1);
         assertIterableEquals(expected, actual);
@@ -86,5 +86,26 @@ class IntegersTest {
         int[][] expectedResult = new int[][]{};
         int[][] actualResult = Integers.task555(0);
         assertArrayEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testtask561() {
+        ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 5, 6, 25, 76));
+        ArrayList<Integer> actual = Integers.task561(300);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+    @Test
+    public void testtask561RetunEmpty() {
+        ArrayList<Integer> expected = new ArrayList<Integer>();
+        ArrayList<Integer> actual = Integers.task561(0);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+    @Test
+    public void testtask561Border() {
+        ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1));
+        ArrayList<Integer> actual = Integers.task561(1);
+        assertEquals(expected, actual, "Something wrong");
     }
 }

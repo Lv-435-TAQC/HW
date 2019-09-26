@@ -82,13 +82,6 @@ class CyclesAndBranchingTest {
     }
 
     @Test
-    void task178d() {
-        int expected = 1;
-        int actual = CyclesAndBranching.task178d(40);
-        assertEquals(expected, actual);
-    }
-
-    @Test
     void task178dReturnZero() {
         int expected = 0;
         int actual = CyclesAndBranching.task178d(3);
@@ -132,6 +125,7 @@ class CyclesAndBranchingTest {
     }
 
     @Test
+
     public void task242() {
         Double expectedResult = 1.3817460317460317;
         Double actualResult = CyclesAndBranching.task242(7);
@@ -154,4 +148,42 @@ class CyclesAndBranchingTest {
         assertEquals(expectedResult, actualResult);
 
     }
+
+    public void testtask178hIsGood() {
+        int expected = 2;
+        ArrayList<Integer> arrayList = new ArrayList<Integer>(Arrays.asList(2, 5, 10, 15, 30));
+        int actual = CyclesAndBranching.task178h(5, arrayList);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+    @Test
+    public void testtask178hBorder() {
+        int expected = 0;
+        ArrayList<Integer> arrayList = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
+        int actual = CyclesAndBranching.task178h(7, arrayList);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+    @Test
+    public void task243a() {
+        ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(1, 2, 2, 1));
+        ArrayList<Integer> actual = CyclesAndBranching.task243a(5);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+    @Test
+    public void task243aBigNumber() {
+        ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(10, 30, 18, 26, 26, 18, 30, 10));
+        ArrayList<Integer> actual = CyclesAndBranching.task243a(1000);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+    @Test
+    public void task243aReturnEmpty() {
+        ArrayList<Integer> expected = new ArrayList<Integer>();
+        ArrayList<Integer> actual = CyclesAndBranching.task243a(3);
+        assertEquals(expected, actual, "Something wrong");
+    }
+
+
 }

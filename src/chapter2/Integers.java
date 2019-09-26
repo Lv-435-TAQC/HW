@@ -9,7 +9,7 @@ public class Integers {
         LinkedList<Integer> numbers = new LinkedList<>();
         int numberOfMersen = 0;
         for (int i = 2; i < n; i++) {
-            if(!Util.isNaturalNumber(i))
+            if(!Util.isNaturalPrimeNumber(i))
                 continue;
             numberOfMersen = ((int) Math.pow(2, i) - 1);
             if (numberOfMersen < n) {
