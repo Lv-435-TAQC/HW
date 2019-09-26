@@ -7,7 +7,6 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
 class CyclesAndBranchingTest {
 
     @Test
@@ -126,6 +125,30 @@ class CyclesAndBranchingTest {
     }
 
     @Test
+
+    public void task242() {
+        Double expectedResult = 1.3817460317460317;
+        Double actualResult = CyclesAndBranching.task242(7);
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    public void negativeTestTask242() {
+        Double expectedResult = 0.0;
+        Double actualResult = CyclesAndBranching.task242(-7);
+        assertEquals(expectedResult, actualResult);
+
+    }
+
+    @Test
+    public void zeroTestTask242() {
+        Double expectedResult = 1.0;
+        Double actualResult = CyclesAndBranching.task242(0);
+        assertEquals(expectedResult, actualResult);
+
+    }
+
     public void testtask178hIsGood() {
         int expected = 2;
         ArrayList<Integer> arrayList = new ArrayList<Integer>(Arrays.asList(2, 5, 10, 15, 30));
@@ -161,5 +184,6 @@ class CyclesAndBranchingTest {
         ArrayList<Integer> actual = CyclesAndBranching.task243a(3);
         assertEquals(expected, actual, "Something wrong");
     }
+
 
 }
