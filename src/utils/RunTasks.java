@@ -254,7 +254,7 @@ public class RunTasks {
 
     static void start243a() {
         System.out.println("Pls write number");
-        CyclesAndBranching.task243a(consoleReader.readInteger());
+        System.out.println(CyclesAndBranching.task243a(consoleReader.readInteger()));
     }
 
     private static void start331a() {
