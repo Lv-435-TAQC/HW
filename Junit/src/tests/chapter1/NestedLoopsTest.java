@@ -90,5 +90,19 @@ class NestedLoopsTest {
         ArrayList<Integer> actual = NestedLoops.task331a(4);
         assertEquals(expected, actual, "Something wrong");
     }
+    @Test
+    void testTask340() {
+        int[] expectedResult = {1, 11, 15};
+        int[] insert = {745, 51, 5, 13, 10, 4, 3, 2, 5, 1, 16, 235, 623, 235, 745, 27, 52, 234, 532, 63, 12};
+        int[] actualResult = NestedLoops.task340(313, insert);
+        assertArrayEquals(expectedResult, actualResult);
+    }
+    @Test
+    void zeroTestTask340() {
+        int[] expectedResult = null;
+        int[] insert = {745, 59, 193, 109, 49, 39, 42, 45, 41, 156, 623, 235, 745, 52, 234, 532, 67, 152, 532, 178};
+        int[] actualResult = NestedLoops.task340(33, insert);
+        assertArrayEquals(expectedResult, actualResult);
+    }
 
 }
