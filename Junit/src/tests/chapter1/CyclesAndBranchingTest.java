@@ -162,7 +162,7 @@ class CyclesAndBranchingTest {
         assertEquals(expectedResult, actualResult);
 
     }
-
+    @Test
     public void testtask178hIsGood() {
         int expected = 2;
         ArrayList<Integer> arrayList = new ArrayList<Integer>(Arrays.asList(2, 5, 10, 15, 30));

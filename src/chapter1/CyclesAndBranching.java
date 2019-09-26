@@ -28,6 +28,12 @@ public class CyclesAndBranching {
 
     }
 
+    /**
+     * Get x and y, which pass condition n = x^2 + y^2
+     *
+     * @param n number for search
+     * @return ArrayList of pair with Integers, or empty ArrayList
+     */
     public static ArrayList<Integer> task243a(Integer n) {
         ArrayList<Integer> a = new ArrayList<>();
         for (int i = 1; i <= n; i++) {
@@ -41,11 +47,19 @@ public class CyclesAndBranching {
         return a;
     }
 
+    /**
+     * We need find number of members in array,
+     * which pass condition a(k) < (a(k-1)+a(k+1))/2
+     *
+     * @param n size of Array
+     * @param a ArrayList of integers to parse
+     * @return number of integers which pass condition
+     */
     public static int task178h(int n, ArrayList<Integer> a) {
-        ArrayList<Integer> k  = new ArrayList<>();
+        ArrayList<Integer> k = new ArrayList<>();
         for (int i = 1; i < n - 1; i++) {
             if (a.get(i) < (a.get(i - 1) + a.get(i + 1)) / 2) {
-               k.add(a.get(i));
+                k.add(a.get(i));
             }
         }
         return k.size();
@@ -55,7 +69,7 @@ public class CyclesAndBranching {
         List<Integer> list = new ArrayList<Integer>();
         for (int i = 1; i < Math.sqrt(n); i++) {
             if ((n % (i * i) == 0) && (n % (i * i * i) != 0)) {
-               list.add(i);
+                list.add(i);
             }
         }
         return list;
@@ -64,22 +78,21 @@ public class CyclesAndBranching {
     public static double task242(final int n) {
         double result = 0;
         for (int k = 0; k <= n; k++) {
-            result += Math.pow(-1, k * (double)(k - 1) / 2) / utils.Util.factorial(k);
+            result += Math.pow(-1, k * (double) (k - 1) / 2) / utils.Util.factorial(k);
         }
         return result;
     }
 
     public static List<Integer> task227(int a, int b) {
         List<Integer> list = new ArrayList();
-        if (a>b){
+        if (a > b) {
             for (int i = -a; i <= a; i++) {
                 if (i != 0) {
                     if ((a % i == 0) && (b % i == 0))
                         list.add(i);
                 }
             }
-        }
-        else{
+        } else {
             for (int i = -b; i <= b; i++) {
                 if (i != 0) {
                     if ((a % i == 0) && (b % i == 0))
@@ -109,12 +122,12 @@ public class CyclesAndBranching {
     }
 
     public static Map task243b(int a) {
-        Map<Integer,Integer> couple = new HashMap();
-        for (int i=1; i<=a;i++){
-            for (int j=1;j<a;j++){
-                if (Math.pow(i,2)+Math.pow(j,2)==a){
-                    if (i>=j)
-                    couple.put(i,j);
+        Map<Integer, Integer> couple = new HashMap();
+        for (int i = 1; i <= a; i++) {
+            for (int j = 1; j < a; j++) {
+                if (Math.pow(i, 2) + Math.pow(j, 2) == a) {
+                    if (i >= j)
+                        couple.put(i, j);
                 }
             }
         }

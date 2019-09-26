@@ -23,6 +23,11 @@ public class NestedLoops {
         return listEqualsSquareSum;
     }
 
+    /**
+     * Get x, y and z, which pass condition n = x^2 + y^2 + z^2
+     * @param n number for search
+     * @return ArrayList with x,y,z, or empty ArrayList
+     */
     public static ArrayList<Integer> task331a(Integer n) {
         ArrayList<Integer> a = new ArrayList<Integer>();
         for (int i = 1; i <= n; i++) {
