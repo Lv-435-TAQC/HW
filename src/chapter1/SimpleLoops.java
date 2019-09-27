@@ -12,6 +12,13 @@ public class SimpleLoops {
         return Integer.parseInt(change);
     }
 
+    /**
+     * Finds the sum of all digits of a number with consecutive change of the sign
+     * For example, for number 1234 the method will return -2 because 1 - 2 + 3 - 4 = -2
+     *
+     * @param number number from which we take all the digits and count their sum with consecutive change of the sign.
+     * @return sum of all digits with consecutive change of the sign
+     */
     public static int task86h(final int number) {
         int result = 0;
         char[] digits = String.valueOf(number).toCharArray();

@@ -75,6 +75,13 @@ public class CyclesAndBranching {
         return list;
     }
 
+    /**
+     * Calculates the sum on formula from exercise 242
+     * Formula from exercise 242 can be found within exercise 242 here: https://github.com/Lv-435-TAQC/HW/blob/master/zadachi.pdf
+     *
+     * @param n entering natural number
+     * @return the result of calculation
+     */
     public static double task242(final int n) {
         double result = 0;
         for (int k = 0; k <= n; k++) {
@@ -109,6 +116,14 @@ public class CyclesAndBranching {
         return list.size();
     }
 
+    /**
+     * Method places nils in array instead of digits, modulus of which gives in remainder q during the division on p
+     *
+     * @param p          number on which we divide all elements of entering array
+     * @param q          remainder, which satisfy the condition
+     * @param startArray entering array of elements
+     * @return array with nils instead of digits, modulus of which gives in remainder q during the division on p
+     */
     public static int[] task184(final int p, final int q, final int[] startArray) {
         int[] result = new int[startArray.length];
         for (int i = 0; i < startArray.length; i++) {

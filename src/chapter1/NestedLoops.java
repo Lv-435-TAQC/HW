@@ -25,6 +25,7 @@ public class NestedLoops {
 
     /**
      * Get x, y and z, which pass condition n = x^2 + y^2 + z^2
+     *
      * @param n number for search
      * @return ArrayList with x,y,z, or empty ArrayList
      */
@@ -54,6 +55,14 @@ public class NestedLoops {
         return listOfPerfectNumbers;
     }
 
+    /**
+     * Method searches for the position of three numbers (a[i], a[j], a[k]) in array, less than 20 each,
+     * which satisfy the equation a[i] + a[j] + a[k] = m
+     *
+     * @param m          sum from the equation, which must be satisfied by three numbers (i, j, k)
+     * @param startArray entering array of elements
+     * @return array of positions (i, j, k), if they satisfy the equation. If not, method returns null
+     */
     public static int[] task340(final int m, final int[] startArray) {
         int i = 0;
         int j = 0;
@@ -120,11 +129,10 @@ public class NestedLoops {
         List<Integer> list = new ArrayList<Integer>();
         for (int i = 2; i <= n / 2; i++) {
             if (n % i == 0 && Util.isPrimeNumber(i)) {
-               list.add(i);
+                list.add(i);
             }
         }
-        if(Util.isPrimeNumber(n))
-        {
+        if (Util.isPrimeNumber(n)) {
             list.add(n);
         }
         return list;
