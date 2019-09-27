@@ -53,6 +53,12 @@ public class Integers {
         return friendlyNumbers;
     }
 
+    /**
+     * Method searches for first n natural numbers which divide on no prime numbers except 2, 3 and 5
+     *
+     * @param n number of natural numbers
+     * @return ArrayList of n natural numbers which satisfy the condition
+     */
     public static List<Integer> task569(int n) {
         List<Integer> result = new ArrayList<>();
         List<Integer> seriesOfNFirstPrimeNumbersAfterTwoThreeAndFive = new ArrayList<>();
