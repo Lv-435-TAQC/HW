@@ -105,4 +105,17 @@ class NestedLoopsTest {
         assertArrayEquals(expectedResult, actualResult);
     }
 
+    @Test
+    public void task325Test() {
+        List<Integer> expectedResult = new ArrayList<>(Arrays.asList(2, 5));
+        List<Integer> actualResult = NestedLoops.task325(100);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void task325NegativeTest() {
+        List<Integer> expectedResult = new ArrayList<>(Arrays.asList());
+        List<Integer> actualResult = NestedLoops.task325(1);
+        assertEquals(expectedResult, actualResult);
+    }
 }
